@@ -1,0 +1,33 @@
+.hero-wrapper {
+    @include gradient-bg(50deg, $red, $blue);
+    .hero {
+        display: flex;
+        align-items: center;
+
+        padding: 186px 0;
+        color: #fff;
+       
+        &__left {
+            display: flex;
+            flex-direction: column;    
+            
+            width: 50%;
+            p {
+                margin: 42px 0 44px;
+
+                font-size: $fz-21px;
+                font-weight: 300;
+
+                color: inherit;
+                opacity: .8;
+            }
+
+            a {
+                font-weight: 500;
+            }
+        }
+        &__right {
+
+        }
+    }
+}

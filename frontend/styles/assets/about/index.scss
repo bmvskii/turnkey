@@ -1,0 +1,38 @@
+.about-wrapper {
+    background-color: #fff;
+    .about {
+        display: flex;
+        
+        padding: 204px 0 227px;
+
+        &::before {
+            @include gradient-line();
+            position: relative;
+            
+            top: 29px;
+            margin-right: 29px;
+        }
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            
+            width: 50%;
+            color: $black;
+
+            h1 {
+                width: 50%;
+                margin: 0;
+            }
+
+            p {
+                margin: 39px 0 0;
+                font-size: $fz-21px;
+                line-height: 1.48;
+            }
+        }
+        &__right {
+
+        }
+    }
+}

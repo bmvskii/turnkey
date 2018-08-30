@@ -1,0 +1,52 @@
+.proposals-wrapper {
+    @include gradient-bg(50deg, $blue, $red);
+    .proposals {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 60px;
+
+        color: #fff;
+
+        .tabs {
+            display: flex;
+            .tab {
+                margin-top: 33px;
+                padding: 29px 61px;
+                border-bottom: 2px solid #fff;
+                
+                opacity: .6;
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .tab-content {
+            width: 100%;
+            .cards {
+                display: flex;
+                justify-content: space-between;
+
+                margin: 59px -14px 0;
+
+                .card {
+                    margin: 0 14px;
+                    padding: 40px 30px;
+                    border-radius: $border-radius;
+
+                    background-color: #fff;
+                    h4 {
+                        color: $black;
+                    }
+                    p {
+                        font-size: $fz-14px;
+                        line-height: 1.29;
+                    }
+                }
+            }   
+        }
+    }
+}
