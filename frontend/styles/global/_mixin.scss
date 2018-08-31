@@ -9,5 +9,5 @@
     width: 71px;
     height: 6px;
     
-    @include gradient-bg(to left, $red, $blue);
+    @include gradient-bg(to right, $red, $blue);
 }

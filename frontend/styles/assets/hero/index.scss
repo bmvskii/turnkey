@@ -1,10 +1,10 @@
 .hero-wrapper {
+    padding: 186px 0;
+
     @include gradient-bg(50deg, $red, $blue);
     .hero {
         display: flex;
         align-items: center;
-
-        padding: 186px 0;
         color: #fff;
        
         &__left {
@@ -12,22 +12,74 @@
             flex-direction: column;    
             
             width: 50%;
-            p {
-                margin: 42px 0 44px;
 
-                font-size: $fz-21px;
-                font-weight: 300;
+            .slider {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                
+                .owl-item.active {
+                    .slider__item {
+                        display: flex;
+                        flex-direction: column;
 
-                color: inherit;
-                opacity: .8;
+                        opacity: 1;
+                    }
+                } 
+
+                &__item {
+                    display: none;
+                    opacity: 0;
+                    transition: .3s ease;
+
+                    height: 257px;
+                    
+                    h2 {
+                        margin: 0;
+                    }
+    
+                    p {
+                        margin: 42px 0 44px;
+        
+                        font-size: $fz-21px;
+                        font-weight: 300;
+        
+                        color: inherit;
+                        opacity: .8;
+                    }    
+                }
+
             }
 
             a {
+                display: flex;
+                align-items: center;
+
                 font-weight: 500;
+
+                opacity: 1;
+                transition: .3s ease;
+                &:hover {
+                    opacity: .8;
+                }
+
+                &::before {
+                    display: inline;
+                    content: url('../images/down-arrow.svg');
+
+                    margin-right: 20px;
+
+                    width: 32px;
+                    height: 32px;
+                }
             }
         }
         &__right {
 
         }
+    }
+    
+    .owl-theme .owl-nav.disabled + .owl-dots {
+        margin-bottom: 41px; 
     }
 }

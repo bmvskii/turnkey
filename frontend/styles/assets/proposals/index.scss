@@ -5,48 +5,102 @@
         flex-direction: column;
         align-items: center;
 
-        padding: 60px;
+        padding: 60px 0;
 
         color: #fff;
 
         .tabs {
             display: flex;
             .tab {
+                cursor: pointer;
+                
                 margin-top: 33px;
                 padding: 29px 61px;
                 border-bottom: 2px solid #fff;
                 
                 opacity: .6;
-
+              
                 &.active {
                     opacity: 1;
+                    transition: .3s ease;
                 }
             }
         }
 
         .tab-content {
-            width: 100%;
-            .cards {
-                display: flex;
-                justify-content: space-between;
+            position: relative;
 
-                margin: 59px -14px 0;
+            width: 100%;
+            & > div {
+                display: flex;
+                height: 0px;
+                opacity: 0;
+                overflow: hidden;
+
+                transition: .8s ease;
+                &.active {
+                    opacity: 1;
+                    height: auto;
+                }
+            }
+            
+            .cards {
+                flex-direction: column;
+
+                margin: 59px 0 110px;
 
                 .card {
-                    margin: 0 14px;
+                    display: flex;
+                    
+                    min-height: 250px;
+
                     padding: 40px 30px;
                     border-radius: $border-radius;
 
                     background-color: #fff;
-                    h4 {
-                        color: $black;
+
+                    &__info {
+                        display: flex;
+                        flex-direction: column;
+
+                        width: 75%;
+
+                        margin-left: 20px;
+
+                        h4 {
+                            min-height: 32px;
+                            margin: 0;
+                            
+                            color: $black;
+                            line-height: 1.3;
+                        }
+                        p {
+                            display: flex;
+                            align-items: center;
+
+                            margin: 19px 0 0;
+                            font-size: $fz-14px;
+                            line-height: 1.29;
+                            height: 110px;
+                        }
                     }
-                    p {
-                        font-size: $fz-14px;
-                        line-height: 1.29;
+                    &__image {
+                        width: 52px;
+                        height: 52px;
+
+                        svg {
+                            max-width: 100%;
+                            object-fit: cover;
+                        }
                     }
                 }
             }   
         }
+    }
+    
+    .owl-theme .owl-nav.disabled + .owl-dots {
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 24px);
     }
 }

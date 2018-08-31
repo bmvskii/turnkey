@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Likimap</title>
+  <title>AvezorSoftware Blockchain</title>
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
   <link rel="stylesheet" href="./styles/index.css">
+
 </head>
 <body>
     <header class="header-wrapper">
@@ -21,13 +25,25 @@
     <section class="hero-wrapper">
       <div class="container hero">
         <div class="hero__left">
-          <div class="slider">
-            <div class="slide__item">
+          <div class="owl-carousel owl-theme slider">
+            <div class='slider__item'>
               <h2>BLOCKCHAIN DEVELOPMENT</h2>
               <p>Smart contracts, private blockchains, identity management - we provide you all opportunities of blockchain development.</p>
-            </div>   
+            </div>
+            <div class='slider__item'>
+              <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, dolor!</h2>
+              <p>Smart contracts, private blockchains, identity management - we provide you all opportunities of blockchain development.</p>
+            </div>
+            <div class='slider__item'>
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <p>Smart contracts, private blockchains, identity management - we provide you all opportunities of blockchain development.</p>
+            </div>
+            <div class='slider__item'>
+              <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+              <p>Smart contracts, private blockchains, identity management - we provide you all opportunities of blockchain development.</p>
+            </div>    
           </div>
-          <a href="">Scroll down</a>
+          <a href="#down">Scroll down</a>
         </div>
         <div class="hero__right"></div>
       </div>
@@ -48,64 +64,231 @@
         <h2>Our proposals</h2>
         <div class="tabs">
           <div class="tab active"><h3>Industries</h3></div>
-          <div class="tab"><h3>Services</h3></div>
+          <div class="tab "><h3>Services</h3></div>
           <div class="tab"><h3>Solutions</h3></div>
         </div>
         <div class="tab-content">
-          <div class="slider">
-            <div class="cards">
-              <div class="card">
-                <div class="card__image"></div>
-                <div class="card__info">
-                  <h4>FINANCE AND BANKING</h4>
-                  <p>Use the blockchain tech and involve clients with absolute security of their funds.</p>
-                </div>
+          <div class="active">
+            <div class="owl-carousel owl-theme cards">
+            <div class="card">
+              <div class="card__image">
+                <img src="./images/industries/finance.svg" alt="finance and banking">
               </div>
-              <div class="card">
-                <div class="card__image"></div>
-                <div class="card__info">
-                  <h4>FINANCE AND BANKING</h4>
-                  <p>Use the blockchain tech and involve clients with absolute security of their funds.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card__image"></div>
-                <div class="card__info">
-                  <h4>FINANCE AND BANKING</h4>
-                  <p>Use the blockchain tech and involve clients with absolute security of their funds.</p>
-                </div>
+              <div class="card__info">
+                <h4>FINANCE AND BANKING</h4>
+                <p>Use the blockchain tech and involve clients with absolute security of their funds.</p>
               </div>
             </div>
-          </div>
-          <!-- <div class="slider">
-              <div class="cards">
-                <div class="card">
-                  <div class="card__image"></div>
-                  <div class="card__info">
-                    <h4></h4>
-                    <p></p>
-                  </div>
-                </div>
-                <div class="card"></div>
-                <div class="card"></div>
+            <div class="card">
+              <div class="card__image"> 
+              <img src="./images/industries/cloud storage.svg" alt="cloud storage">   
               </div>
-          </div>
-          <div class="slider">
-              <div class="cards">
-                <div class="card">
-                  <div class="card__image"></div>
-                  <div class="card__info">
-                    <h4></h4>
-                    <p></p>
-                  </div>
-                </div>
-                <div class="card"></div>
-                <div class="card"></div>
+              <div class="card__info">
+                <h4>Сloud storage</h4>
+                <p>Decentralized data storage ensures reliability and confidentiality of information.</p>
               </div>
-            </div> -->
+            </div>
+            <div class="card">
+                <div class="card__image">
+                <img src="./images/industries/cryptocurrency.svg" alt="cryptocurrency">                     
+                </div>
+                <div class="card__info">
+                  <h4>Cryptocurrency</h4>
+                  <p>Start your own altcoin, run cryptocurrency exchange or crypto exchange office.</p>
+                </div>
+            </div>
+            <div class="card">
+              <div class="card__image">
+              <img src="./images/industries/logistics.svg" alt="logistics">  
+              </div>
+              <div class="card__info">
+                <h4>Logistics</h4>
+                <p>Automate your processes to speed up service and delivery.</p>
+              </div>
+            </div>    
+            <div class="card">
+              <div class="card__image">
+               <img src="./images/industries/goverment.svg" alt="goverment agency"> 
+              </div>
+              <div class="card__info">
+                <h4>Government agency</h4>
+                <p>Simplify access to public services by making it transparent for every citizen.</p>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card__image">
+                 <img src="./images/industries/media.svg" alt="media and distribution content"> 
+                </div>
+                <div class="card__info">
+                  <h4>Media and distribution content</h4>
+                  <p>Establish new rules for accessing, storing and distributing media resources.</p>
+                </div>
+            </div>
+            </div>
+          </div>
+          <div>
+            <div class="owl-carousel owl-theme cards ">
+            <div class="card">
+              <div class="card__image">
+                <img src="./images/services/block_dev.svg" alt="blochain development logo">                      
+              </div>
+              <div class="card__info">
+                <h4>BLOCKCHAIN DEVELOPMENT</h4>
+                <p>Smart contracts, private blockchains, identity management - we provide you all opportunities of blockchain development</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__image">
+                <img src="./images/services/dev_team.svg" alt="developer team">      
+              </div>
+              <div class="card__info">
+                <h4>EXPERIENCED DEVELOPMENT TEAMS</h4>
+                <p>Place an order with experienced developers. Realize your breakthrough ideas in the field of blockchain</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__image">
+                <img src="./images/services/block_enterprise.svg" alt="blochain development enterprise">   
+              </div>
+              <div class="card__info">
+                <h4>BLOCKCHAIN DEVELOPMENT ENTERPRISE</h4>
+                <p>Protect your customers with emerging technologies. Be the safest company for each of your clients.</p>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div>
+            <div class="owl-carousel owl-theme cards ">
+            <div class="card">
+              <div class="card__image">
+               <img src="./images/solutions/pub_priv.svg" alt="public and private blockchain development"> 
+              </div>
+              <div class="card__info">
+                <h4>PUBLIC AND PRIVATE BLOCKCHAINS</h4>
+                <p>Choose public blockchain if your network is completely open and
+                    anyone can join and participate in it or private blockchain if you set up
+                    a permissioned network and set limits for those who is allowed to
+                    participate in the network.
+                    </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__image">
+               <img src="./images/solutions/dist_app.svg" alt="distributed applications"> 
+              </div>
+              <div class="card__info">
+                <h4>DISTRIBUTED APPLICATIONS (DAPPS)</h4>
+                <p>The App has crypto-tokens, digital assets for self-fueling and uses blockchain-like cryptographic
+                    technology. Generates tokens and has an inbuilt consensus mechanism.</p>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card__image">
+                 <img src="./images/solutions/smart.svg" alt="smart contracts development"> 
+                </div>
+                <div class="card__info">
+                  <h4>SMART CONTRACTS DEVELOPMENT
+                    </h4>
+                  <p>Smart contracts help you to exchange money, property, shares, or anything of value in a
+                      transparent, conflict-free way.</p>
+                </div>
+            </div>
+            <div class="card">
+              <div class="card__image">
+              <img src="./images/solutions/compliance.svg" alt="aml/kyc compliance">  
+              </div>
+              <div class="card__info">
+                <h4>AML/KYC COMPLIANCE</h4>
+                <p>Ward off the transformation of the profit from illegal activities into the proceeds from lawful
+                    sources. Gather the information about clients/customers, having verified their identities
+                    </p>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card__image">
+                <img src="./images/solutions/wallets_exchanges.svg" alt="wallets and exchanges">  
+                </div>
+                <div class="card__info">
+                  <h4>CRYPTOCURRENCIES, WALLETS AND EXCHANGES</h4>
+                  <p>Create and run your own cryptocurrency exchange, a crypto exchange office with the support of
+                      all the types of cryptocurrencies, digital money and conventional methods of bank payment.</p>
+                </div>
+            </div>
+            <div class="card">
+              <div class="card__image">
+              <img src="./images/solutions/hard_forks.svg" alt="cryptocurrency hard-forks">  
+              </div>
+              <div class="card__info">
+                <h4>CRYPTOCURRENCY HARD-FORKS</h4>
+                <p>A hard fork can be implemented to correct security risks represented in previous versions of the
+                    blockchain, to add new functionality, or to reverse transactions hack on the DAO.</p>
+              </div>
+            </div>   
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <section class="explorers-wrapper">
+      <div class="container explorers">
+        <div class="explorers__left">
+          <h2>THESE COMPANIES EXPLORE BLOCKCHAIN. WHAT ABOUT YOURS?</h2>
+          <button class="btn btn-blue">Talk to our team</button>
+        </div>
+        <div class="explorers__right">
+          <div class="companies">
+            <div class="company">
+              <img src="./images/companies/facebook.svg" alt="facebook">           
+            </div>
+            <div class="company">
+              <img src="./images/companies/allianz.svg" alt="allianz">
+            </div>
+            <div class="company">
+              <img src="./images/companies/toyota.svg" alt="toyota">
+            </div>
+            <div class="company">
+              <img src="./images/companies/walmart.svg" alt="walmart"> 
+            </div>
+            <div class="company">
+              <img src="./images/companies/disney.svg" alt="disney">
+            </div>
+            <div class="company">
+              <img src="./images/companies/apple.svg" alt="apple">
+            </div>
+          </div>
+        </div>  
+      </div>
+    </section>
+
+    <section class="contact-wrapper">
+      <div class="container contact">
+        <div class="contact__left">
+          <h2>Work with us</h2>
+          <button class="btn btn-white">Contact</button>
+        </div>
+        <div class="contact__right">
+          <address class="address">
+            <span>Phone</span>
+            <span class="address__info">+1 (916) 779-4345</span>
+            <span>Email</span>
+            <a class="address__info" href='mailto:info@avezorsoftware.com'>info@avezorsoftware.com</a>
+          </address>
+        </div>
+      </div>
+      
+      <footer class="footer-wrapper">
+          <div class="container">
+            <div class="footer">
+              <span class="logo">Avezor{software}</span>
+              <p class="rights">&copy; 2018 Avezorsoftware</p>
+            </div>  
+          </div>
+        </footer>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

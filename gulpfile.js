@@ -62,7 +62,6 @@ gulp.task('webpack', function (callback) {
   let options = {
     entry: {
       script: './frontend/js/script',
-      mainPage: './frontend/js/mainPage',
       // pageIndex: './frontend/js/page-index'
     },
     output: {

@@ -1,5 +1,8 @@
 * {
   box-sizing: border-box;
+  &::selection {
+    background-color: $red;
+  }
 }
 
 html {
@@ -56,11 +59,17 @@ a:active {
   width: 100%;
 
   margin: 0 auto;
-  padding: 15px;
+  padding: 0 15px;
 }
 
 .btn {
-  padding: 14px 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 174px;
+
+  padding: 14px 0;
 
   font-size: $fz-16px;
   font-family: inherit;
@@ -94,3 +103,18 @@ a:active {
   }
 }
 
+.owl-theme .owl-dots .owl-dot {
+  outline: none;
+  span {
+      transition: .2s ease;
+      background-color: rgba(255,255,255, .2);
+  }
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background-color: #fff;
+}
+
+.owl-carousel {
+  position: static;
+}
