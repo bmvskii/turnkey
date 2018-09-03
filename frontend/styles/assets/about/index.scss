@@ -32,7 +32,40 @@
             }
         }
         &__right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
             width: 44%;
+
+            .cube {
+                width: 70px;
+                height: 81px;
+                
+                position: absolute;
+
+            }
+            .fst {
+                bottom: -4%;
+                left: 18%;
+            }
+
+            .snd {
+                bottom: 90%;
+                right: 25%;
+            }
+
+            .trd {
+                bottom: -3%;
+                right: 20%;
+            }
+            
+            .big {
+                animation: none;
+                width: 257px;
+                height: 296px;
+            }
         }
     }
 }

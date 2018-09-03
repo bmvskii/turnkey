@@ -1,5 +1,5 @@
 .header-wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
 
     width: 100%;
@@ -9,5 +9,25 @@
         align-items: center;
 
         padding-top: 20px;
+        
+        transition: .3s ease;
+        .btn {
+            padding: 7px 0;
+        }
+
+        .logo {
+            fill: #fff;
+            position: relative;
+        }
+    }
+    
+    &.fixed {
+        background-color: #fff;
+        box-shadow: 0 10px 5px rgba(0,0,0,.5);
+        z-index: 900;
+
+        .logo {
+            fill: $gray;
+        }
     }
 }

@@ -12,6 +12,7 @@
         &__left { 
             display:flex;
             flex-direction: column;
+            justify-content: center;
             align-items: flex-start;
 
             width: calc(50% - 1px);

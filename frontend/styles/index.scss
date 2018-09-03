@@ -2,6 +2,7 @@
 @import './global/normalize';
 @import './global/vars';
 @import './global/mixin';
+@import './global/animations';
 
 @import './assets/common.scss';
 
@@ -10,7 +11,9 @@
 @import './assets/hero/index.scss';
 @import './assets/about/index.scss';
 @import './assets/proposals/index.scss';
+@import './assets/services/index.scss';
+@import './assets/tools/index.scss';
 @import './assets/explorers/index.scss';
 @import './assets/contact/index.scss';
-@import './assets/about/index.scss';
 @import './assets/footer/index.scss';
+@import './assets/modal/index.scss';

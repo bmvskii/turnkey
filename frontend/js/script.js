@@ -4,7 +4,8 @@ window.onload = () => {
         items: 1,
         dotsEach: true,
         autoplay: true,
-        rewind: true
+        rewind: true,
+        animateIn: 'slideInLeft',
     });
 
     $('.proposals .owl-carousel').owlCarousel({
@@ -13,6 +14,18 @@ window.onload = () => {
         items: 3
     });
     
+    let page = $('html, body');
+    let scrollDownTrigger = $('.toDown');
+    let scrollTimeInMs = 800;
+
+    $(scrollDownTrigger).click(function() {
+        page.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top,
+
+        }, scrollTimeInMs);
+        return false;
+    });
+
     let tabs = document.querySelectorAll('.proposals .tab');
     tabs.forEach(tab => {
         tab.addEventListener('click', (e) => {
@@ -43,5 +56,27 @@ window.onload = () => {
             
             cards[tabPosition].classList.add('active');
         });
+    });
+
+    let modalTriggerButtons = document.querySelectorAll('.modal-trigger');
+    modalTriggerButtons.forEach(mtb => {
+        mtb.addEventListener('click', () => {
+            document.getElementById('modal-window').classList.add('active');
+        });
+    });
+
+    let modalWindow = document.getElementById('modal-window');
+    modalWindow.addEventListener('click', (e) => {
+        if (e.target.classList.contains('close')) {
+            e.target.classList.add('clicked');
+            
+            let elem = e.currentTarget;
+            let transitionTime = 500;
+
+            setTimeout((elem) => {
+                e.target.classList.remove('clicked');
+                elem.classList.remove('active');
+            }, transitionTime, elem);
+        }
     });
 };

@@ -10,15 +10,77 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
   <link rel="stylesheet" href="./styles/index.css">
 
 </head>
 <body>
-    <header class="header-wrapper">
+    <header class="header-wrapper fixed">
       <div class="container header">
-        <span class="logo">Avezor{software}</span>
-        <button class="btn btn-white">Get in touch</button>
+        <svg version="1.1" class='logo' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 477 54" style="enable-background:new 0 0 477 54;" xml:space="preserve">
+        <g id="Color_on_white">
+        </g>
+        <g id="Color_on_black">
+          <g>
+            <g>
+              <path class="st0" d="M28.8,43.5h-8v-2.8c-1.1,1.1-2.2,1.9-3.4,2.4c-1.2,0.5-2.7,0.7-4.5,0.7c-3.6,0-6.3-0.9-8.2-2.8
+                c-1.8-1.8-2.6-4.2-2.6-7.2c0-2.7,0.9-4.9,2.8-6.7c1.9-1.7,4.6-2.6,8.2-2.6h7.6v-1.6c0-1.8-0.5-3-1.4-3.8s-2.5-1.2-4.6-1.2
+                c-2.5,0-4.6,0.9-6.2,2.8l-5-5c1.6-1.7,3.2-2.9,4.9-3.6c1.7-0.7,3.9-1,6.6-1c9.1,0,13.7,3.8,13.7,11.3L28.8,43.5L28.8,43.5z
+                M20.8,32.2v-1.7h-5.9c-3.1,0-4.6,1.2-4.6,3.6c0,2.4,1.6,3.5,4.7,3.5c2,0,3.6-0.5,4.6-1.5C20.4,35.5,20.8,34.1,20.8,32.2z"/>
+              <path class="st0" d="M61.5,12.5l-11.4,31H44l-11.4-31h8.2l6.3,19.2l6.2-19.2H61.5z"/>
+              <path class="st0" d="M90.8,30.5H71.3c0,2.1,0.6,3.8,1.8,5c1.2,1.3,2.9,1.9,5,1.9c1.6,0,2.9-0.2,3.9-0.7s2.1-1.2,3.1-2.3l4.7,4.6
+                c-1.7,1.7-3.4,3-5.2,3.8c-1.8,0.8-4,1.2-6.7,1.2c-2,0-3.8-0.3-5.4-0.8s-3.1-1.3-4.5-2.5s-2.5-2.8-3.3-5c-0.8-2.2-1.2-4.8-1.2-7.8
+                c0-5,1.2-8.9,3.7-11.7S73,12,77.1,12c4.3,0,7.6,1.4,10,4.2s3.6,6.4,3.6,11L90.8,30.5L90.8,30.5z M83.6,24.5
+                c0-1.4-0.3-2.5-0.7-3.4c-1-2.2-2.7-3.2-5.2-3.2s-4.3,1.1-5.2,3.2c-0.4,0.9-0.7,2-0.7,3.4H83.6z"/>
+              <path class="st0" d="M119.8,43.5h-23v-5.9l13.7-18.1H96.8v-7h23v5.8l-14,18.2h14V43.5z"/>
+              <path class="st0" d="M152.3,27.8c0,3-0.3,5.4-0.8,7.3c-0.5,1.9-1.4,3.5-2.8,4.9c-2.5,2.6-5.7,3.8-9.7,3.8s-7.2-1.3-9.7-3.8
+                c-1.4-1.4-2.3-3.1-2.8-5s-0.8-4.3-0.8-7.2c0-3,0.2-5.4,0.8-7.2c0.5-1.8,1.4-3.5,2.8-4.9c2.5-2.6,5.7-3.8,9.7-3.8
+                c4.1,0,7.3,1.3,9.7,3.8c1.4,1.4,2.3,3.1,2.8,4.9C152.1,22.5,152.3,24.9,152.3,27.8z M144.5,27.8c0-3.9-0.6-6.4-1.8-7.6
+                c-0.9-0.9-2.1-1.4-3.7-1.4c-1.5,0-2.7,0.5-3.6,1.4c-1.2,1.2-1.8,3.7-1.8,7.6s0.6,6.5,1.8,7.6c0.9,0.9,2.1,1.4,3.6,1.4
+                s2.7-0.5,3.7-1.4C143.9,34.3,144.5,31.7,144.5,27.8z"/>
+              <path class="st0" d="M182.6,14.8l-5.9,5.9c-1.2-1.2-2.6-1.9-4.1-1.9c-1.3,0-2.5,0.5-3.5,1.5s-1.3,4.3-1.3,4.3v18.9h-8v-31h7v2.7
+                c1.4-1,2.5-1.8,3.9-2.4s2.9-1,4.5-1C178.2,11.9,180.7,12.8,182.6,14.8z"/>
+            </g>
+            <path class="st0" d="M207.8,53.5h-6.6c-3,0-5.3-0.7-6.8-2.2c-1.7-1.7-2.6-3.8-2.6-6.6v-8.6c0-1.7-0.3-2.9-1-3.5
+              c-0.8-0.7-1.8-1.1-3.2-1.1h-2.8v-7h2.8c1.3,0,2.4-0.4,3.2-1.1c0.7-0.7,1-1.9,1-3.5v-8.6c0-2.7,0.9-4.9,2.6-6.6
+              c1.5-1.5,3.8-2.2,6.8-2.2h6.6v7h-3.4c-1.8,0-3,0.3-3.6,0.8c-0.7,0.7-1,2-1,3.8v7.6c0,1.3-0.3,2.4-0.8,3.3
+              c-0.6,0.9-1.1,1.5-1.6,1.8s-1.2,0.6-2,0.9c0.8,0.3,1.5,0.6,2,0.9s1,0.9,1.6,1.8c0.5,0.9,0.8,2,0.8,3.3v8.1c0,1.9,0.3,3.2,1,3.8
+              c0.6,0.6,1.8,0.8,3.6,0.8h3.4V53.5z"/>
+            <path class="st0" d="M238,34.4c0,3.3-1.2,5.8-3.7,7.6c-2.5,1.7-5.7,2.6-9.5,2.6c-2.9,0-5.4-0.3-7.4-0.9c-2.1-0.6-4-1.8-5.9-3.6
+              l5.1-5.1c1.9,2,4.7,2.9,8.3,2.9c1.5,0,2.8-0.3,3.9-0.8s1.6-1.4,1.6-2.4c0-1.7-1.1-2.7-3.3-2.9l-5-0.5c-6-0.6-9-3.5-9-8.8
+              c0-3.1,1.2-5.6,3.5-7.3c2.3-1.8,5.2-2.6,8.5-2.6c5.3,0,9.3,1.2,11.9,3.7l-4.8,4.9c-1.6-1.4-4-2.1-7.3-2.1c-1.5,0-2.6,0.3-3.3,0.9
+              s-1.1,1.3-1.1,2.1c0,1.6,1.1,2.5,3.2,2.7l4.9,0.5C234.9,25.8,238,28.8,238,34.4z"/>
+            <path class="st0" d="M269.7,28.5c0,3-0.3,5.4-0.8,7.3c-0.5,1.9-1.4,3.5-2.8,4.9c-2.5,2.6-5.7,3.8-9.7,3.8s-7.2-1.3-9.7-3.8
+              c-1.4-1.4-2.3-3.1-2.8-5s-0.8-4.3-0.8-7.2c0-3,0.2-5.4,0.8-7.2c0.5-1.8,1.4-3.5,2.8-4.9c2.5-2.6,5.7-3.8,9.7-3.8
+              c4.1,0,7.3,1.3,9.7,3.8c1.4,1.4,2.3,3.1,2.8,4.9C269.5,23.2,269.7,25.6,269.7,28.5z M261.9,28.5c0-3.9-0.6-6.4-1.8-7.6
+              c-0.9-0.9-2.1-1.4-3.7-1.4c-1.5,0-2.7,0.5-3.6,1.4c-1.2,1.2-1.8,3.7-1.8,7.6s0.6,6.5,1.8,7.6c0.9,0.9,2.1,1.4,3.6,1.4
+              s2.7-0.5,3.7-1.4C261.3,35,261.9,32.5,261.9,28.5z"/>
+            <path class="st0" d="M291.8,19.5h-6v24h-8v-24h-3v-6h3V9.6c0-2.5,0.7-4.6,2.2-6.4c1.4-1.8,3.5-2.7,6.3-2.7h5.6v7h-3.2
+              c-1.9,0-2.8,1-2.8,3v3h6v6H291.8z"/>
+            <path class="st0" d="M311.8,44.5h-4.9c-3,0-5.2-0.9-6.8-2.6c-1.5-1.8-2.3-3.9-2.3-6.3V19.5h-3v-6h3v-9h8v9h6v6h-6v15
+              c0,2,1,3,2.9,3h3.1L311.8,44.5L311.8,44.5z"/>
+            <path class="st0" d="M359.5,13.5l-9.5,31h-6.4L337.2,25l-6.5,19.5h-6.4l-9.5-31h8.2l5,19.2l6.3-19.2h5.7l6.4,19.2l5-19.2H359.5z"
+              />
+            <path class="st0" d="M387.8,44.5h-8v-2.8c-1.1,1.1-2.2,1.9-3.4,2.4c-1.2,0.5-2.7,0.7-4.5,0.7c-3.6,0-6.3-0.9-8.2-2.8
+              c-1.8-1.8-2.6-4.2-2.6-7.2c0-2.7,0.9-4.9,2.8-6.7c1.9-1.7,4.6-2.6,8.2-2.6h7.6v-1.6c0-1.8-0.5-3-1.4-3.8s-2.5-1.2-4.6-1.2
+              c-2.5,0-4.6,0.9-6.2,2.8l-5-5c1.6-1.7,3.2-2.9,4.9-3.6c1.7-0.7,3.9-1,6.6-1c9.1,0,13.7,3.8,13.7,11.3v21.1H387.8z M379.8,33.2
+              v-1.7h-5.9c-3.1,0-4.6,1.2-4.6,3.6c0,2.4,1.6,3.5,4.7,3.5c2,0,3.6-0.5,4.6-1.5C379.4,36.5,379.8,35.1,379.8,33.2z"/>
+            <path class="st0" d="M418.9,15.5l-5.9,5.9c-1.2-1.2-2.6-1.9-4.1-1.9c-1.3,0-2.5,0.5-3.5,1.5s-1.5,4.3-1.5,4.3v19.1h-8v-31h7v2.4
+              c1.6-1,2.7-1.8,4.2-2.4c1.4-0.6,2.9-1,4.5-1C414.5,12.6,417,13.6,418.9,15.5z"/>
+            <path class="st0" d="M446.8,31.5h-19.6c0,2.1,0.6,3.8,1.8,5c1.2,1.3,2.9,1.9,5,1.9c1.6,0,2.9-0.2,3.9-0.7s2.1-1.2,3.2-2.3l4.7,4.6
+              c-1.7,1.7-3.4,3-5.2,3.8c-1.8,0.8-4,1.2-6.7,1.2c-2,0-3.8-0.3-5.4-0.8s-3.1-1.3-4.5-2.5s-2.5-2.8-3.3-5s-1.2-4.8-1.2-7.8
+              c0-5,1.2-8.9,3.7-11.7s5.8-4.2,9.9-4.2c4.3,0,7.6,1.4,10,4.2s3.6,6.4,3.6,11v3.3H446.8z M439.6,25.5c0-1.4-0.3-2.5-0.7-3.4
+              c-1-2.2-2.7-3.2-5.2-3.2s-4.3,1.1-5.2,3.2c-0.4,0.9-0.7,2-0.7,3.4H439.6z"/>
+            <path class="st0" d="M474.8,31.5h-3c-1.3,0-2.3,0.4-3,1.1c-0.7,0.7-1,1.9-1,3.5v8.6c0,2.7-0.8,4.9-2.5,6.6
+              c-1.4,1.5-3.6,2.2-6.6,2.2h-6v-7h3.4c1.8,0,3-0.3,3.6-0.8c0.7-0.7,1-2,1-3.9v-8.2c0-1.3,0.3-2.5,0.8-3.4s1.1-1.5,1.6-1.8
+              s1.2-0.6,2-0.9c-0.8-0.3-1.5-0.6-2-0.9s-1-0.9-1.6-1.8s-0.8-2-0.8-3.4v-8.2c0-1.9-0.3-3.2-1-3.9c-0.6-0.6-1.8-0.9-3.6-0.9h-3.4v-6
+              h5.9c3-0.5,5.2,0.3,6.7,1.8c1.7,1.7,2.4,6.7,2.4,6.7v8.8c0,1.7,0.3,2.9,1,3.6c0.8,0.8,1.8,1.1,3.2,1.1h2.8v7.1H474.8z"/>
+          </g>
+        </g>
+        </svg>
+        <button class="btn btn-white modal-trigger">Get in touch</button>
       </div>
     </header>
 
@@ -31,31 +93,53 @@
               <p>Smart contracts, private blockchains, identity management - we provide you all opportunities of blockchain development.</p>
             </div>
             <div class='slider__item'>
-              <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, dolor!</h2>
-              <p>Smart contracts, private blockchains, identity management - we provide you all opportunities of blockchain development.</p>
+              <h2>EXPERIENCED
+                  DEVELOPMENT TEAMS
+                  </h2>
+              <p>Place an order with experienced developers.
+                  Implement your breakthrough ideas in the field of
+                  blockchain
+                  </p>
             </div>
             <div class='slider__item'>
-              <h2>Lorem ipsum dolor sit amet.</h2>
-              <p>Smart contracts, private blockchains, identity management - we provide you all opportunities of blockchain development.</p>
+              <h2>BLOCKCHAIN 
+                  DEVELOPMENT ENTERPRISE</h2>
+              <p>Protect your customers with the emerging technologies.
+                  Be the safest company for each of your clients.
+                  </p>
             </div>
-            <div class='slider__item'>
-              <h2>Lorem ipsum dolor sit amet consectetur.</h2>
-              <p>Smart contracts, private blockchains, identity management - we provide you all opportunities of blockchain development.</p>
-            </div>    
+            
           </div>
-          <a href="#down">Scroll down</a>
+          <a href="#down" class="toDown">Scroll down</a>
         </div>
-        <div class="hero__right"></div>
+        <div class="hero__right">
+          <img class="main-elem" src="./images/hero/main-comp.svg" alt="main-comp">
+          <img src="./images/hero/cube.svg" alt="cube" class="cube fst">
+          <img src="./images/hero/cube.svg" alt="cube" class="cube snd">
+          <img src="./images/hero/cube.svg" alt="cube" class="cube trd">
+          <img src="./images/hero/cube.svg" alt="cube" class="cube fth">
+          <img src="./images/hero/cube.svg" alt="cube" class="cube fif">
+          <img src="./images/hero/cube.svg" alt="cube" class="cube six">
+        </div>
       </div>
     </section>
 
-    <section class="about-wrapper">
+    <section class="about-wrapper" id="down">
       <div class="container about">
         <div class="about__left">
           <h1>ABOUT COMPANY</h1>
-          <p>Avezor Software is one of the few companies that develops complex solutions for blockchain services. Since 2012 we have been introducing new standards of private blockchains for business use. We appreciate the trust of companies that have become better with us.</p>
+          <p>Avezor Software is one of а few companies that develop
+              complex solutions for blockchain services. Since 2012 we have
+              introduced new standards of private blockchains for business
+              purposes. We appreciate the credibility and reliance from the
+              companies we collaborate with.</p>
         </div>
-        <div class="about__right"></div>
+        <div class="about__right">
+          <img class="cube big" src="./images/services/cube.svg" alt="cube">
+          <img class="cube fst" src="./images/services/cube.svg" alt="cube">
+          <img class="cube snd" src="./images/services/cube.svg" alt="cube">
+          <img class="cube trd" src="./images/services/cube.svg" alt="cube">
+        </div>
       </div>
     </section>
 
@@ -68,91 +152,91 @@
           <div class="tab"><h3>Solutions</h3></div>
         </div>
         <div class="tab-content">
-          <div class="active">
+          <div >
             <div class="owl-carousel owl-theme cards">
-            <div class="card">
-              <div class="card__image">
-                <img src="./images/industries/finance.svg" alt="finance and banking">
-              </div>
-              <div class="card__info">
-                <h4>FINANCE AND BANKING</h4>
-                <p>Use the blockchain tech and involve clients with absolute security of their funds.</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card__image"> 
-              <img src="./images/industries/cloud storage.svg" alt="cloud storage">   
-              </div>
-              <div class="card__info">
-                <h4>Сloud storage</h4>
-                <p>Decentralized data storage ensures reliability and confidentiality of information.</p>
-              </div>
-            </div>
-            <div class="card">
+              <div class="card">
                 <div class="card__image">
-                <img src="./images/industries/cryptocurrency.svg" alt="cryptocurrency">                     
+                  <img src="./images/proposals/industries/finance.svg" alt="finance and banking">
                 </div>
                 <div class="card__info">
-                  <h4>Cryptocurrency</h4>
-                  <p>Start your own altcoin, run cryptocurrency exchange or crypto exchange office.</p>
+                  <h4>FINANCE AND BANKING</h4>
+                  <p>Use the blockchain tech and involve clients with absolute security of their funds.</p>
                 </div>
-            </div>
-            <div class="card">
-              <div class="card__image">
-              <img src="./images/industries/logistics.svg" alt="logistics">  
               </div>
-              <div class="card__info">
-                <h4>Logistics</h4>
-                <p>Automate your processes to speed up service and delivery.</p>
-              </div>
-            </div>    
-            <div class="card">
-              <div class="card__image">
-               <img src="./images/industries/goverment.svg" alt="goverment agency"> 
-              </div>
-              <div class="card__info">
-                <h4>Government agency</h4>
-                <p>Simplify access to public services by making it transparent for every citizen.</p>
-              </div>
-            </div>
-            <div class="card">
-                <div class="card__image">
-                 <img src="./images/industries/media.svg" alt="media and distribution content"> 
+              <div class="card">
+                <div class="card__image"> 
+                <img src="./images/proposals/industries/cloud storage.svg" alt="cloud storage">   
                 </div>
                 <div class="card__info">
-                  <h4>Media and distribution content</h4>
-                  <p>Establish new rules for accessing, storing and distributing media resources.</p>
+                  <h4>Сloud storage</h4>
+                  <p>Decentralized data storage ensures reliability and confidentiality of information.</p>
                 </div>
-            </div>
+              </div>
+              <div class="card">
+                  <div class="card__image">
+                  <img src="./images/proposals/industries/cryptocurrency.svg" alt="cryptocurrency">                     
+                  </div>
+                  <div class="card__info">
+                    <h4>Cryptocurrency</h4>
+                    <p>Start your own altcoin, run cryptocurrency exchange or crypto exchange office.</p>
+                  </div>
+              </div>
+              <div class="card">
+                <div class="card__image">
+                <img src="./images/proposals/industries/logistics.svg" alt="logistics">  
+                </div>
+                <div class="card__info">
+                  <h4>Logistics</h4>
+                  <p>Automate your processes to speed up service and delivery.</p>
+                </div>
+              </div>    
+              <div class="card">
+                <div class="card__image">
+                <img src="./images/proposals/industries/goverment.svg" alt="goverment agency"> 
+                </div>
+                <div class="card__info">
+                  <h4>Government agency</h4>
+                  <p>Simplify access to public services by making it transparent for every citizen.</p>
+                </div>
+              </div>
+              <div class="card">
+                  <div class="card__image">
+                  <img src="./images/proposals/industries/media.svg" alt="media and distribution content"> 
+                  </div>
+                  <div class="card__info">
+                    <h4>Media and distribution content</h4>
+                    <p>Establish new rules for accessing, storing and distributing media resources.</p>
+                  </div>
+              </div>
             </div>
           </div>
-          <div>
+          <div class="active">
             <div class="owl-carousel owl-theme cards ">
             <div class="card">
               <div class="card__image">
-                <img src="./images/services/block_dev.svg" alt="blochain development logo">                      
+                <img src="./images/proposals/services/block_dev.svg" alt="blochain development logo">                      
               </div>
               <div class="card__info">
                 <h4>BLOCKCHAIN DEVELOPMENT</h4>
-                <p>Smart contracts, private blockchains, identity management - we provide you all opportunities of blockchain development</p>
+                <p>Smart contracts, private blockchains, identity management - we suggest you all opportunities of blockchain development</p>
               </div>
             </div>
             <div class="card">
               <div class="card__image">
-                <img src="./images/services/dev_team.svg" alt="developer team">      
+                <img src="./images/proposals/services/team.svg" alt="developer team">      
               </div>
               <div class="card__info">
                 <h4>EXPERIENCED DEVELOPMENT TEAMS</h4>
-                <p>Place an order with experienced developers. Realize your breakthrough ideas in the field of blockchain</p>
+                <p>Place an order with experienced developers. Accomplish your breakthrough ideas in the field of blockchain</p>
               </div>
             </div>
             <div class="card">
               <div class="card__image">
-                <img src="./images/services/block_enterprise.svg" alt="blochain development enterprise">   
+                <img src="./images/proposals/services/block_enterprise.svg" alt="blochain development enterprise">   
               </div>
               <div class="card__info">
                 <h4>BLOCKCHAIN DEVELOPMENT ENTERPRISE</h4>
-                <p>Protect your customers with emerging technologies. Be the safest company for each of your clients.</p>
+                <p>Protect your customers with emerging technologies. Be the safest company for every client.</p>
               </div>
             </div>
             </div>
@@ -161,20 +245,21 @@
             <div class="owl-carousel owl-theme cards ">
             <div class="card">
               <div class="card__image">
-               <img src="./images/solutions/pub_priv.svg" alt="public and private blockchain development"> 
+               <img src="./images/proposals/solutions/pub_priv.svg" alt="public and private blockchain development"> 
               </div>
               <div class="card__info">
                 <h4>PUBLIC AND PRIVATE BLOCKCHAINS</h4>
-                <p>Choose public blockchain if your network is completely open and
-                    anyone can join and participate in it or private blockchain if you set up
-                    a permissioned network and set limits for those who is allowed to
-                    participate in the network.
+                <p>Use a public blockchain if your network is completely
+                    open and anyone can join it or take advantage of a
+                    private blockchain if you set up a premised network
+                    and set up restrictions and limitations for the network
+                    participants.                    
                     </p>
               </div>
             </div>
             <div class="card">
               <div class="card__image">
-               <img src="./images/solutions/dist_app.svg" alt="distributed applications"> 
+               <img src="./images/proposals/solutions/dist_app.svg" alt="distributed applications"> 
               </div>
               <div class="card__info">
                 <h4>DISTRIBUTED APPLICATIONS (DAPPS)</h4>
@@ -184,7 +269,7 @@
             </div>
             <div class="card">
                 <div class="card__image">
-                 <img src="./images/solutions/smart.svg" alt="smart contracts development"> 
+                 <img src="./images/proposals/solutions/smart.svg" alt="smart contracts development"> 
                 </div>
                 <div class="card__info">
                   <h4>SMART CONTRACTS DEVELOPMENT
@@ -195,7 +280,7 @@
             </div>
             <div class="card">
               <div class="card__image">
-              <img src="./images/solutions/compliance.svg" alt="aml/kyc compliance">  
+              <img src="./images/proposals/solutions/compliance.svg" alt="aml/kyc compliance">  
               </div>
               <div class="card__info">
                 <h4>AML/KYC COMPLIANCE</h4>
@@ -206,7 +291,7 @@
             </div>
             <div class="card">
                 <div class="card__image">
-                <img src="./images/solutions/wallets_exchanges.svg" alt="wallets and exchanges">  
+                <img src="./images/proposals/solutions/wallets_exchanges.svg" alt="wallets and exchanges">  
                 </div>
                 <div class="card__info">
                   <h4>CRYPTOCURRENCIES, WALLETS AND EXCHANGES</h4>
@@ -216,7 +301,7 @@
             </div>
             <div class="card">
               <div class="card__image">
-              <img src="./images/solutions/hard_forks.svg" alt="cryptocurrency hard-forks">  
+              <img src="./images/proposals/solutions/hard_forks.svg" alt="cryptocurrency hard-forks">  
               </div>
               <div class="card__info">
                 <h4>CRYPTOCURRENCY HARD-FORKS</h4>
@@ -230,11 +315,102 @@
       </div>
     </section>
 
+    <section class="services-wrapper">
+      <div class="container services">
+        <div class="service requirements">
+          <div class="service__image ">
+            <img class="cube" src="./images/services/cube.svg" alt="cube">
+            <img class="illustration" src="./images/services/illustration-1.svg" alt="illustration">
+          </div>
+          <div class="service__info">
+            <h2 data-number="1">GATHERING YOUR REQUIREMENTS</h2>
+            <p>During the first consultation we analyze all your needs. In accordance with them, we form the budget and the terms of the order.</p>
+          </div>
+        </div>
+        <div class="service strategy">
+          <div class="service__image">
+            <img class="cube" src="./images/services/cube.svg" alt="cube">
+            <img class="illustration" src="./images/services/illustration-2.svg" alt="illustration">
+          </div>
+          <div class="service__info">
+            <h2 data-number="2">STRATEGY AND DEVELOPMENT</h2>
+            <p>Our team of blockchain developers analysts, product and tech managers come up with a detailed plan that takes into consideration your present and future business processes. They create the initial solution architecture concept. You will be able to track the development process of your blockchain and every  week closely collaborate with your team .</p>
+          </div>
+        </div>
+        <div class="service commerce">
+          <div class="service__image">
+            <img class="cube" src="./images/services/cube.svg" alt="cube">
+            <img class="illustration" src="./images/services/illustration-3.svg" alt="illustration">
+          </div>
+          <div class="service__info">
+            <h2 data-number="3">COMMENCE AND MAINTENANCE</h2>
+            <p>We start releasing your blockchain in coordination with all your teams, from sales to support. After the release, our quality assurance experts test the system making sure it is ready for production. Finally, we outline support and maintenance processes for your blockchain project to ensure its continuous operation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-wrapper">
+      <div class="container tools">
+        <h2>TOOLS AND TECHNOLOGIES</h2>
+        <div class="techs">
+          <div class="tech">
+            <figure>
+              <div class="img-wrapper">
+                <img src="./images/tools/nxt.png" alt="nxt">
+              </div>
+              <figcaption>NXT</figcaption>
+            </figure>
+          </div>
+          <div class="tech">
+            <figure>
+              <div class="img-wrapper">
+                <img src="./images/tools/hyperledger.png" alt="hyperledger">
+              </div>
+              <figcaption>hyperledger</figcaption>
+            </figure>
+          </div>
+          <div class="tech">
+            <figure>
+              <div class="img-wrapper">
+                <img src="./images/tools/r3cev.png" alt="r3">
+              </div>
+              <figcaption>r3</figcaption>
+            </figure>
+          </div>
+          <div class="tech">
+            <figure>
+              <div class="img-wrapper">
+                <img src="./images/tools/eth.png" alt="ethereum">
+              </div>
+              <figcaption>ethereum</figcaption>
+            </figure>
+          </div>
+          <div class="tech">
+            <figure>
+              <div class="img-wrapper">
+                <img src="./images/tools/parity.png" alt="parity">
+              </div>
+              <figcaption>parity</figcaption>
+            </figure>
+          </div>
+          <div class="tech">
+            <figure>
+              <div class="img-wrapper">
+                <img src="./images/tools/exonum.png" alt="exonum">
+              </div>
+              <figcaption>exonum</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="explorers-wrapper">
       <div class="container explorers">
         <div class="explorers__left">
-          <h2>THESE COMPANIES EXPLORE BLOCKCHAIN. WHAT ABOUT YOURS?</h2>
-          <button class="btn btn-blue">Talk to our team</button>
+          <h2>THESE COMPANIES ENJOY BLOCKCHAIN. WHAT ABOUT YOURS?</h2>
+          <button class="btn btn-blue modal-trigger">Talk to our team</button>
         </div>
         <div class="explorers__right">
           <div class="companies">
@@ -265,7 +441,7 @@
       <div class="container contact">
         <div class="contact__left">
           <h2>Work with us</h2>
-          <button class="btn btn-white">Contact</button>
+          <button class="btn btn-white modal-trigger">Contact</button>
         </div>
         <div class="contact__right">
           <address class="address">
@@ -273,6 +449,8 @@
             <span class="address__info">+1 (916) 779-4345</span>
             <span>Email</span>
             <a class="address__info" href='mailto:info@avezorsoftware.com'>info@avezorsoftware.com</a>
+            <span>Location</span>
+            <span class="address__info">629 E Grape St, Vineland, NJ 08360</a>
           </address>
         </div>
       </div>
@@ -280,12 +458,90 @@
       <footer class="footer-wrapper">
           <div class="container">
             <div class="footer">
-              <span class="logo">Avezor{software}</span>
+              <svg version="1.1" class='logo' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 477 54" style="enable-background:new 0 0 477 54;" xml:space="preserve">
+              <style type="text/css">
+                .st0{fill:#FFFFFF;}
+              </style>
+              <g id="Color_on_white">
+              </g>
+              <g id="Color_on_black">
+                <g>
+                  <g>
+                    <path class="st0" d="M28.8,43.5h-8v-2.8c-1.1,1.1-2.2,1.9-3.4,2.4c-1.2,0.5-2.7,0.7-4.5,0.7c-3.6,0-6.3-0.9-8.2-2.8
+                      c-1.8-1.8-2.6-4.2-2.6-7.2c0-2.7,0.9-4.9,2.8-6.7c1.9-1.7,4.6-2.6,8.2-2.6h7.6v-1.6c0-1.8-0.5-3-1.4-3.8s-2.5-1.2-4.6-1.2
+                      c-2.5,0-4.6,0.9-6.2,2.8l-5-5c1.6-1.7,3.2-2.9,4.9-3.6c1.7-0.7,3.9-1,6.6-1c9.1,0,13.7,3.8,13.7,11.3L28.8,43.5L28.8,43.5z
+                        M20.8,32.2v-1.7h-5.9c-3.1,0-4.6,1.2-4.6,3.6c0,2.4,1.6,3.5,4.7,3.5c2,0,3.6-0.5,4.6-1.5C20.4,35.5,20.8,34.1,20.8,32.2z"/>
+                    <path class="st0" d="M61.5,12.5l-11.4,31H44l-11.4-31h8.2l6.3,19.2l6.2-19.2H61.5z"/>
+                    <path class="st0" d="M90.8,30.5H71.3c0,2.1,0.6,3.8,1.8,5c1.2,1.3,2.9,1.9,5,1.9c1.6,0,2.9-0.2,3.9-0.7s2.1-1.2,3.1-2.3l4.7,4.6
+                      c-1.7,1.7-3.4,3-5.2,3.8c-1.8,0.8-4,1.2-6.7,1.2c-2,0-3.8-0.3-5.4-0.8s-3.1-1.3-4.5-2.5s-2.5-2.8-3.3-5c-0.8-2.2-1.2-4.8-1.2-7.8
+                      c0-5,1.2-8.9,3.7-11.7S73,12,77.1,12c4.3,0,7.6,1.4,10,4.2s3.6,6.4,3.6,11L90.8,30.5L90.8,30.5z M83.6,24.5
+                      c0-1.4-0.3-2.5-0.7-3.4c-1-2.2-2.7-3.2-5.2-3.2s-4.3,1.1-5.2,3.2c-0.4,0.9-0.7,2-0.7,3.4H83.6z"/>
+                    <path class="st0" d="M119.8,43.5h-23v-5.9l13.7-18.1H96.8v-7h23v5.8l-14,18.2h14V43.5z"/>
+                    <path class="st0" d="M152.3,27.8c0,3-0.3,5.4-0.8,7.3c-0.5,1.9-1.4,3.5-2.8,4.9c-2.5,2.6-5.7,3.8-9.7,3.8s-7.2-1.3-9.7-3.8
+                      c-1.4-1.4-2.3-3.1-2.8-5s-0.8-4.3-0.8-7.2c0-3,0.2-5.4,0.8-7.2c0.5-1.8,1.4-3.5,2.8-4.9c2.5-2.6,5.7-3.8,9.7-3.8
+                      c4.1,0,7.3,1.3,9.7,3.8c1.4,1.4,2.3,3.1,2.8,4.9C152.1,22.5,152.3,24.9,152.3,27.8z M144.5,27.8c0-3.9-0.6-6.4-1.8-7.6
+                      c-0.9-0.9-2.1-1.4-3.7-1.4c-1.5,0-2.7,0.5-3.6,1.4c-1.2,1.2-1.8,3.7-1.8,7.6s0.6,6.5,1.8,7.6c0.9,0.9,2.1,1.4,3.6,1.4
+                      s2.7-0.5,3.7-1.4C143.9,34.3,144.5,31.7,144.5,27.8z"/>
+                    <path class="st0" d="M182.6,14.8l-5.9,5.9c-1.2-1.2-2.6-1.9-4.1-1.9c-1.3,0-2.5,0.5-3.5,1.5s-1.3,4.3-1.3,4.3v18.9h-8v-31h7v2.7
+                      c1.4-1,2.5-1.8,3.9-2.4s2.9-1,4.5-1C178.2,11.9,180.7,12.8,182.6,14.8z"/>
+                  </g>
+                  <path class="st0" d="M207.8,53.5h-6.6c-3,0-5.3-0.7-6.8-2.2c-1.7-1.7-2.6-3.8-2.6-6.6v-8.6c0-1.7-0.3-2.9-1-3.5
+                    c-0.8-0.7-1.8-1.1-3.2-1.1h-2.8v-7h2.8c1.3,0,2.4-0.4,3.2-1.1c0.7-0.7,1-1.9,1-3.5v-8.6c0-2.7,0.9-4.9,2.6-6.6
+                    c1.5-1.5,3.8-2.2,6.8-2.2h6.6v7h-3.4c-1.8,0-3,0.3-3.6,0.8c-0.7,0.7-1,2-1,3.8v7.6c0,1.3-0.3,2.4-0.8,3.3
+                    c-0.6,0.9-1.1,1.5-1.6,1.8s-1.2,0.6-2,0.9c0.8,0.3,1.5,0.6,2,0.9s1,0.9,1.6,1.8c0.5,0.9,0.8,2,0.8,3.3v8.1c0,1.9,0.3,3.2,1,3.8
+                    c0.6,0.6,1.8,0.8,3.6,0.8h3.4V53.5z"/>
+                  <path class="st0" d="M238,34.4c0,3.3-1.2,5.8-3.7,7.6c-2.5,1.7-5.7,2.6-9.5,2.6c-2.9,0-5.4-0.3-7.4-0.9c-2.1-0.6-4-1.8-5.9-3.6
+                    l5.1-5.1c1.9,2,4.7,2.9,8.3,2.9c1.5,0,2.8-0.3,3.9-0.8s1.6-1.4,1.6-2.4c0-1.7-1.1-2.7-3.3-2.9l-5-0.5c-6-0.6-9-3.5-9-8.8
+                    c0-3.1,1.2-5.6,3.5-7.3c2.3-1.8,5.2-2.6,8.5-2.6c5.3,0,9.3,1.2,11.9,3.7l-4.8,4.9c-1.6-1.4-4-2.1-7.3-2.1c-1.5,0-2.6,0.3-3.3,0.9
+                    s-1.1,1.3-1.1,2.1c0,1.6,1.1,2.5,3.2,2.7l4.9,0.5C234.9,25.8,238,28.8,238,34.4z"/>
+                  <path class="st0" d="M269.7,28.5c0,3-0.3,5.4-0.8,7.3c-0.5,1.9-1.4,3.5-2.8,4.9c-2.5,2.6-5.7,3.8-9.7,3.8s-7.2-1.3-9.7-3.8
+                    c-1.4-1.4-2.3-3.1-2.8-5s-0.8-4.3-0.8-7.2c0-3,0.2-5.4,0.8-7.2c0.5-1.8,1.4-3.5,2.8-4.9c2.5-2.6,5.7-3.8,9.7-3.8
+                    c4.1,0,7.3,1.3,9.7,3.8c1.4,1.4,2.3,3.1,2.8,4.9C269.5,23.2,269.7,25.6,269.7,28.5z M261.9,28.5c0-3.9-0.6-6.4-1.8-7.6
+                    c-0.9-0.9-2.1-1.4-3.7-1.4c-1.5,0-2.7,0.5-3.6,1.4c-1.2,1.2-1.8,3.7-1.8,7.6s0.6,6.5,1.8,7.6c0.9,0.9,2.1,1.4,3.6,1.4
+                    s2.7-0.5,3.7-1.4C261.3,35,261.9,32.5,261.9,28.5z"/>
+                  <path class="st0" d="M291.8,19.5h-6v24h-8v-24h-3v-6h3V9.6c0-2.5,0.7-4.6,2.2-6.4c1.4-1.8,3.5-2.7,6.3-2.7h5.6v7h-3.2
+                    c-1.9,0-2.8,1-2.8,3v3h6v6H291.8z"/>
+                  <path class="st0" d="M311.8,44.5h-4.9c-3,0-5.2-0.9-6.8-2.6c-1.5-1.8-2.3-3.9-2.3-6.3V19.5h-3v-6h3v-9h8v9h6v6h-6v15
+                    c0,2,1,3,2.9,3h3.1L311.8,44.5L311.8,44.5z"/>
+                  <path class="st0" d="M359.5,13.5l-9.5,31h-6.4L337.2,25l-6.5,19.5h-6.4l-9.5-31h8.2l5,19.2l6.3-19.2h5.7l6.4,19.2l5-19.2H359.5z"
+                    />
+                  <path class="st0" d="M387.8,44.5h-8v-2.8c-1.1,1.1-2.2,1.9-3.4,2.4c-1.2,0.5-2.7,0.7-4.5,0.7c-3.6,0-6.3-0.9-8.2-2.8
+                    c-1.8-1.8-2.6-4.2-2.6-7.2c0-2.7,0.9-4.9,2.8-6.7c1.9-1.7,4.6-2.6,8.2-2.6h7.6v-1.6c0-1.8-0.5-3-1.4-3.8s-2.5-1.2-4.6-1.2
+                    c-2.5,0-4.6,0.9-6.2,2.8l-5-5c1.6-1.7,3.2-2.9,4.9-3.6c1.7-0.7,3.9-1,6.6-1c9.1,0,13.7,3.8,13.7,11.3v21.1H387.8z M379.8,33.2
+                    v-1.7h-5.9c-3.1,0-4.6,1.2-4.6,3.6c0,2.4,1.6,3.5,4.7,3.5c2,0,3.6-0.5,4.6-1.5C379.4,36.5,379.8,35.1,379.8,33.2z"/>
+                  <path class="st0" d="M418.9,15.5l-5.9,5.9c-1.2-1.2-2.6-1.9-4.1-1.9c-1.3,0-2.5,0.5-3.5,1.5s-1.5,4.3-1.5,4.3v19.1h-8v-31h7v2.4
+                    c1.6-1,2.7-1.8,4.2-2.4c1.4-0.6,2.9-1,4.5-1C414.5,12.6,417,13.6,418.9,15.5z"/>
+                  <path class="st0" d="M446.8,31.5h-19.6c0,2.1,0.6,3.8,1.8,5c1.2,1.3,2.9,1.9,5,1.9c1.6,0,2.9-0.2,3.9-0.7s2.1-1.2,3.2-2.3l4.7,4.6
+                    c-1.7,1.7-3.4,3-5.2,3.8c-1.8,0.8-4,1.2-6.7,1.2c-2,0-3.8-0.3-5.4-0.8s-3.1-1.3-4.5-2.5s-2.5-2.8-3.3-5s-1.2-4.8-1.2-7.8
+                    c0-5,1.2-8.9,3.7-11.7s5.8-4.2,9.9-4.2c4.3,0,7.6,1.4,10,4.2s3.6,6.4,3.6,11v3.3H446.8z M439.6,25.5c0-1.4-0.3-2.5-0.7-3.4
+                    c-1-2.2-2.7-3.2-5.2-3.2s-4.3,1.1-5.2,3.2c-0.4,0.9-0.7,2-0.7,3.4H439.6z"/>
+                  <path class="st0" d="M474.8,31.5h-3c-1.3,0-2.3,0.4-3,1.1c-0.7,0.7-1,1.9-1,3.5v8.6c0,2.7-0.8,4.9-2.5,6.6
+                    c-1.4,1.5-3.6,2.2-6.6,2.2h-6v-7h3.4c1.8,0,3-0.3,3.6-0.8c0.7-0.7,1-2,1-3.9v-8.2c0-1.3,0.3-2.5,0.8-3.4s1.1-1.5,1.6-1.8
+                    s1.2-0.6,2-0.9c-0.8-0.3-1.5-0.6-2-0.9s-1-0.9-1.6-1.8s-0.8-2-0.8-3.4v-8.2c0-1.9-0.3-3.2-1-3.9c-0.6-0.6-1.8-0.9-3.6-0.9h-3.4v-6
+                    h5.9c3-0.5,5.2,0.3,6.7,1.8c1.7,1.7,2.4,6.7,2.4,6.7v8.8c0,1.7,0.3,2.9,1,3.6c0.8,0.8,1.8,1.1,3.2,1.1h2.8v7.1H474.8z"/>
+                </g>
+              </g>
+              </svg>
               <p class="rights">&copy; 2018 Avezorsoftware</p>
             </div>  
           </div>
         </footer>
     </section>
+
+    <div class="modal" id="modal-window">
+      <div class="modal__content">
+        <h2>Get in touch</h2>
+        <form action="">
+          <input type="text" name="name" placeholder="Name">
+          <input type="text" name="email" placeholder="Email">
+          <input type="text" name="phone" placeholder="Phone">
+          <input type="text" name="message" placeholder="Leave a message">
+          <button class="btn btn-blue">Send a message</button>
+        </form>
+      </div>
+      <button class="close"></button>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

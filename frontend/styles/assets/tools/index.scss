@@ -1,0 +1,54 @@
+.tools-wrapper {
+    @include gradient-bg(50deg, $blue, $red);
+
+    padding: 61px 0;
+
+    .tools {
+        display: flex;
+        flex-direction: column;
+
+        color: #fff;
+        text-align: center;
+        h2 {
+            margin-top: 0;
+        }
+        .techs {
+            display: flex;
+            justify-content: space-between;
+
+            margin-top: 75px;
+            padding: 0 33px;
+            .tech {
+                display: flex;
+                justify-content: center;
+
+                width: 16.6666666667%;
+
+                figure {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    margin: 0;
+
+                    .img-wrapper {
+                        display: flex;
+                        align-items: center;
+
+                        height: 61px;
+                    }
+
+                    figcaption {
+                        margin-top: 56px;
+
+                        text-transform: uppercase;
+
+                        font-size: $fz-18px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}

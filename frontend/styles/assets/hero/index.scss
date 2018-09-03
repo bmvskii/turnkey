@@ -1,16 +1,15 @@
 .hero-wrapper {
-    padding: 186px 0;
+    padding: 92px 0 68px;
 
     @include gradient-bg(50deg, $red, $blue);
     .hero {
         display: flex;
-        align-items: center;
         color: #fff;
        
         &__left {
             display: flex;
             flex-direction: column;    
-            
+            align-self: center;
             width: 50%;
 
             .slider {
@@ -32,7 +31,7 @@
                     opacity: 0;
                     transition: .3s ease;
 
-                    height: 257px;
+                    height: 200px;
                     
                     h2 {
                         margin: 0;
@@ -75,11 +74,87 @@
             }
         }
         &__right {
+            display: flex;
+            justify-content: flex-end;
+            
+            position: relative;
 
+            width: calc(50% - 40px);
+            margin-right: 40px;
+
+            .main-elem {
+                width: 263px;
+                height: 422px;
+
+                // transform-origin: 30% 80%;
+                // animation: scalation 1s alternate infinite;
+            }
+
+            .cube {
+                width: 48px;
+                height: 56px;
+                position: absolute;
+
+                animation: levitate-small 8s alternate infinite ease-in-out;
+            }
+
+            .fst {
+                width: 81px;
+                height: 94px;
+
+                bottom: 0;
+                left: 20%;
+                
+                animation-name: levitate-medium;
+            }
+
+            .snd {
+                width: 70px;
+                height: 81px;
+
+                bottom: -8%;
+                right: -8%;
+                
+                animation-delay: -2s;                
+                animation-name: levitate-medium;
+            }
+
+            .trd {                  
+                width: 257px;
+                height: 296px;
+                
+                bottom: 28%;
+                left: 10%;
+
+                animation-delay: -1s;
+                animation-name: levitate-large;
+            }
+
+            .fth, .fif, .six {
+                width: 48px;
+                height: 56px;
+
+                animation-delay: -3s;
+            }
+
+            .fth {
+                bottom: 20%;
+                right: 0;
+            }
+
+            .six {
+                bottom: 25%;
+                left: 48%;
+            }
+
+            .fif {
+                top: 0;
+                right: 24%;
+            }
         }
     }
     
     .owl-theme .owl-nav.disabled + .owl-dots {
-        margin-bottom: 41px; 
+        margin: 0 0 41px; 
     }
 }
