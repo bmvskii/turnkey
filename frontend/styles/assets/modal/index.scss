@@ -37,36 +37,78 @@
         
             margin-top: 20px;
             
-            input {
-                padding: 17px 1px 9px;
-                margin-top: 40px;
+
+            label {
+                display: flex;
+                position: relative;
+
                 width: 100%;
-
-                outline: none;
-                border: none;
-                border-bottom: 2px solid $gray;
-
-                font-weight: 300;
-                color: $gray;
                 
-                &::placeholder {
+                color: $gray;
+                font-weight: 300;
+
+                span {
+                    position: absolute;
+                    left: 1px;
+                    top: calc(40% + 1em);
+                    
                     transition: .3s ease;
+                    
+                    &.focused {    
+                        top: 20%;
+                        font-size: .8em;
+                    }
+
+                    &.error-box {  
+                        color: $red;  
+                        transform: translateY(33px);
+                        font-size: .8em;
+                    }
                 }
 
-                &:focus {
-                    color: $blue;
-                    border-bottom-color: $blue;
+                input, textarea {
+                    padding: 17px 1px 9px;
+                    margin-top: 20px;
+                    width: 100%;
 
-                    &::placeholder {
-                        color: $blue;    
-                        position: relative;
-    
-                        font-size: .9em;
-                        transform: translateY(-17px);
+                    outline: none;
+                    border: none;
+                    border-bottom: 2px solid $gray;
+                    
+                    
+                    font-weight: 300;
+
+                    &:focus {
+                        color: $blue;
+                        border-bottom-color: $blue;
+                    }       
+                    
+                    &:focus + span {
+                        color: $blue;
                     }
-                }                 
-            }
 
+                    &.error {
+                        border-bottom-color: $red;
+                        & + span {
+                            color: $red;
+                        }
+                    }
+                }
+                
+                textarea {
+                    resize: none;
+                }
+
+                textarea + span {
+                    transform: translateY(8px);
+                }
+
+                &:last-child > span.error-box {
+                    transform: translateY(43px);
+                }
+
+            }
+            
             .btn {
                 margin-top: 59px;
             }
@@ -90,10 +132,14 @@
         background: url('../images/close.svg') no-repeat center center;
         background-size: cover;
 
-        transition: .5s ease;
+        opacity: 1;
+        transition: .3s ease;
+
         &.clicked {
             transform: rotateZ(359deg);
         }
+        &:hover {
+            opacity: .6;
+        }
     }
-
 }

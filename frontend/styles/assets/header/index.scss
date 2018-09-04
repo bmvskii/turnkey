@@ -1,33 +1,54 @@
 .header-wrapper {
     position: fixed;
     top: 0;
+    z-index: 900;
 
     width: 100%;
+    
+    transition: .3s ease;
+    
     .header { 
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        padding-top: 20px;
-        
-        transition: .3s ease;
+        padding: 20px 0;
         .btn {
             padding: 7px 0;
         }
 
         .logo {
-            fill: #fff;
+            .st0 {
+                fill: #fff;
+                transition: .3s ease;
+            }
             position: relative;
+        }
+        .logo-mobile {
+            .cls-1 {
+                fill: #fff;
+                transition: .3s ease;
+            }
         }
     }
     
     &.fixed {
-        background-color: #fff;
-        box-shadow: 0 10px 5px rgba(0,0,0,.5);
-        z-index: 900;
+        background-color: rgba(255,255,255,0.98);
+        box-shadow: 0 2px 5px rgba(0,0,0,.1);
 
-        .logo {
-            fill: $gray;
+        .header {
+            .logo {
+                .st0 {
+                    fill: $gray;
+                }
+            }
+            
+            .logo-mobile {
+                .cls-1 {
+                    fill: $gray;
+                    transition: .3s ease;
+                }
+            }
         }
-    }
+    }   
 }
