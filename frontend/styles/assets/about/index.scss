@@ -47,26 +47,24 @@
 
             }
             .fst {
-                bottom: -4%;
-                left: 18%;
+                z-index: 10000;
+                animation:  cube-1-translate-move 3s infinite ease-in-out;
             }
 
             .snd {
-                bottom: 90%;
-                right: 25%;
-
-                //animation:  cube-2-translate-move 4s backwards;
+                z-index: 10000;
+                animation:  cube-2-translate-move 3s infinite ease-in-out;
             }
 
             .trd {
-                bottom: -3%;
-                right: 20%;
+                //animation: cube-3-translate-move 3s infinite ease-in-out;
             }
             
             .big {
                 width: 257px;
                 height: 296px;
-                animation: levitate-medium 4s alternate infinite ease-in-out;
+
+                // animation: levitate-medium 4s alternate infinite ease-in-out;
             }
         }
     }
