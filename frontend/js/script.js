@@ -238,8 +238,6 @@ window.onload = () => {
         };
     });
 
-    isLoaded = true;
-
     function deactivateErrorBox(elem) {
         let errorBox = elem.parentElement.querySelector('.error-box');
         errorBox.innerHTML = '';

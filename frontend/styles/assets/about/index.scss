@@ -44,27 +44,27 @@
                 height: 81px;
                 
                 position: absolute;
-
             }
             .fst {
-                z-index: 10000;
-                animation:  cube-1-translate-move 3s infinite ease-in-out;
+                z-index: 200;
+                animation:  cube-1-translate-move 6s infinite ease-in-out;
             }
 
             .snd {
-                z-index: 10000;
-                animation:  cube-2-translate-move 3s infinite ease-in-out;
+                z-index: 200;
+                animation:  cube-2-translate-move 6s infinite ease-in-out;
             }
 
             .trd {
-                //animation: cube-3-translate-move 3s infinite ease-in-out;
+                z-index: 200;
+                animation: cube-3-translate-move 6s infinite ease-in-out;
             }
             
             .big {
                 width: 257px;
                 height: 296px;
 
-                // animation: levitate-medium 4s alternate infinite ease-in-out;
+                animation: scale-little 6s alternate infinite ease-in-out;
             }
         }
     }
