@@ -6,10 +6,6 @@
     .container {
       max-width: 992px;
     }
-
-    .services-wrapper .services .service.commerce .cube {
-      left: 21.5%;  
-    }
   }
   
   @media (max-width: 768px) {
@@ -20,11 +16,19 @@
       max-width: 750px;
     }
 
-    .services-wrapper .services .service.commerce .cube {
-      left: 11.5%;
+    .explorers-wrapper {
+      .explorers {
+          &__right {
+              .companies {
+                  .company {
+                      width: 40%;
+                  }
+              }
+          }
+      }
     }
 
-    body .contact-wrapper {
+    .contact-wrapper {
       padding: 0;
       .contact {
         flex-direction: column; 
@@ -118,7 +122,7 @@
         &::before {
           @include gradient-line();
           position: absolute;
-          top: 25%;
+          top: 27%;
           left: calc(50% - 35.5px);
           
           margin-right: 0;
@@ -335,11 +339,11 @@
             }
 
             &.commerce {
-                .cube {
-                    left: 31.5%;
-                    
+                .ill-wrapper {
+                  .cube {       
                     width: 48px;
                     height: 55px;
+                  }
                 }
             }
 
@@ -347,10 +351,12 @@
                 display: flex;
                 flex-direction: column;
                 text-align: center;
+                
                 width: 100%;
+                padding-top: 0;
                 h2 {
                     margin: 30px 0 40px;
-
+                
                     position: relative;
                     z-index: 5;
 
@@ -381,12 +387,12 @@
           
           position: relative;
           
-          padding: 78px 0 116px;
+          padding: 78px 0 155px;
           &::before {
               @include gradient-line();
               position: absolute;
               
-              top: 32%;
+              top: 31%;
               margin-right: none;
           }
   
@@ -417,14 +423,13 @@
                   display: flex;
                   flex-wrap: wrap;
                   justify-content: space-around;
-                  
+                  margin: -20px 0;
                   .company {
-                      margin-top: -75px;
                       display: flex;
                       justify-content: center;
                       width: 40%;
 
-                      margin-right: 0;
+                      margin: 20px 0;
                       img {
                           max-width: 100%;
                       }
@@ -434,7 +439,7 @@
       }
     }
 
-    body .contact-wrapper {
+    .contact-wrapper {
       padding: 0;
       .contact {
         flex-direction: column; 
@@ -455,12 +460,18 @@
           width: 100%;
   
           margin: 0;
-          padding: 41px 0;
-
-          .address__info {
+          padding: 8px 0 41px;
+          .address {
+            width: 100%;
+            margin-top: 0;
+            span,
+            a {
+              &.address__info {
                 margin-top: 6px;
                 font-size: $fz-18px;
+              }
             }
+          }
         }
       }
 

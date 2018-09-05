@@ -60,14 +60,18 @@
             }
 
             &.commerce {
-                .cube {
-                    top: 40%;
-                    left: 26.5%;
+                .ill-wrapper {
+                    position: relative;
+                
+                    .cube {
+                        top: 40%;
+                        left: 6%;
 
-                    width: 125px;
-                    height: 144px;
-                    
-                    animation: scalation 4s alternate infinite;
+                        width: 125px;
+                        height: 144px;
+                        
+                        animation: scalation 4s alternate infinite;
+                    }
                 }
             }
 

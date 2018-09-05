@@ -54,6 +54,8 @@
             .snd {
                 bottom: 90%;
                 right: 25%;
+
+                //animation:  cube-2-translate-move 4s backwards;
             }
 
             .trd {
@@ -62,9 +64,9 @@
             }
             
             .big {
-                animation: none;
                 width: 257px;
                 height: 296px;
+                animation: levitate-medium 4s alternate infinite ease-in-out;
             }
         }
     }

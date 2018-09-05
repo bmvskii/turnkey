@@ -1,4 +1,39 @@
 window.onload = () => {
+    document.querySelector('.preloader').classList.remove('active');
+    
+    const page = $('html, body');
+    const scrollDownTrigger = $('.toDown');
+    const scrollTimeInMs = 800;
+    
+    const tabs = document.querySelectorAll('.proposals .tab');
+
+    const header = document.querySelector('.header-wrapper');
+    const headerBtn = document.querySelector('.header-wrapper .btn');
+
+    const modalWindow = document.getElementById('modal-window');
+    const modalTriggerButtons = document.querySelectorAll('.modal-trigger');
+    const form = modalWindow.querySelector('form');
+    const formElements = form.querySelectorAll('.form-elem');
+
+    //swap logo depends on device
+    let mobileLogo =   header.querySelector('.mlogo-link');
+    let logo = header.querySelector('.logo-link');
+
+    if (window.innerWidth <= 650) {
+        mobileLogo.style.display = "block";
+
+        $('.tools .owl-carousel').owlCarousel({
+            dots: true,
+            dotsEach: true,
+            items: 1,
+            center: true,
+            margin: 20   
+        });
+    } else {
+        logo.style.display = "block";
+    }
+
+
     //init of a third party libraries
     $('.hero .owl-carousel').owlCarousel({
         dots: true,
@@ -34,9 +69,6 @@ window.onload = () => {
     });
     
     //scroll animation
-    const page = $('html, body');
-    const scrollDownTrigger = $('.toDown');
-    const scrollTimeInMs = 800;
     $(scrollDownTrigger).click(function() {
         page.animate({
             scrollTop: $($.attr(this, 'href')).offset().top,
@@ -45,7 +77,6 @@ window.onload = () => {
     });
 
     //changing tabs and sliders
-    const tabs = document.querySelectorAll('.proposals .tab');
     tabs.forEach(tab => {
         tab.addEventListener('click', (e) => {
             let tabPosition = 0;
@@ -78,10 +109,6 @@ window.onload = () => {
     });
     
     //appearing of a header when have scrolled ... pxs
-    const header = document.querySelector('.header-wrapper');
-    const headerBtn = document.querySelector('.header-wrapper .btn');
-    const hero = document.querySelector('.hero-wrapper');
-    
     window.addEventListener('scroll', () => {
         if (window.pageYOffset >= header.offsetHeight) {
             header.classList.add('fixed');
@@ -96,11 +123,6 @@ window.onload = () => {
 
 
     //a logic of a modal window
-    const modalWindow = document.getElementById('modal-window');
-    const modalTriggerButtons = document.querySelectorAll('.modal-trigger');
-    const form = modalWindow.querySelector('form');
-    const formElements = form.querySelectorAll('.form-elem')
-
     modalTriggerButtons.forEach(mtb => {
         mtb.addEventListener('click', () => {
             document.getElementById('modal-window').classList.add('active');
@@ -122,6 +144,10 @@ window.onload = () => {
                 
                 formElements.forEach(fe => {
                     fe.nextElementSibling.classList.remove('focused');
+                    if (fe.classList.contains('error')) {
+                        fe.classList.remove('error');
+                        deactivateErrorBox(fe);
+                    }
                 });
             }, transitionTime, elem);
         }
@@ -129,7 +155,14 @@ window.onload = () => {
 
     formElements.forEach(fe => {
         fe.addEventListener('focus', () => {
+            if (fe.classList.contains('error')) {
+                fe.classList.remove('error');
+                fe.value = '';
+
+                deactivateErrorBox(fe);
+            }
             fe.nextElementSibling.classList.add('focused');
+
         });
         
         fe.addEventListener('blur', () => {
@@ -139,66 +172,105 @@ window.onload = () => {
         });
     });
 
-    form.addEventListener('submit', () => {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
         let isValid = true;
+        let dataObj = {};
+
         formElements.forEach(fe => {
             switch (fe.name) {
                 case 'name': {
-                    if (fe.value === '') {
-                        isValid = false;
-                    }
-
-                    fe.classList.add('error');
-                    
-                    fe.parentElement.querySelector('.error-box').innerHTML = "Empty name";
+                    isValid = setErrorState(fe, "A name is empty.", isEmptyField);
+                    dataObj.name = fe.value;
                     break;
                 };
                 case 'email': {
-                    let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    isValid = re.test(fe.value.toLowerCase());
-                    fe.classList.add('error');
-
-                    fe.parentElement.querySelector('.error-box').innerHTML = "Invalid email";
+                    if (!isValid) {
+                       setErrorState(fe, "Invalid type of email.", isInvalidEmail);
+                    } else {                    
+                       isValid = setErrorState(fe, "Invalid type of email.", isInvalidEmail);
+                    }
+                    
+                    dataObj.email = fe.value;
                     break;
                 };
                 case 'phone': {
-                    if (fe.value === '') {
-                        isValid = false;
+                    if (!isValid) {
+                        setErrorState(fe, "Invalid type of a phone number.", isInvalidPhoneNumber);
+                    } else {
+                        isValid = setErrorState(fe, "Invalid type of a phone number.", isInvalidPhoneNumber);
                     }
                     
-                    fe.classList.add('error');
-                    fe.parentElement.querySelector('.error-box').innerHTML = "Empty phone";
+                    dataObj.phone = fe.value;
                     break;
                 };
                 case 'message': {
-                    if (fe.value === '') {
-                        isValid = false;
+                    if (!isValid) {
+                        setErrorState(fe, "A message is empty", isEmptyField);
+                    } else {
+                        isValid = setErrorState(fe, "A message is empty", isEmptyField);
                     }
-                    fe.classList.add('error');
                     
-                    fe.parentElement.querySelector('.error-box').innerHTML = "Empty message";
+                    dataObj.message = fe.value;
                     break;
                 };
             };
         });
-        return false;
+        if (isValid) {
+            $.ajax({
+                type: "GET",
+                url: './index.php',
+                data: dataObj,
+                success: () => {
+                    modalWindow.querySelector('.close').click();
+
+                    let popup = document.querySelector('.popup');
+                    setTimeout(() => {
+                        popup.classList.add('active');
+                    }, 600);
+
+                    setTimeout(() => {
+                        popup.classList.remove('active');
+                    }, 1600);
+                }
+            });
+        };
     });
 
-    //swap logo depends on device
-    let mobileLogo =   header.querySelector('.logo-mobile');
-    let logo = header.querySelector('.logo');
+    isLoaded = true;
 
-    if (window.innerWidth <= 650) {
-        logo.style.display = "none";
+    function deactivateErrorBox(elem) {
+        let errorBox = elem.parentElement.querySelector('.error-box');
+        errorBox.innerHTML = '';
+        errorBox.classList.remove('active');
+    }
 
-        $('.tools .owl-carousel').owlCarousel({
-            dots: true,
-            dotsEach: true,
-            items: 1,
-            center: true,
-            margin: 20   
-        });
-    } else {
-        mobileLogo.style.display = "none";
+    function activateErrorBox(elem, msg) {
+        elem.parentElement.querySelector('.error-box').innerHTML = msg;
+        elem.parentElement.querySelector('.error-box').classList.add('active');
+    }
+
+    function setErrorState(elem, msg, callback) {
+        if (callback(elem.value)) {
+            elem.classList.add('error');
+            activateErrorBox(elem, msg);
+            return false;
+        };
+        return true;
+    }
+
+    function isEmptyField(value) {
+        return value === "";
+    }
+
+    function isInvalidPhoneNumber(value) {
+        let re = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/gi;
+        return !re.test(value);
+    }
+
+    function isInvalidEmail(value) {
+        let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return !re.test(value);
     }
 };

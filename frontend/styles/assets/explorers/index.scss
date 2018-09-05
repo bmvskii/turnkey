@@ -27,15 +27,17 @@
             width: 50%;
             .companies {
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
                 flex-wrap: wrap;
-                
+                margin: -37px 0;
                 .company {
                     display: flex;
                     justify-content: center;
-                    width: calc(50% - 40px);
+                    align-self: center;
                     
-                    margin-right: 40px;
+                    margin: 37px 0;
+                    width: 50%;
+
                     img {
                         max-width: 100%;
                     }
