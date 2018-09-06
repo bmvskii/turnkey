@@ -27,7 +27,8 @@
       } else {
         $message = trim($_POST['message']);
       }
-     } {
+     } 
+     
       if(!isset($hasError)) {
         $emailTo = 'evg.rogovoy@gmail.com'; //Сюда введите Ваш email
       
@@ -37,5 +38,4 @@
       
         mail($emailTo, $subject, $body, $headers);
       }  
-     }
 ?>
