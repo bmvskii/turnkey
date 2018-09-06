@@ -47,17 +47,17 @@
             }
             .fst {
                 z-index: 200;
-                animation:  cube-1-translate-move 6s infinite ease-in-out;
+                animation:  cube-1-translate-move-ls 6s infinite ease-in-out;
             }
 
             .snd {
                 z-index: 200;
-                animation:  cube-2-translate-move 6s infinite ease-in-out;
+                animation:  cube-2-translate-move-ls 6s infinite ease-in-out;
             }
 
             .trd {
                 z-index: 200;
-                animation: cube-3-translate-move 6s infinite ease-in-out;
+                animation: cube-3-translate-move-ls 6s infinite ease-in-out;
             }
             
             .big {

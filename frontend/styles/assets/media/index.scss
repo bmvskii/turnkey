@@ -6,12 +6,40 @@
     .container {
       max-width: 992px;
     }
+    
+    .about-wrapper .about__right {
+      .cube {
+        width: 52px;
+        height: 60px;
+      }
+      .fst {
+        z-index: 200;
+        animation:  cube-1-translate-move-md 6s infinite ease-in-out;
+      }
+
+      .snd {
+        z-index: 200;
+        animation:  cube-2-translate-move-md 6s infinite ease-in-out;
+      }
+
+      .trd {
+        z-index: 200;
+        animation: cube-3-translate-move-md 6s infinite ease-in-out;
+      }
+   
+      .big {
+        width: 156px;
+        height: 180px;
+      }
+    }
+
   }
   
   @media (max-width: 768px) {
     html {
       font-size: 13px;
     }
+
    .container {
       max-width: 750px;
     }

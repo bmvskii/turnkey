@@ -49,7 +49,9 @@
     }
 }
 
-@keyframes cube-1-translate-move {
+//cubes moving on desktops
+
+@keyframes cube-1-translate-move-ls {
     0%, 100% {
         top: 65%;
         right: 10%;
@@ -81,7 +83,7 @@
     }
 }
 
-@keyframes cube-2-translate-move {
+@keyframes cube-2-translate-move-ls {
     0%, 100% {
         top: -26%;
         right: 43.5%;
@@ -113,7 +115,7 @@
     }
 }
 
-@keyframes cube-3-translate-move {
+@keyframes cube-3-translate-move-ls {
     0%, 100% {
         top: 66%;
         right: 77.5%;
@@ -142,5 +144,103 @@
     85% {
         top: 8%;
         right: 77.5%;
+    }
+}
+
+//cubes moving on medium screen
+
+@keyframes cube-1-translate-move-md {
+    0%, 100% {
+        top: 60%;
+        right: 18%;
+    }
+
+    17% {
+        top: 20%;
+        right: 18%;
+    }
+
+    34% {
+        top: -6%;
+        right: 44%;
+    }
+
+    51% {
+        top: 19%;
+        right: 69.5%;
+    }
+
+    68% {
+        top: 60%;
+        right: 69.5%;
+    }
+
+    85% {
+        top: 84%;
+        right: 44%;
+    }
+}
+
+@keyframes cube-2-translate-move-md {
+    0%, 100% {
+        top: -6%;
+        right: 44%;
+    }
+
+    17% {
+        top: 19%;
+        right: 69.5%;
+    }
+
+    34% {
+        top: 60%;
+        right: 69.5%;
+    }
+
+    51% {
+        top: 84%;
+        right: 44%;
+    }
+
+    68% {
+        top: 60%;
+        right: 18%;
+    }
+
+    85% {
+        top: 20%;
+        right: 18%;
+    }
+}
+
+@keyframes cube-3-translate-move-md {
+    0%, 100% {
+        top: 60%;
+        right: 69.5%;
+    }
+
+    17% {
+        top: 84%;
+        right: 44%;
+    }
+
+    34% {
+        top: 60%;
+        right: 18%;
+    }
+
+    51% {
+        top: 20%;
+        right: 18%;
+    }
+
+    68% {
+        top: -6%;
+        right: 44%;
+    }
+
+    85% {
+        top: 19%;
+        right: 69.5%;
     }
 }

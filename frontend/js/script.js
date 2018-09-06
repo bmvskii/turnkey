@@ -18,10 +18,11 @@ window.onload = () => {
     //swap logo depends on device
     let mobileLogo =   header.querySelector('.mlogo-link');
     let logo = header.querySelector('.logo-link');
+    let techs = document.querySelector('.techs');
 
     if (window.innerWidth <= 650) {
-        mobileLogo.style.display = "block";
-
+        mobileLogo.style.display = "block";    
+        techs.classList.add('owl-carousel');
         $('.tools .owl-carousel').owlCarousel({
             dots: true,
             dotsEach: true,
@@ -31,8 +32,8 @@ window.onload = () => {
         });
     } else {
         logo.style.display = "block";
+        techs.classList.remove('owl-carousel');
     }
-
 
     //init of a third party libraries
     $('.hero .owl-carousel').owlCarousel({
@@ -120,7 +121,6 @@ window.onload = () => {
             headerBtn.classList.add('btn-white');
         }
     });
-
 
     //a logic of a modal window
     modalTriggerButtons.forEach(mtb => {
