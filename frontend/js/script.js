@@ -112,11 +112,19 @@ window.onload = () => {
     
     //appearing of a header when have scrolled ... pxs
     window.addEventListener('scroll', () => {
-        // let h1 = document.querySelectorAll('h1'),
-        //     h2 = document.querySelectorAll('h2'),
-        //     h3 = document.querySelectorAll('h3'),
-        //     h4 = document.querySelectorAll('h4'),
-        //     p  = document.querySelectorAll('p');    
+        let h1 = document.querySelectorAll('h1'),
+            h2 = document.querySelectorAll('h2'),
+            h3 = document.querySelectorAll('h3'),
+            h4 = document.querySelectorAll('h4'),
+            p  = document.querySelectorAll('p'); 
+            
+        let text = [];
+
+        h1.forEach(t => text.push(t));
+        h2.forEach(t => text.push(t));
+        h3.forEach(t => text.push(t));
+        h4.forEach(t => text.push(t));
+        p.forEach(t => text.push(t));
         
         if (window.pageYOffset >= header.offsetHeight) {
             header.classList.add('fixed');
@@ -128,10 +136,17 @@ window.onload = () => {
             headerBtn.classList.add('btn-white');
         }
 
-        // if (window.pageYOffset >= aboutHeadingText.offsetHeight) {
-        //     aboutHeadingText.classList.add('show');
-        // }
+        // text.forEach(t => {
+        //     console.log(t + " " + t.getBoundingClientRect().top);
+        //     if (window.pageYOffset <= t.getBoundingClientRect().top + 100) {
+        //         t.classList.add('show');
+        //     } else {
+        //         t.classList.remove('show');
+        //     }
+        // });
     });
+
+    window.scroll();
 
     //a logic of a modal window
     modalTriggerButtons.forEach(mtb => {

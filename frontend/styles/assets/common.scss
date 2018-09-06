@@ -22,6 +22,18 @@ h4 {
   text-transform: uppercase;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+  opacity: 0 !important;
+  transition: .5s ease;
+  &.show {
+      opacity: 1 !important;
+  }
+}
+
 h1 {
   font-size: $fz-48px;
   font-weight: bold;
