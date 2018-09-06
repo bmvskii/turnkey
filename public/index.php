@@ -25,7 +25,7 @@ if (trim($_POST['message']) == '') {
     }
 }
 if (!isset($hasError)) {
-    $emailTo = 'evg.rogovoy@gmail.com';
+    $emailTo = 'info@avezorsoftware.com';
 
     $body = "Name:" . $name . "\n\nEmail: " . $email . "\n\nPhone:" . $phone . "\n\nMessage:\n" . $message;
     $headers = 'From: Blockchain Avezorsoftware <' . $emailTo . '>' . "\r\n" . 'Reply-To: ' . $email;
