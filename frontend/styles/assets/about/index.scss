@@ -23,6 +23,12 @@
             h1 {
                 width: 50%;
                 margin: 0;
+
+                // opacity: 0;
+                // transition: .3s ease;
+                // &.show {
+                //     opacity: 1;
+                // }
             }
 
             p {
@@ -63,8 +69,6 @@
             .big {
                 width: 257px;
                 height: 296px;
-
-                animation: scale-little 6s alternate infinite ease-in-out;
             }
         }
     }

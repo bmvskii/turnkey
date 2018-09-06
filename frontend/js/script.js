@@ -112,6 +112,12 @@ window.onload = () => {
     
     //appearing of a header when have scrolled ... pxs
     window.addEventListener('scroll', () => {
+        // let h1 = document.querySelectorAll('h1'),
+        //     h2 = document.querySelectorAll('h2'),
+        //     h3 = document.querySelectorAll('h3'),
+        //     h4 = document.querySelectorAll('h4'),
+        //     p  = document.querySelectorAll('p');    
+        
         if (window.pageYOffset >= header.offsetHeight) {
             header.classList.add('fixed');
             headerBtn.classList.remove('btn-white');
@@ -121,6 +127,10 @@ window.onload = () => {
             headerBtn.classList.remove('btn-blue');
             headerBtn.classList.add('btn-white');
         }
+
+        // if (window.pageYOffset >= aboutHeadingText.offsetHeight) {
+        //     aboutHeadingText.classList.add('show');
+        // }
     });
 
     //a logic of a modal window
