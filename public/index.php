@@ -5,7 +5,7 @@
      if(trim($_POST['name']) == '') {
       $hasError = true;
      } else {
-     $name = trim($_POST['name']);
+      $name = trim($_POST['name']);
      }
     //Проверка правильности ввода EMAIL
      if(trim($_POST['email']) == '')  {
@@ -28,6 +28,7 @@
         $message = trim($_POST['message']);
       }
      } 
+    }
      
       if(!isset($hasError)) {
         $emailTo = 'evg.rogovoy@gmail.com'; //Сюда введите Ваш email
