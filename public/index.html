@@ -30,10 +30,6 @@
     };
     
     function verifyCallback() {
-      let captcha = document.querySelector('#captcha');
-      captcha.classList.remove('showed');
-      captcha.style.display = 'none';
-
       $.ajax({
           type: "GET",
           url: './index.php',
@@ -51,6 +47,11 @@
               }, 2100);
           }
       });
+      
+      let captcha = document.querySelector('#captcha');
+      captcha.classList.remove('showed');
+      captcha.style.display = 'none';
+      grecaptcha.reset();
     }
   </script>
 </head>

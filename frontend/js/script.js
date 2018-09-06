@@ -219,7 +219,7 @@ window.onload = () => {
         });
 
         if (isValid) {
-            captcha.hidden = false;
+            captcha.style.display = 'block';
             captcha.classList.add('showed');
         };
     });
