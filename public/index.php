@@ -28,15 +28,15 @@
         $message = trim($_POST['message']);
       }
      } 
-    }
      
-      if(!isset($hasError)) {
-        $emailTo = 'evg.rogovoy@gmail.com'; //Сюда введите Ваш email
-      
-        $body = "Name:" . $name . "\n\nEmail: " . $email . "\n\nPhone:" . $phone . "\n\nMessage:\n" . $message;
-        $headers = 'From: Blockchain Avezorsoftware <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
-        $subject = 'Avezorsoftware Blockchain Contact Us';
-      
-        mail($emailTo, $subject, $body, $headers);
+     if(!isset($hasError)) {
+       $emailTo = 'info@avezorsoft.com'; //Сюда введите Ваш email
+       
+       $body = "Name:" . $name . "\n\nEmail: " . $email . "\n\nPhone:" . $phone . "\n\nMessage:\n" . $message;
+       $headers = 'From: Blockchain Avezorsoftware <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
+       $subject = 'Avezorsoftware Blockchain Contact Us';
+       
+       mail($emailTo, $subject, $body, $headers);
       }  
+    }
 ?>
