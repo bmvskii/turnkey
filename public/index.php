@@ -24,7 +24,6 @@ if (isset($_POST['submit'])) {
             $message = trim($_POST['message']);
         }
     }
-
     if (!isset($hasError)) {
         $emailTo = 'evg.rogovoy@gmail.com'; //Сюда введите Ваш email
 
