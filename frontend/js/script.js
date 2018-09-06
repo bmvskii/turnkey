@@ -112,19 +112,17 @@ window.onload = () => {
     
     //appearing of a header when have scrolled ... pxs
     window.addEventListener('scroll', () => {
-        let h1 = document.querySelectorAll('h1'),
-            h2 = document.querySelectorAll('h2'),
-            h3 = document.querySelectorAll('h3'),
-            h4 = document.querySelectorAll('h4'),
-            p  = document.querySelectorAll('p'); 
-            
-        let text = [];
+        // let h1 = document.querySelectorAll('h1'),
+        //     h2 = document.querySelectorAll('h2'),
+        //     h3 = document.querySelectorAll('h3'),
+        //     h4 = document.querySelectorAll('h4');
 
-        h1.forEach(t => text.push(t));
-        h2.forEach(t => text.push(t));
-        h3.forEach(t => text.push(t));
-        h4.forEach(t => text.push(t));
-        p.forEach(t => text.push(t));
+        // let text = [];
+
+        // h1.forEach(t => text.push(t));
+        // h2.forEach(t => text.push(t));
+        // h3.forEach(t => text.push(t));
+        // h4.forEach(t => text.push(t));
         
         if (window.pageYOffset >= header.offsetHeight) {
             header.classList.add('fixed');
@@ -137,8 +135,10 @@ window.onload = () => {
         }
 
         // text.forEach(t => {
-        //     console.log(t + " " + t.getBoundingClientRect().top);
-        //     if (window.pageYOffset <= t.getBoundingClientRect().top + 100) {
+        //     console.log("Window " + (window.pageYOffset + document.documentElement.clientHeight) + " Elem " + t.innerHTML + " " + Math.abs(t.getBoundingClientRect().top));
+            
+        //     if (window.pageYOffset + document.documentElement.clientHeight >= 
+        //         Math.abs(t.getBoundingClientRect().top) + (document.documentElement.clientHeight * 0.7))  {
         //         t.classList.add('show');
         //     } else {
         //         t.classList.remove('show');
