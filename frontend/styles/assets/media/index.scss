@@ -45,11 +45,60 @@
     }
 
     .explorers-wrapper {
+      background-color: #fff;
       .explorers {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          
+          position: relative;
+          
+          padding: 78px 0 155px;
+          &::before {
+              @include gradient-line();
+              position: absolute;
+              
+              top: 31%;
+              margin-right: none;
+          }
+  
+          &__left {
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              
+              h2 {
+                  width: 90%;
+                  margin: 0;
+
+                  text-align: center;
+                  color: $black;
+              }
+
+              .btn {
+                position: absolute;
+                bottom: 80px;
+              }
+          }
+  
           &__right {
+              margin-top: 80px;
+              width: 100%;
+              
               .companies {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: space-around;
+                  margin: -20px 0;
                   .company {
+                      display: flex;
+                      justify-content: center;
                       width: 40%;
+
+                      margin: 20px 0;
+                      img {
+                          max-width: 100%;
+                      }
                   }
               }
           }
@@ -417,66 +466,7 @@
       }
     }
 
-    .explorers-wrapper {
-      background-color: #fff;
-      .explorers {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          
-          position: relative;
-          
-          padding: 78px 0 155px;
-          &::before {
-              @include gradient-line();
-              position: absolute;
-              
-              top: 31%;
-              margin-right: none;
-          }
-  
-          &__left {
-              display: flex;
-              justify-content: center;
-              width: 100%;
-              
-              h2 {
-                  width: 90%;
-                  margin: 0;
-
-                  text-align: center;
-                  color: $black;
-              }
-
-              .btn {
-                position: absolute;
-                bottom: 80px;
-              }
-          }
-  
-          &__right {
-              margin-top: 80px;
-              width: 100%;
-              
-              .companies {
-                  display: flex;
-                  flex-wrap: wrap;
-                  justify-content: space-around;
-                  margin: -20px 0;
-                  .company {
-                      display: flex;
-                      justify-content: center;
-                      width: 40%;
-
-                      margin: 20px 0;
-                      img {
-                          max-width: 100%;
-                      }
-                  }
-              }
-          }
-      }
-    }
+   
 
     .contact-wrapper {
       padding: 0;
