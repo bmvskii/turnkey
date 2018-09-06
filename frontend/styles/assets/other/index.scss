@@ -112,7 +112,7 @@
             }
             
             .btn {
-                margin-top: 59px;
+                margin-top: 35px;
             }
         }
     }
@@ -250,4 +250,13 @@
        opacity: 1;
        z-index: 1040;
    }
+}
+
+#captcha {
+    opacity: 0;
+    transition: .3s ease;
+
+    &.showed {
+        opacity: 1;
+    }
 }

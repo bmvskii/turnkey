@@ -14,6 +14,7 @@ window.onload = () => {
     const modalTriggerButtons = document.querySelectorAll('.modal-trigger');
     const form = modalWindow.querySelector('form');
     const formElements = form.querySelectorAll('.form-elem');
+    const captcha = document.getElementById('captcha');
 
     //swap logo depends on device
     let mobileLogo =   header.querySelector('.mlogo-link');
@@ -176,7 +177,6 @@ window.onload = () => {
         e.preventDefault();
 
         let isValid = true;
-        let dataObj = {};
 
         formElements.forEach(fe => {
             switch (fe.name) {
@@ -217,27 +217,13 @@ window.onload = () => {
                 };
             };
         });
+
         if (isValid) {
-            $.ajax({
-                type: "GET",
-                url: './index.php',
-                data: dataObj,
-                success: () => {
-                    modalWindow.querySelector('.close').click();
-
-                    let popup = document.querySelector('.popup');
-                    setTimeout(() => {
-                        popup.classList.add('active');
-                    }, 600);
-
-                    setTimeout(() => {
-                        popup.classList.remove('active');
-                    }, 1600);
-                }
-            });
+            captcha.hidden = false;
+            captcha.classList.add('showed');
         };
     });
-
+        
     function deactivateErrorBox(elem) {
         let errorBox = elem.parentElement.querySelector('.error-box');
         errorBox.innerHTML = '';

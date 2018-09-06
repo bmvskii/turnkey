@@ -17,6 +17,42 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="stylesheet" href="./styles/index.css">
 
+  <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit'></script>
+  <script>
+    var dataObj = {};
+
+    var onloadCallback = function () {
+      grecaptcha.render('captcha', {
+        'sitekey': '6Lfdf24UAAAAANCUOXLrIQjJhYvo4hcJCY7xie1R',
+        'callback': verifyCallback,
+        'theme': 'light'
+      });
+    };
+    
+    function verifyCallback() {
+      let captcha = document.querySelector('#captcha');
+      captcha.classList.remove('showed');
+      captcha.style.display = 'none';
+
+      $.ajax({
+          type: "GET",
+          url: './index.php',
+          data: dataObj,
+          success: () => {
+              document.getElementById('modal-window').querySelector('.close').click();
+  
+              let popup = document.querySelector('.popup');
+              setTimeout(() => {
+                  popup.classList.add('active');
+              }, 600);
+  
+              setTimeout(() => {
+                  popup.classList.remove('active');
+              }, 2100);
+          }
+      });
+    }
+  </script>
 </head>
 <body>
     <div class="preloader active">
@@ -607,6 +643,7 @@
             <span class="error-box ta"></span>
           </label>
 
+          <div class="g-recaptcha" id="captcha" data-sitekey="" style="margin: 30px auto 0;" hidden></div>
           <button class="btn btn-blue">Send a message</button>
         </form>
       </div>
