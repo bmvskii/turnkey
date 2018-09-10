@@ -244,3 +244,23 @@
         right: 69.5%;
     }
 }
+
+@keyframes rotation {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(359deg);
+    }
+}
+
+// @keyframes bgMorph {
+//     0% {
+//         fill: #ff303e;
+//     }
+
+//     100% {
+//         fill: #0083bf;
+//     }
+// }
