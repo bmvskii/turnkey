@@ -1,6 +1,7 @@
 window.onload = () => {
     document.querySelector('.preloader').classList.remove('active');
     
+    
     const page = $('html, body');
     const scrollDownTrigger = $('.toDown');
     const scrollTimeInMs = 800;
