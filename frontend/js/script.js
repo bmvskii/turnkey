@@ -1,10 +1,10 @@
 window.onload = () => {
-//    document.querySelector('.preloader').classList.remove('active');
-    
+    //    document.querySelector('.preloader').classList.remove('active');
+
     const page = $('html, body');
     const scrollDownTrigger = $('.toDown');
     const scrollTimeInMs = 800;
-    
+
     const tabs = document.querySelectorAll('.proposals .tab');
 
     const header = document.querySelector('.header-wrapper');
@@ -17,19 +17,19 @@ window.onload = () => {
     const captcha = document.getElementById('captcha');
 
     //swap logo depends on device
-    let mobileLogo =   header.querySelector('.mlogo-link');
+    let mobileLogo = header.querySelector('.mlogo-link');
     let logo = header.querySelector('.logo-link');
     let techs = document.querySelector('.techs');
 
     if (window.innerWidth <= 650) {
-        mobileLogo.style.display = "block";    
+        mobileLogo.style.display = "block";
         techs.classList.add('owl-carousel');
         $('.tools .owl-carousel').owlCarousel({
             dots: true,
             dotsEach: true,
             items: 1,
             center: true,
-            margin: 20   
+            margin: 20
         });
     } else {
         logo.style.display = "block";
@@ -69,9 +69,9 @@ window.onload = () => {
             },
         },
     });
-    
+
     //scroll animation
-    $(scrollDownTrigger).click(function() {
+    $(scrollDownTrigger).click(function () {
         page.animate({
             scrollTop: $($.attr(this, 'href')).offset().top,
         }, scrollTimeInMs);
@@ -99,17 +99,17 @@ window.onload = () => {
             });
 
             e.currentTarget.classList.add('active');
-            
+
             //Find out a current position of the tab 
             for (let i = 0; i < tabs.length; i++)
                 if (tabs[i].classList.contains('active')) {
                     tabPosition = i;
                 }
-            
+
             cards[tabPosition].classList.add('active');
         });
     });
-    
+
     //appearing of a header when have scrolled ... pxs
     window.addEventListener('scroll', () => {
         // let h1 = document.querySelectorAll('h1'),
@@ -123,7 +123,7 @@ window.onload = () => {
         // h2.forEach(t => text.push(t));
         // h3.forEach(t => text.push(t));
         // h4.forEach(t => text.push(t));
-        
+
         if (window.pageYOffset >= header.offsetHeight) {
             header.classList.add('fixed');
             headerBtn.classList.remove('btn-white');
@@ -136,7 +136,7 @@ window.onload = () => {
 
         // text.forEach(t => {
         //     console.log("Window " + (window.pageYOffset + document.documentElement.clientHeight) + " Elem " + t.innerHTML + " " + Math.abs(t.getBoundingClientRect().top));
-            
+
         //     if (window.pageYOffset + document.documentElement.clientHeight >= 
         //         Math.abs(t.getBoundingClientRect().top) + (document.documentElement.clientHeight * 0.7))  {
         //         t.classList.add('show');
@@ -149,6 +149,27 @@ window.onload = () => {
     window.scroll();
 
     //a logic of a modal window
+
+    var isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
     modalTriggerButtons.forEach(mtb => {
         mtb.addEventListener('click', () => {
             document.getElementById('modal-window').classList.add('active');
@@ -167,7 +188,7 @@ window.onload = () => {
                 elem.classList.remove('active');
 
                 form.reset();
-                
+
                 formElements.forEach(fe => {
                     fe.nextElementSibling.classList.remove('focused');
                     if (fe.classList.contains('error')) {
@@ -190,7 +211,7 @@ window.onload = () => {
             fe.nextElementSibling.classList.add('focused');
 
         });
-        
+
         fe.addEventListener('blur', () => {
             if (fe.value == "") {
                 fe.nextElementSibling.classList.remove('focused');
@@ -205,50 +226,74 @@ window.onload = () => {
 
         formElements.forEach(fe => {
             switch (fe.name) {
-                case 'name': {
-                    isValid = setErrorState(fe, "A name is empty.", isEmptyField);
-                    dataObj.name = fe.value;
-                    break;
-                };
-                case 'email': {
-                    if (!isValid) {
-                       setErrorState(fe, "Invalid type of email.", isInvalidEmail);
-                    } else {                    
-                       isValid = setErrorState(fe, "Invalid type of email.", isInvalidEmail);
-                    }
-                    
-                    dataObj.email = fe.value;
-                    break;
-                };
-                case 'phone': {
-                    if (!isValid) {
-                        setErrorState(fe, "Invalid type of a phone number.", isInvalidPhoneNumber);
-                    } else {
-                        isValid = setErrorState(fe, "Invalid type of a phone number.", isInvalidPhoneNumber);
-                    }
-                    
-                    dataObj.phone = fe.value;
-                    break;
-                };
-                case 'message': {
-                    if (!isValid) {
-                        setErrorState(fe, "A message is empty", isEmptyField);
-                    } else {
-                        isValid = setErrorState(fe, "A message is empty", isEmptyField);
-                    }
-                    
-                    dataObj.message = fe.value;
-                    break;
-                };
+                case 'name':
+                    {
+                        isValid = setErrorState(fe, "A name is empty.", isEmptyField);
+                        dataObj.name = fe.value;
+                        break;
+                    };
+                case 'email':
+                    {
+                        if (!isValid) {
+                            setErrorState(fe, "Invalid type of email.", isInvalidEmail);
+                        } else {
+                            isValid = setErrorState(fe, "Invalid type of email.", isInvalidEmail);
+                        }
+
+                        dataObj.email = fe.value;
+                        break;
+                    };
+                case 'phone':
+                    {
+                        if (!isValid) {
+                            setErrorState(fe, "Invalid type of a phone number.", isInvalidPhoneNumber);
+                        } else {
+                            isValid = setErrorState(fe, "Invalid type of a phone number.", isInvalidPhoneNumber);
+                        }
+
+                        dataObj.phone = fe.value;
+                        break;
+                    };
+                case 'message':
+                    {
+                        if (!isValid) {
+                            setErrorState(fe, "A message is empty", isEmptyField);
+                        } else {
+                            isValid = setErrorState(fe, "A message is empty", isEmptyField);
+                        }
+
+                        dataObj.message = fe.value;
+                        break;
+                    };
             };
         });
 
         if (isValid) {
-            captcha.style.display = 'block';
-            captcha.classList.add('showed');
+            if (!isMobile) {
+                captcha.style.display = 'block';
+                captcha.classList.add('showed');
+            } else {
+                $.ajax({
+                    type: "post",
+                    url: './index.php',
+                    data: dataObj,
+                    success: () => {
+                        document.getElementById('modal-window').querySelector('.close').click();
+
+                        let popup = document.querySelector('.popup');
+                        setTimeout(() => {
+                            popup.classList.add('active');
+                        }, 600);
+
+                        setTimeout(() => {
+                            popup.classList.remove('active');
+                        }, 2100);
+                    }
+                });
+            }
         };
     });
-        
+
     function deactivateErrorBox(elem) {
         let errorBox = elem.parentElement.querySelector('.error-box');
         errorBox.innerHTML = '';
