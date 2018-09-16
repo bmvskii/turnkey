@@ -18,6 +18,10 @@
     &.active {
         z-index: 1000;
         opacity: 1;
+        
+        &__content form .btn{
+            z-index: 1050;
+        }
     }
 
     &__content {
