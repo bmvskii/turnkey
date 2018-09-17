@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="./images/fav.ico">
+
+  <title>Successful sended</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/index.css">
+
+</head>
+
+<body>
+  <div class="successful">
+    <h1>Success</h1>
+    <p>Your message was successfully sent. We will contact you as soon as possible. Thank you.</p>
+    <button class="btn btn-blue">ok</button>
+  </div>
+
+  <script>
+    window.onload = function () {
+      var button = document.querySelector('.btn');
+      button.addEventListener('click', function () {
+        location.href = location.origin + '/index.html';
+      });
+    }
+  </script>
+</body>
+
+</html>

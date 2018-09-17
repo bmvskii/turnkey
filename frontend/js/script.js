@@ -1,6 +1,4 @@
 window.onload = () => {
-    //    document.querySelector('.preloader').classList.remove('active');
-
     const page = $('html, body');
     const scrollDownTrigger = $('.toDown');
     const scrollTimeInMs = 800;
@@ -22,6 +20,7 @@ window.onload = () => {
     let techs = document.querySelector('.techs');
 
     if (window.innerWidth <= 650) {
+        logo.style.display = "none";
         mobileLogo.style.display = "block";
         techs.classList.add('owl-carousel');
         $('.tools .owl-carousel').owlCarousel({
@@ -32,7 +31,6 @@ window.onload = () => {
             margin: 20
         });
     } else {
-        logo.style.display = "block";
         techs.classList.remove('owl-carousel');
     }
 
@@ -170,8 +168,15 @@ window.onload = () => {
             return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
         }
     };
+
     modalTriggerButtons.forEach(mtb => {
         mtb.addEventListener('click', () => {
+           let elemsToHide = document.querySelectorAll('.will-hidden');
+           elemsToHide.forEach(e => {
+               if (!e.classList.contains('modal'))
+                   e.classList.add('hidden');
+           });
+
             document.getElementById('modal-window').classList.add('active');
         });
     });
@@ -179,13 +184,21 @@ window.onload = () => {
     modalWindow.addEventListener('click', (e) => {
         if (e.target.classList.contains('close')) {
             e.target.classList.add('clicked');
-            
+
             let elem = e.currentTarget;
-            let transitionTime = 500;
+            let transitionTime = 200;
 
             setTimeout((elem) => {
                 e.target.classList.remove('clicked');
+
                 elem.classList.remove('active');
+
+                let elemsToHide = document.querySelectorAll('.will-hidden');
+                elemsToHide.forEach(e => {
+                    if (!e.classList.contains('modal')) {
+                        e.classList.remove('hidden');
+                    }
+                });
 
                 form.reset();
 
@@ -196,6 +209,12 @@ window.onload = () => {
                         deactivateErrorBox(fe);
                     }
                 });
+                
+                if (captcha.classList.contains('showed')) {
+                    captcha.classList.remove('showed');
+                    captcha.style.display = 'none';
+                }
+            
             }, transitionTime, elem);
         }
     });
@@ -209,7 +228,6 @@ window.onload = () => {
                 deactivateErrorBox(fe);
             }
             fe.nextElementSibling.classList.add('focused');
-
         });
 
         fe.addEventListener('blur', () => {
@@ -228,7 +246,7 @@ window.onload = () => {
             switch (fe.name) {
                 case 'name':
                     {
-                        isValid = setErrorState(fe, "A name is empty.", isEmptyField);
+                        //isValid = setErrorState(fe, "A name is empty.", isEmptyField);
                         dataObj.name = fe.value;
                         break;
                     };
@@ -239,7 +257,6 @@ window.onload = () => {
                         } else {
                             isValid = setErrorState(fe, "Invalid type of email.", isInvalidEmail);
                         }
-
                         dataObj.email = fe.value;
                         break;
                     };
@@ -248,20 +265,18 @@ window.onload = () => {
                         if (!isValid) {
                             setErrorState(fe, "Invalid type of a phone number.", isInvalidPhoneNumber);
                         } else {
-                            isValid = setErrorState(fe, "Invalid type of a phone number.", isInvalidPhoneNumber);
+                            isValid = setErrorState(fe, "Please enter a correct email.", isInvalidPhoneNumber);
                         }
-
                         dataObj.phone = fe.value;
                         break;
                     };
                 case 'message':
                     {
-                        if (!isValid) {
-                            setErrorState(fe, "A message is empty", isEmptyField);
-                        } else {
-                            isValid = setErrorState(fe, "A message is empty", isEmptyField);
-                        }
-
+                        // if (!isValid) {
+                        //     setErrorState(fe, "A message is empty", isEmptyField);
+                        // } else {
+                        //     isValid = setErrorState(fe, "A message is empty", isEmptyField);
+                        // }
                         dataObj.message = fe.value;
                         break;
                     };
@@ -269,7 +284,7 @@ window.onload = () => {
         });
 
         if (isValid) {
-            if (!isMobile) {
+            if (!isMobile.any()) {
                 captcha.style.display = 'block';
                 captcha.classList.add('showed');
             } else {
@@ -278,16 +293,7 @@ window.onload = () => {
                     url: './index.php',
                     data: dataObj,
                     success: () => {
-                        document.getElementById('modal-window').querySelector('.close').click();
-
-                        let popup = document.querySelector('.popup');
-                        setTimeout(() => {
-                            popup.classList.add('active');
-                        }, 600);
-
-                        setTimeout(() => {
-                            popup.classList.remove('active');
-                        }, 2100);
+                        location.href = location.origin + "/success.html";
                     }
                 });
             }
@@ -314,13 +320,13 @@ window.onload = () => {
         return true;
     }
 
-    function isEmptyField(value) {
-        return value === "";
-    }
+    // function isEmptyField(value) {
+    //     return value === "";
+    // }
 
     function isInvalidPhoneNumber(value) {
-        let re = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/gi;
-        return !re.test(value);
+        let re = /^[+±]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/gi;
+        return value !== "" && !re.test(value);
     }
 
     function isInvalidEmail(value) {
