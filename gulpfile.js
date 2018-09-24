@@ -20,6 +20,7 @@ const AssetsPlugin = require('assets-webpack-plugin');
 const webpack = require('webpack');
 const notifier = require('node-notifier');
 const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 
 const fileinclude = require('gulp-file-include');
 
@@ -35,6 +36,10 @@ gulp.task('styles-sass', () => {
     }))
     .pipe(gulpIf(isDevelopment, sourcemaps.init()))
     .pipe(sass())
+    .pipe(autoprefixer({
+      browsers: ['last 15 versions'],
+      cascade: false
+    }))
     .pipe(gulpIf(isDevelopment, sourcemaps.write()))
     .pipe(gulpIf(!isDevelopment, combine(cssnano(), rev())))
     .pipe(gulp.dest('public/styles/'))
@@ -42,18 +47,26 @@ gulp.task('styles-sass', () => {
 })
 
 gulp.task('assets', function () {
-  return gulp.src('frontend/assets/**/*.*', { since: gulp.lastRun('assets') })
+  return gulp.src('frontend/assets/**/*.*', {
+      since: gulp.lastRun('assets')
+    })
     .pipe(gulpIf(!isDevelopment, revReplace({
-      manifest: gulp.src('manifest/css.json', { allowEmpty: true })
+      manifest: gulp.src('manifest/css.json', {
+        allowEmpty: true
+      })
     })))
     .pipe(gulpIf(!isDevelopment, revReplace({
-      manifest: gulp.src('manifest/webpack.json', { allowEmpty: true })
+      manifest: gulp.src('manifest/webpack.json', {
+        allowEmpty: true
+      })
     })))
     .pipe(gulp.dest('public'));
 });
 
 gulp.task('images', function () {
-  return gulp.src('frontend/assets/images/**/*.{svg,png,jpg}', { since: gulp.lastRun('images') })
+  return gulp.src('frontend/assets/images/**/*.{svg,png,jpg}', {
+      since: gulp.lastRun('images')
+    })
     .pipe(gulp.dest('public/images'));
 });
 
@@ -152,7 +165,7 @@ gulp.task('fileinclude', function () {
     .pipe(gulp.dest('./public/'));
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel('images', 'styles-sass', 'webpack', ), 'assets', 'fileinclude',));
+gulp.task('build', gulp.series('clean', gulp.parallel('images', 'styles-sass', 'webpack', ), 'assets', 'fileinclude', ));
 
 gulp.task('serve', function () {
   browserSync.init({

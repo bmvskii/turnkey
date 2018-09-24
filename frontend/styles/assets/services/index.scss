@@ -5,7 +5,8 @@
         display: flex;
         flex-direction: column;
 
-        padding: 100px 0;
+        padding: 100px 15px;
+
         .service {
             display: flex;
             justify-content: space-between;
@@ -38,38 +39,49 @@
             }
 
             &.requirements {
-                .cube {
-                    top: 27%;
+                .ill-wrapper {
+                    position: relative;
 
-                    width: 130px;
-                    height: 149px;
-                }
+                    .cube {
+                        top: 27%;
+                        left: calc(50% - 65px);
 
-                .illustration {
-                    animation: rotation 16s alternate-reverse infinite;
+                        width: 130px;
+                        height: 149px;
+                    }
+
+                    .illustration {
+                        animation: rotation 16s alternate-reverse infinite;
+                    }
                 }
             }
 
             &.strategy {
-                .cube {
-                    width: 147px;
-                    height: 169px;
-                    
-                    animation: levitate-medium 4s alternate infinite ease-in-out;
+                .ill-wrapper {
+                    position: relative;
+
+                    .cube {
+                        left: calc(50% - 73.5px);
+                        
+                        width: 147px;
+                        height: 169px;
+
+                        animation: levitate-medium 4s alternate infinite ease-in-out;
+                    }
                 }
             }
 
             &.commerce {
                 .ill-wrapper {
                     position: relative;
-                
+
                     .cube {
                         top: 40%;
                         left: 6%;
 
                         width: 125px;
                         height: 144px;
-                        
+
                         animation: scale-little 4s alternate infinite;
                     }
                 }
@@ -105,6 +117,7 @@
                         z-index: -5;
                     }
                 }
+
                 p {
                     margin: 40px 0 0;
 
@@ -116,4 +129,3 @@
 
     }
 }
-

@@ -27,5 +27,7 @@ if (!isset($hasError)) {
     $body = "Name:" . $name . "\n\nEmail: " . $email . "\n\nPhone:" . $phone . "\n\nMessage:\n" . $message;
     $headers = 'From: Blockchain Avezorsoftware <' . $emailTo . '>' . "\r\n" . 'Reply-To: ' . $email;
     $subject = 'Avezorsoftware Blockchain Contact Us';
+
+    mail($emailTo, $subject, $body, $headers);
 }
 ?>

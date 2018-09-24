@@ -7,10 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="./images/fav.ico">
 
-  <title>AvezorSoftware Blockchain</title>
-  <!-- <style>
-  @keyframes rotation {from {transform: rotateZ(0deg);}to {transform: rotateZ(359deg);}}@keyframes bgMorph {0% {fill: #ff303e;}100% {fill: #0083bf;}}.preloader {display: flex;justify-content: center;align-items: center;position: fixed;top: 0;left: 0;z-index: -1;width: 100vw;height: 100vh;background-color: #fff;opacity: 0;transition: .3s ease;}.preloader .circles-container {position: absolute;top: calc(50% - 150px);left: calc(50% - 150px);z-index: 1055;width: 300px;height: 300px;background-color: transparent;border-radius: 50%;overflow: hidden;animation: rotation 2s infinite;}.preloader .circles-container .circle {position: absolute;top: calc(50% - 15px);z-index: 1060;width: 30px;height: 30px;border-radius: 50%;background-color: #0083bf;}.preloader .circles-container.fst {animation-timing-function: linear;}.preloader .circles-container.snd {animation-timing-function: ease;}.preloader .circles-container.trd {animation-timing-function: ease-in;}.preloader .circles-container.fth {animation-timing-function: ease-in-out;}.preloader .circles-container.fif {animation-timing-function: ease-out;}.preloader .pre-logo {width: 10%;}.preloader .pre-logo .cls-1 {animation: bgMorph 2s alternate infinite;}.preloader.active {opacity: 1;z-index: 1040;}@media (max-width: 650px) and (min-width: 320px) {body .preloader .circles-container {top: calc(50% - 75px);left: calc(50% - 75px);width: 150px;height: 150px;}body .preloader .circles-container .circle {top: calc(50% - 10px);width: 20px;height: 20px;}body .preloader .pre-logo {width: 20%;}}
-  </style> -->
+  <!-- <span itemprop="rating" itemscope="" itemtype="http://data-vocabulary.org/Rating">
+    <meta itemprop="value" content="9.0">
+    <meta itemprop="best" content="10">
+    <span itemprop="votes">1</span> отзыв
+  </span> -->
+
+  <title>Blockchain Development Provider | Avezor Software</title>
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -18,7 +21,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="stylesheet" href="./styles/index.css">
 
-  <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit'></script>
+  <!-- <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit'></script>
   <script>
     var dataObj = {};
 
@@ -45,17 +48,20 @@
       captcha.style.display = 'none';
       grecaptcha.reset();
     }
-  </script>
+  </script> -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123909765-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'UA-123909765-2');
-  </script>
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
 
+  gtag('config', 'UA-123909765-2');
+  gtag('config', 'AW-859179477');
+</script>
 </head>
 
 <body>
@@ -132,7 +138,7 @@
             <path class="cls-1" d="M740,182.88H723.45q-11.87,0-18.71,6.83-6.12,6.12-6.11,21.59v52.17q0,24.82-15.11,39.93-13.32,13.3-40.29,13.31h-36.7V274.62H625.6q15.47,0,20.51-5,5.74-6.11,5.76-23V198q0-11.87,4.67-20t9-10.79A61.46,61.46,0,0,1,676.69,162a61.06,61.06,0,0,1-11.15-5.22q-4.31-2.7-9-10.79t-4.67-20V77.48q0-16.91-5.76-23-5.05-5-20.51-5H606.53V7.32h36.7q27,0,40.29,13.31,15.12,15.11,15.11,39.93v52.16q0,15.47,6.11,21.59,6.83,6.84,18.71,6.84H740Z" />
           </g>
         </svg></a>
-      <button class="btn btn-white modal-trigger">Get in touch</button>
+      <button class="btn btn-white modal-trigger tracking">Get in touch</button>
     </div>
   </header>
 
@@ -177,7 +183,7 @@
     </div>
   </section>
 
-  <section class="will-hidden about-wrapper" id="down">
+  <section class="will-hidden about-wrapper">
     <div class="container about">
       <div class="about__left">
         <h1>ABOUT COMPANY</h1>
@@ -196,17 +202,17 @@
     </div>
   </section>
 
-  <section class="will-hidden proposals-wrapper">
+  <section class="will-hidden proposals-wrapper" id="down">
     <div class="container proposals">
       <h2>Our proposals</h2>
       <div class="tabs">
         <div class="tab ">
           <h3>Industries</h3>
         </div>
-        <div class="tab">
+        <div class="tab active">
           <h3>Solutions</h3>
         </div>
-        <div class="tab active">
+        <div class="tab">
           <h3>Services</h3>
         </div>
       </div>
@@ -269,7 +275,7 @@
             </div>
           </div>
         </div>
-        <div>
+        <div class="active">
           <div class="owl-carousel owl-theme cards ">
             <div class="card">
               <div class="card__image">
@@ -339,7 +345,7 @@
             </div>
           </div>
         </div>
-        <div class="active">
+        <div>
           <div class="owl-carousel owl-theme cards ">
             <div class="card">
               <div class="card__image">
@@ -380,9 +386,11 @@
   <section class="will-hidden services-wrapper">
     <div class="container services">
       <div class="service requirements">
-        <div class="service__image ">
-          <img class="cube" src="./images/services/cube.svg" alt="cube">
-          <img class="illustration" src="./images/services/illustration-1.svg" alt="illustration">
+        <div class="service__image">
+          <div class="ill-wrapper">
+            <img class="cube" src="./images/services/cube.svg" alt="cube">
+            <img class="illustration" src="./images/services/illustration-1.svg" alt="illustration">
+          </div>
         </div>
         <div class="service__info">
           <h2 data-number="1">MEETING YOUR REQUIREMENTS</h2>
@@ -395,8 +403,10 @@
       </div>
       <div class="service strategy">
         <div class="service__image">
-          <img class="cube" src="./images/services/cube.svg" alt="cube">
-          <img class="illustration" src="./images/services/illustration-2.svg" alt="illustration">
+          <div class="ill-wrapper">
+            <img class="cube" src="./images/services/cube.svg" alt="cube">
+            <img class="illustration" src="./images/services/illustration-2.svg" alt="illustration">
+          </div>
         </div>
         <div class="service__info">
           <h2 data-number="2">STRATEGY AND SOFTWARE DEVELOPMENT</h2>
@@ -490,7 +500,7 @@
     <div class="container explorers">
       <div class="explorers__left">
         <h2>THESE COMPANIES ENJOY BLOCKCHAIN. WHAT ABOUT YOURS?</h2>
-        <button class="btn btn-blue modal-trigger">Talk to our team</button>
+        <button class="btn btn-blue modal-trigger tracking">Talk to our team</button>
       </div>
       <div class="explorers__right">
         <div class="companies">
@@ -521,7 +531,7 @@
     <div class="container contact">
       <div class="contact__left">
         <h2>Work with us</h2>
-        <button class="btn btn-white modal-trigger">Contact</button>
+        <button class="btn btn-white modal-trigger tracking">Contact</button>
       </div>
       <div class="contact__right">
         <address class="address">
@@ -649,12 +659,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="./js/script.js"></script>
-
-  <!-- BEGIN JIVOSITE CODE {literal} -->
-  <!-- <script type='text/javascript'>
-      (function () { var widget_id = 'Vbx91jROiy'; var d = document; var w = window; function l() { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/' + widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss); } if (d.readyState == 'complete') { l(); } else { if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })();
-    </script> -->
-  <!-- {/literal} END JIVOSITE CODE -->
 </body>
 
 </html>

@@ -3,7 +3,7 @@
     .about {
         display: flex;
         
-        padding: 204px 0 227px;
+        padding: 204px 15px 227px;
 
         &::before {
             @include gradient-line();

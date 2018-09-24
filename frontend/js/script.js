@@ -40,9 +40,7 @@ window.onload = () => {
         items: 1,
         dotsEach: true,
         autoplay: true,
-        rewind: true,
         animateIn: 'slideInLeft',
-        center: true
     });
 
     $('.proposals .owl-carousel').owlCarousel({
@@ -75,6 +73,7 @@ window.onload = () => {
         }, scrollTimeInMs);
         return false;
     });
+
 
     //changing tabs and sliders
     tabs.forEach(tab => {
@@ -147,7 +146,6 @@ window.onload = () => {
     window.scroll();
 
     //a logic of a modal window
-
     var isMobile = {
         Android: function () {
             return navigator.userAgent.match(/Android/i);
@@ -171,11 +169,13 @@ window.onload = () => {
 
     modalTriggerButtons.forEach(mtb => {
         mtb.addEventListener('click', () => {
-           let elemsToHide = document.querySelectorAll('.will-hidden');
-           elemsToHide.forEach(e => {
-               if (!e.classList.contains('modal'))
-                   e.classList.add('hidden');
-           });
+            gtag_report_conversion();
+            
+            let elemsToHide = document.querySelectorAll('.will-hidden');
+            elemsToHide.forEach(e => {
+                if (!e.classList.contains('modal'))
+                    e.classList.add('hidden');
+            });
 
             document.getElementById('modal-window').classList.add('active');
         });
@@ -209,12 +209,12 @@ window.onload = () => {
                         deactivateErrorBox(fe);
                     }
                 });
-                
+
                 if (captcha.classList.contains('showed')) {
                     captcha.classList.remove('showed');
                     captcha.style.display = 'none';
                 }
-            
+
             }, transitionTime, elem);
         }
     });
@@ -241,6 +241,9 @@ window.onload = () => {
         e.preventDefault();
 
         let isValid = true;
+
+        //captcha deleted
+        var dataObj = {};
 
         formElements.forEach(fe => {
             switch (fe.name) {
@@ -284,19 +287,22 @@ window.onload = () => {
         });
 
         if (isValid) {
-            if (!isMobile.any()) {
-                captcha.style.display = 'block';
-                captcha.classList.add('showed');
-            } else {
-                $.ajax({
-                    type: "post",
-                    url: './index.php',
-                    data: dataObj,
-                    success: () => {
-                        location.href = location.origin + "/success.html";
-                    }
-                });
-            }
+
+            // if (!isMobile.any()) {
+            //     captcha.style.display = 'block';
+            //     captcha.classList.add('showed');
+            // } else {
+
+            $.ajax({
+                type: "post",
+                url: './index.php',
+                data: dataObj,
+                success: () => {
+                    location.href = location.origin + "/success.html";
+                }
+            });
+
+            // }
         };
     });
 
@@ -332,5 +338,20 @@ window.onload = () => {
     function isInvalidEmail(value) {
         let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return !re.test(value);
+    }
+
+    // <!-- Event snippet for click_CTA conversion page
+    // In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof (url) != 'undefined') {
+                window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-859179477/zFhtCLfR04kBENWT2JkD',
+            'event_callback': callback
+        });
+        return false;
     }
 };

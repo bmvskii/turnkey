@@ -1,10 +1,11 @@
 @media (max-width: 1024px) {
+
   html {
     font-size: 14px;
   }
 
   .container {
-    max-width: 992px;
+    max-width: 994px;
   }
 
   .about-wrapper .about__right {
@@ -42,7 +43,7 @@
   }
 
   .container {
-    max-width: 750px;
+    max-width: 768px;
   }
 
   .explorers-wrapper {
@@ -55,13 +56,14 @@
 
       position: relative;
 
-      padding: 78px 0 155px;
+      padding: 78px 15px 155px;
 
       &::before {
         @include gradient-line();
         position: absolute;
-
         top: 31%;
+        left: calc(50% - 35.5px);
+
         margin-right: none;
       }
 
@@ -81,6 +83,7 @@
         .btn {
           position: absolute;
           bottom: 80px;
+          left: calc(50% - 71px);
         }
       }
 
@@ -432,20 +435,26 @@
         }
 
         &.requirements {
-          .cube {
-            width: 50px;
-            height: 57px;
-          }
+          .ill-wrapper {
+            .cube {
+              left: calc(50% - 25px);
+              width: 50px;
+              height: 57px;
+            }
 
-          .illustration {
-            animation: rotation 4s alternate-reverse infinite;
+            .illustration {
+              animation: rotation 4s alternate-reverse infinite;
+            }
           }
         }
 
         &.strategy {
-          .cube {
-            width: 56px;
-            height: 64px;
+          .ill-wrapper {
+            .cube {
+              left: calc(50% - 28px);
+              width: 56px;
+              height: 64px;
+            }
           }
         }
 
@@ -490,8 +499,6 @@
       }
     }
   }
-
-
 
   .contact-wrapper {
     padding: 0;
@@ -558,11 +565,13 @@
 
       form {
         label {
+
           input,
           textarea {
             margin-top: 30px;
           }
         }
+
         .btn {
           margin-top: 20px;
         }
