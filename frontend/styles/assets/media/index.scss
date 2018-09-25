@@ -8,6 +8,18 @@
     max-width: 994px;
   }
 
+  .header-wrapper {
+    .header {
+      .logo-link {
+        display: inline-block;
+      }
+
+      .mlogo-link {
+        display: none;
+      }
+    }
+  }
+
   .about-wrapper .about__right {
     .cube {
       width: 52px;
@@ -158,6 +170,37 @@
 @media (max-width: 650px) and (min-width: 320px) {
   html {
     font-size: 16px;
+  }
+
+  .header-wrapper {
+    .header {
+      .logo-link {
+        display: none;
+      }
+
+      .mlogo-link {
+        display: inline-block;
+      }
+    }
+  }
+
+  .call-button {
+    display: inline-block;
+
+    width: 50px;
+    height: 50px;
+
+    bottom: 10px;
+    right: 10px;
+
+    &::before {
+
+      left: calc(50% - 25px);
+      top: calc(50% - 25px);
+
+      width: 50px;
+      height: 50px;
+    }
   }
 
   h1,

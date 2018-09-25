@@ -15,13 +15,9 @@ window.onload = () => {
     const captcha = document.getElementById('captcha');
 
     //swap logo depends on device
-    let mobileLogo = header.querySelector('.mlogo-link');
-    let logo = header.querySelector('.logo-link');
     let techs = document.querySelector('.techs');
 
     if (window.innerWidth <= 650) {
-        logo.style.display = "none";
-        mobileLogo.style.display = "block";
         techs.classList.add('owl-carousel');
         $('.tools .owl-carousel').owlCarousel({
             dots: true,
@@ -74,7 +70,6 @@ window.onload = () => {
         return false;
     });
 
-
     //changing tabs and sliders
     tabs.forEach(tab => {
         tab.addEventListener('click', (e) => {
@@ -109,18 +104,6 @@ window.onload = () => {
 
     //appearing of a header when have scrolled ... pxs
     window.addEventListener('scroll', () => {
-        // let h1 = document.querySelectorAll('h1'),
-        //     h2 = document.querySelectorAll('h2'),
-        //     h3 = document.querySelectorAll('h3'),
-        //     h4 = document.querySelectorAll('h4');
-
-        // let text = [];
-
-        // h1.forEach(t => text.push(t));
-        // h2.forEach(t => text.push(t));
-        // h3.forEach(t => text.push(t));
-        // h4.forEach(t => text.push(t));
-
         if (window.pageYOffset >= header.offsetHeight) {
             header.classList.add('fixed');
             headerBtn.classList.remove('btn-white');
@@ -130,17 +113,6 @@ window.onload = () => {
             headerBtn.classList.remove('btn-blue');
             headerBtn.classList.add('btn-white');
         }
-
-        // text.forEach(t => {
-        //     console.log("Window " + (window.pageYOffset + document.documentElement.clientHeight) + " Elem " + t.innerHTML + " " + Math.abs(t.getBoundingClientRect().top));
-
-        //     if (window.pageYOffset + document.documentElement.clientHeight >= 
-        //         Math.abs(t.getBoundingClientRect().top) + (document.documentElement.clientHeight * 0.7))  {
-        //         t.classList.add('show');
-        //     } else {
-        //         t.classList.remove('show');
-        //     }
-        // });
     });
 
     window.scroll();
@@ -169,7 +141,7 @@ window.onload = () => {
 
     modalTriggerButtons.forEach(mtb => {
         mtb.addEventListener('click', () => {
-            gtag_report_conversion();
+            // gtag_report_conversion();
             
             let elemsToHide = document.querySelectorAll('.will-hidden');
             elemsToHide.forEach(e => {
