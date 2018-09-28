@@ -17,18 +17,20 @@ window.onload = () => {
     //swap logo depends on device
     let techs = document.querySelector('.techs');
 
-    if (window.innerWidth <= 650) {
-        techs.classList.add('owl-carousel');
-        $('.tools .owl-carousel').owlCarousel({
-            dots: true,
-            dotsEach: true,
-            items: 1,
-            center: true,
-            margin: 20
-        });
-    } else {
-        techs.classList.remove('owl-carousel');
-    }
+    window.onresize = () => {
+        if (window.innerWidth <= 650) {
+            techs.classList.add('owl-carousel');
+            $('.tools .owl-carousel').owlCarousel({
+                dots: true,
+                dotsEach: true,
+                items: 1,
+                center: true,
+                margin: 20
+            });
+        } else {
+            $(techs).trigger('destroy.owl.carousel');
+        }
+    };
 
     //init of a third party libraries
     $('.hero .owl-carousel').owlCarousel({
@@ -36,7 +38,7 @@ window.onload = () => {
         items: 1,
         dotsEach: true,
         autoplay: true,
-        animateIn: 'slideInLeft',
+        animateIn: 'slideInRight',
     });
 
     $('.proposals .owl-carousel').owlCarousel({
@@ -142,7 +144,7 @@ window.onload = () => {
     modalTriggerButtons.forEach(mtb => {
         mtb.addEventListener('click', () => {
             // gtag_report_conversion();
-            
+
             let elemsToHide = document.querySelectorAll('.will-hidden');
             elemsToHide.forEach(e => {
                 if (!e.classList.contains('modal'))

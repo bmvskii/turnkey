@@ -369,6 +369,7 @@
             align-items: center;
 
             min-height: 250px;
+            margin: 0 auto;
 
             border-radius: $border-radius;
 
@@ -425,7 +426,7 @@
   }
 
   .tools-wrapper {
-    padding: 47px 0;
+    padding: 42px 0;
 
     .tools {
       h2 {
@@ -441,7 +442,7 @@
         }
 
         .owl-nav.disabled+.owl-dots {
-          margin-top: 136px !important;
+          margin-top: 28px !important;
         }
       }
     }
