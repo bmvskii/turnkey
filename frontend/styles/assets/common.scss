@@ -154,10 +154,19 @@ a:active {
   transform: translateY(0px);
 }
 
-h1, h2, h3, h4, p {
+h1, h2, p {
   opacity: 0;
   visibility: hidden;
   transition: 1s ease;
   transform: translateY(100px);
 }
+
+h1, h2 {
+  transition: .8s ease;
+}
+
+p {
+  transition: 1s ease;
+}
+
 //text showing effect end
