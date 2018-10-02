@@ -115,6 +115,21 @@ window.onload = () => {
             headerBtn.classList.remove('btn-blue');
             headerBtn.classList.add('btn-white');
         }
+
+        let hiddenText = [];
+        hiddenText.push(document.querySelectorAll('h1'));
+        hiddenText.push(document.querySelectorAll('h2'));
+        hiddenText.push(document.querySelectorAll('p'));
+
+        hiddenText.forEach(ht => {
+            ht.forEach(elem => {
+                if (!elem.classList.contains('s')) {
+                    if (window.pageYOffset + (document.documentElement.clientHeight * 0.5) >= elem.offsetTop) {
+                        elem.classList.add('s');
+                    }
+                }
+            });
+        });
     });
 
     window.scroll();
@@ -143,7 +158,8 @@ window.onload = () => {
 
     modalTriggerButtons.forEach(mtb => {
         mtb.addEventListener('click', () => {
-            // gtag_report_conversion();
+            
+            gtag_report_conversion();
 
             let elemsToHide = document.querySelectorAll('.will-hidden');
             elemsToHide.forEach(e => {
@@ -314,14 +330,13 @@ window.onload = () => {
         return !re.test(value);
     }
 
-    // <!-- Event snippet for click_CTA conversion page
-    // In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     function gtag_report_conversion(url) {
         var callback = function () {
             if (typeof (url) != 'undefined') {
                 window.location = url;
             }
         };
+        gtag('event', 'Click', {'event_category': 'Form'});
         gtag('event', 'conversion', {
             'send_to': 'AW-859179477/zFhtCLfR04kBENWT2JkD',
             'event_callback': callback
