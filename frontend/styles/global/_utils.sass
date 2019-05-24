@@ -1,0 +1,97 @@
+.container 
+  margin: 0 auto
+  max-width: 1200px
+  width: 100%
+
+  padding: 0 15px
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (max-width: 1200px)
+    max-width: 1140px
+
+  // Large devices (desktops, 992px and up)
+  @media (max-width: 992px)
+    max-width: 960px
+    
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 768px)
+    max-width: 720px
+
+  // Small devices (landscape phones, 576px and up)
+  @media (max-width: 650px)
+    max-width: 100%
+
+.para
+  font-weight: 500
+  color: $gray
+  opacity: .8
+  font-size: $fs18
+  line-height: 1.33
+
+.h1
+  font-size: $fs48
+  font-weight: bold
+  color: $white
+  line-height: normal
+
+.red
+  color: $red
+
+.h2
+  display: inline-flex
+  position: relative
+
+  color: $gray
+  font-size: $fs24
+  padding-bottom: 24px
+
+
+  &::after
+    display: block
+    content: ""
+
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    
+    width: 56px
+    height: 4px
+
+    background-color: $red
+
+.link
+  font-size: $fs14
+  transition: $transition
+  font-weight: 500
+  text-decoration: none
+  opacity: 1
+
+  &:hover
+    opacity: .8
+
+.marked
+  font-weight: 900
+
+.section-gray
+  position: relative
+  background: $bg-gray
+  
+  &::before,
+  &::after
+    display: block
+    content: ""
+
+    position: absolute
+    top: 0
+    bottom: 0
+
+    width: 100%
+
+    background: $bg-gray
+
+  &::before
+    left: -100%
+    
+  &::after
+    right: -100%

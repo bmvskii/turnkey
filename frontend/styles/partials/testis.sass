@@ -1,0 +1,83 @@
+.testis
+  padding-top: 90px
+  padding-bottom: 130px
+
+  .cards
+    display: flex
+
+    .card
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      width: calc(100% / 3 - 30px)
+      padding: 25px 0px
+      &:not(:last-child)
+        margin-right: 30px
+
+      @include box-shadow
+      
+      border-radius: 2px
+      background: $white
+    
+      &__top
+        .figure
+          display: flex
+          flex-direction: column
+          align-items: center
+
+          .caption
+            color: $red
+            font-size: $fs14
+            font-weight: bold
+
+          .company-logo
+            margin-bottom: 27px
+            max-height: 45px
+
+      &__content
+        color: $blue
+        font-style: italic
+        font-weight: 500
+        text-align: center
+        margin-bottom: 42px
+
+        padding: 0 30px
+
+      &__bottom
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        position: relative
+        
+        width: 100%
+
+        padding-top: 30px
+        border-top: 1px solid $l-gray
+
+        &::before
+          display: block
+          content: ""
+
+          width: 56px
+          height: 2px
+
+          position: absolute
+          top: 0
+          left: calc(50% - 28px)
+
+          background: $red
+
+      &__author,
+      &__workplace
+        font-size: $fs14
+        color: $blue
+      
+      &__author
+        font-weight: 500
+        opacity: .5
+        margin-bottom: 5px
+
+      &__workplace
+        font-weight: bold

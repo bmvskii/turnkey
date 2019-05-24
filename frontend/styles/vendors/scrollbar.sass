@@ -1,0 +1,21 @@
+.simplebar
+  &-track
+    z-index: 10
+  &-scrollbar
+    position: relative
+
+    background: $purple-gradient
+    border-radius: $border-radius
+
+    opacity: .6
+    transition: $transition
+
+    cursor: pointer
+
+    &:hover,
+    &:focus
+      opacity: 1
+
+    &::before
+      display: none
+    

@@ -1,0 +1,27 @@
+.owl-theme 
+  .owl-nav.disabled + .owl-dots
+    display: flex
+    align-items: center
+
+    .owl-dot
+      width: 20px
+      height: 20px
+      text-align: center
+      line-height: 20px
+
+      opacity: .8
+      
+      &:not(&:first-child)
+        margin-left: 10px
+
+      span
+        margin: 0
+        width: 15px
+        height: 15px
+        transition: $transition
+
+      &.active
+        opacity: 1
+        span
+          background: $purple-gradient
+          transform: scale(1.4)

@@ -1,0 +1,88 @@
+@keyframes scale 
+    0% 
+        transform: scale(1)
+    
+
+    50% 
+        transform: scale(.9)
+    
+
+    100% 
+        transform: scale(1)
+
+@keyframes opacity-change
+    0% 
+        opacity: .2
+
+    50% 
+        opacity: 0
+
+    100% 
+        opacity: .2
+
+@keyframes blink
+    0%
+        opacity: .5
+
+    60%
+        opacity: 1
+
+    100%
+        opacity: .5
+
+@keyframes sliding
+    0%
+        transform: translateY(0)
+
+    60%
+        transform: translateY(10px)
+        
+    100%
+        transform: translateY(0px)
+
+@keyframes rotation
+    0%
+        transform: rotateZ(0deg)
+
+    100%
+        transform: rotateZ(360deg)
+    
+@keyframes motion-to-left
+    0%
+        transform: translateX(-100%)
+    
+    100%
+        transform: translateX(200%)
+
+@keyframes motion-to-right
+        
+    0%
+        transform: translateX(200%)
+    
+    100%
+        transform: translateX(-100%)
+
+@keyframes width-change
+    0% 
+        width: 0
+
+    100%  
+        width: 50%
+
+@keyframes pulse
+  from 
+    transform: scale3d(1, 1, 1)
+
+  50% 
+    transform: scale3d(1.2, 1.2, 1.2)
+
+  to 
+    transform: scale3d(1, 1, 1)
+
+@keyframes border-change
+    from
+        border: 17.5px solid $white
+        transform: scale3d(1,1,1)
+    to
+        border: 5px solid $white
+        transform: scale3d(1.5,1.5,1.5)

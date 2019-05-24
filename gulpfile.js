@@ -27,7 +27,7 @@ const fileinclude = require('gulp-file-include');
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
 gulp.task('styles-sass', () => {
-  return gulp.src('frontend/styles/index.scss')
+  return gulp.src('frontend/styles/index.sass')
     .pipe(plumber({
       errorHandler: notify.onError(err => ({
         title: 'Styles-sass',
@@ -74,7 +74,7 @@ gulp.task('webpack', function (callback) {
 
   let options = {
     entry: {
-      script: './frontend/js/script',
+      script: './frontend/script/index.js',
       // pageIndex: './frontend/js/page-index'
     },
     output: {
@@ -175,15 +175,13 @@ gulp.task('serve', function () {
   browserSync.watch('public/**/*.*').on('change', browserSync.reload);
 });
 
-
-
 gulp.task('dev',
   gulp.series(
     'build',
     gulp.parallel(
       'serve',
       function () {
-        gulp.watch('frontend/styles/**/*.scss', gulp.series('styles-sass'));
+        gulp.watch('frontend/styles/**/*.sass', gulp.series('styles-sass'));
         gulp.watch('frontend/assets/**/*.*', gulp.series('assets'));
         gulp.watch('frontend/assets/images/**/*.{svg,png,jpg}', gulp.series('images'));
         gulp.watch('frontend/assets/**/*.html', gulp.series('fileinclude'));

@@ -1,0 +1,73 @@
+.contact-us
+  display: flex
+
+  margin-top: 80px
+  margin-bottom: 120px
+
+  &__left
+    width: 50%
+    
+    .contacts
+      margin-top: 50px
+
+      .icon
+        margin-right: 10px
+      
+      .telephone,
+      .address
+        display: flex
+        align-items: center
+        line-height: 1.5
+        color: $blue
+        font-weight: bold
+      
+      .address
+        margin-bottom: 25px
+
+  &__right
+    width: 50%
+
+    .form
+      display: flex
+      flex-direction: column
+
+      &__label
+        display: flex
+        flex-direction: column
+        width: 100%
+
+        .text
+          color: $blue
+          .red
+            color: $red
+
+      &__row
+        display: flex
+        justify-content: space-between
+
+        &:not(:last-child)
+          margin-bottom: 15px
+        
+        &:nth-child(3)
+          .form
+            &__input
+              width: 100%
+
+      &__input
+        height: 48px
+        margin-top: 5px
+        width: calc(100% - 10px)
+
+      &__button
+        margin-top: 20px
+        @include box-shadow
+
+  &__para
+    &:not(:last-child)
+      margin-bottom: 35px
+  
+  &__heading
+    margin-bottom: 43px
+
+  .form
+    &__row

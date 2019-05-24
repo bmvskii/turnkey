@@ -1,0 +1,49 @@
+.showcase
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  &__wrapper
+    padding: 85px 0
+  
+  &__heading
+    margin-bottom: 48px
+    line-height: 1.33
+    text-align: center
+
+  .cards
+    display: flex
+
+    .card
+      height: 260px
+      width: calc(100% / 3 - 30px)
+      
+      padding: 30px 20px 40px
+      
+      background-color: $white
+      border-radius: $card-border-radius
+
+      @include box-shadow
+
+      &:not(:last-child)
+        margin-right: 30px
+
+      &__heading
+        margin-bottom: 10px
+        color: $blue
+
+      &__para
+
+      .info
+        margin-bottom: 20px
+        margin-top: 25px
+
+        .number
+          font-size: $fs84
+          color: $red
+          font-weight: 600
+
+        .ext
+          font-size: $fs32
+          color: $blue
+          font-weight: 600

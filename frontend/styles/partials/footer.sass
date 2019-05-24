@@ -1,0 +1,36 @@
+.footer
+  display: flex
+  justify-content: center
+  align-items: center
+
+  position: relative
+
+  padding: 55px 0
+
+  border-top: 1px solid $l-gray
+
+
+  &::before,
+  &::after
+    display: block
+    content: ""
+
+    position: absolute
+    top: 0
+
+    height: 1px
+    width: 100%
+
+    background: $l-gray
+  
+  &::before
+    left: -100%
+
+  &::after
+    right: -100%
+
+  &__descr
+    width: 50%
+
+  &__logo
+    margin-right: 40px
