@@ -3,7 +3,8 @@
   max-width: 1200px
   width: 100%
 
-  padding: 0 15px
+  padding: 0
+  position: relative
 
   // Extra large devices (large desktops, 1200px and up)
   @media (max-width: 1200px)
@@ -20,6 +21,28 @@
   // Small devices (landscape phones, 576px and up)
   @media (max-width: 650px)
     max-width: 100%
+
+.line
+  position: absolute
+  bottom: 0
+  top: 0
+  z-index: 2
+
+  width: 2px
+  background: $blue
+
+  opacity: .1
+  
+  &:nth-child(1)
+    left: 0
+  &:nth-child(2)
+    left: 25%
+  &:nth-child(3)
+    left: 50%
+  &:nth-child(4)
+    left: 75%
+  &:nth-child(5)
+    left: calc(100% - 2px)
 
 .para
   font-weight: 500

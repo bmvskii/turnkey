@@ -1,5 +1,6 @@
 .contact-us
   display: flex
+  justify-content: space-between
 
   margin-top: 80px
   margin-bottom: 120px
@@ -25,7 +26,10 @@
         margin-bottom: 25px
 
   &__right
-    width: 50%
+    @include middle-layer
+    
+    width: calc(50% - 15px)
+    margin-right: 1px
 
     .form
       display: flex
@@ -34,7 +38,8 @@
       &__label
         display: flex
         flex-direction: column
-        width: 100%
+
+        width: calc(50% - 10px)
 
         .text
           color: $blue
@@ -50,27 +55,28 @@
         
         &:nth-child(3)
           .form
-            &__input
+            &__label
               width: 100%
 
       &__input
         height: 48px
         margin-top: 5px
-        width: calc(100% - 10px)
+        width: 100%
 
       &__button
         margin-top: 20px
+        width: 190px
         @include box-shadow
 
   &__para
+    width: 70%
+    
     &:not(:last-child)
       margin-bottom: 35px
   
   &__heading
     margin-bottom: 43px
 
-    &::before
-      transform: translateX(0)
-
-  .form
-    &__row
+    &::after
+      left: 0
+      transform: none

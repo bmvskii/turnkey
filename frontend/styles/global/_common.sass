@@ -8,6 +8,8 @@ body
   display: flex
   flex-direction: column
 
+  position: relative
+
   font: $default-font-settings
   width: 100vw
   min-height: 100vh
@@ -16,16 +18,17 @@ body
   margin: 0
   padding: 0
 
+
   &.no-scroll 
     overflow: hidden
 
 p 
-  font-family: $roboto
+  font-family: $avenir
   font-size: $fs16
   font-weight: 300
 
 h1, h2, h3  
-  font-family: $roboto
+  font-family: $avenir
 
 //  Reset default props
 h1, p, h2, h3 
@@ -51,5 +54,6 @@ img
   max-width: 100%
   object-fit: cover
   height: auto
+
 
 

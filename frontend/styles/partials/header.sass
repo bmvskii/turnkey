@@ -1,20 +1,26 @@
 .header
   display: flex
-  justify-content: space-between
   align-items: center
-  
-  position: fixed
-  z-index: 10
-
-  margin: 0 auto
+  justify-content: space-between
   
   width: 100%
 
-  height: 100px
   padding: 25px 0
+  transition: $transition
+
+  &__wrapper
+    height: 100px
+    width: 100%
+
+    position: fixed
+    z-index: 4
+    left: 0
+    right: 0
 
   .logo
-  
+    .change
+      fill: $white
+    
   .nav
     &__list
       display: flex
@@ -24,3 +30,27 @@
       font-weight: bold
       font-size: $fs14
       margin-right: 29px
+
+  &__wrapper.scrolled
+    background-color: $white
+    height: auto
+    
+    @include box-shadow
+
+    .header
+      padding: 15px 0
+
+      .logo
+        .change
+          fill: #000
+
+      .button
+        color: $red
+        border-color: $blue
+
+        &:hover
+          color: $white
+          border-color: $red
+
+      .nav__item
+        color: $blue

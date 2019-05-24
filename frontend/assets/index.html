@@ -10,38 +10,325 @@
 </head>
 
 <body>
-    <div class="container">
+    <!-- DECORATIVE LINES -->
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
 
-        <!-- HEADER WRAPPER -->
-        <header class="header">
-            <img src="./images/logo.svg" alt="Turn Key Lender logo" class="logo">
+    <!-- HEADER WRAPPER -->
+    <div class="header__wrapper scrolled">
+        <header class="header container ">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="212"
+                    height="42" viewBox="0 0 212 42">
+                    <defs>
+                        <path id="a" d="M.129.126H32.99V32.98H.13z" />
+                    </defs>
+                    <g fill="none" fill-rule="evenodd">
+                        <g transform="translate(19.5 .024)">
+                            <mask id="b" fill="#fff">
+                                <use xlink:href="#a" />
+                            </mask>
+                            <path fill="#E23E57"
+                                d="M23.024 7.343c-2.449 0-4.468 2.035-4.455 4.489.014 2.409 2.044 4.424 4.455 4.42 2.444-.003 4.493-2.069 4.46-4.496-.033-2.428-2.04-4.413-4.46-4.413M9.478 31.311l4.3-3.14c.626-.457 1.246-.921 1.887-1.356.29-.197.335-.347.115-.647A2184.01 2184.01 0 0 1 7.63 14.96c-.256-.355-.408-.288-.7-.073-2.129 1.568-4.27 3.12-6.415 4.682-1.37-5.226.849-13.043 7.614-17.149 6.639-4.03 15.704-2.637 20.79 3.29 5.39 6.28 5.439 15.293.081 21.558-5.316 6.216-13.878 7.016-19.522 4.043"
+                                mask="url(#b)" />
+                        </g>
+                        <path class="change"
+                            d="M32.786 25.666a.665.665 0 0 1-.183.948c-3.048 2.218-6.098 4.434-9.149 6.65-3.636 2.64-7.277 5.274-10.905 7.924-.402.294-.6.375-.958-.124a2777.805 2777.805 0 0 0-11.395-15.7c-.323-.443-.285-.584.406-1.073 1.89-1.341 3.09-2.391 4.935-3.603.608-.399.667-.228.889.08 1.566 2.164 3.157 4.31 4.692 6.497.351.5.567.493 1.021.16 4.595-3.36 9.205-6.7 13.805-10.053.323-.235.527-.451.872.033 1.969 2.766 3.974 5.506 5.966 8.256l.004.005z" />
+                        <text font-family="AvenirNext-Medium, Avenir Next" font-size="20" font-weight="400">
+                            <tspan class="change" x="65" y="28">Turn</tspan>
+                            <tspan x="105.1" y="28" fill="#E23E57" font-family="AvenirNext-Bold, Avenir Next"
+                                font-weight="bold">Key</tspan>
+                            <tspan x="141.98" y="28" fill="#3F3D56"> </tspan>
+                            <tspan class="change" x="146.98" y="28">Lender</tspan>
+                        </text>
+                    </g>
+                </svg>
+            </div>
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#">Solutions</a></li>
                     <li class="nav__item"><a href="#">Industries</a></li>
                     <li class="nav__item"><a href="#">Testimonials</a></li>
                     <li class="nav__item"><a href="#">Awards</a></li>
-                    <li class="nav__item"><a href="# ">Contact us</a></li>
+                    <li class="nav__item"><a href="#">Contact us</a></li>
                 </ul>
             </nav>
             <button class="button button--white">Free trial</button>
         </header>
+    </div>
 
-        <!-- HERO SECTION -->
-        <div class="hero__wrapper">
-            <div class="hero">
-                <div class="hero__left">
-                    <h1 class="hero__heading h1">Put your loan management
-                        on autopilot</h1>
-                    <p class="hero__para">Automate all steps of the lending process from origination to servicing with
-                        AI-powered
-                        solutions configured for your organization.
-                    </p>
-                    <p class="hero__para">Let's work together to achieve your goals - and fit your budget.</p>
+    <!-- HERO SECTION -->
+    <div class="hero__wrapper container">
+        <div class="hero">
+            <div class="hero__left">
+                <h1 class="hero__heading h1">Put your loan management
+                    on autopilot</h1>
+                <p class="hero__para">Automate all steps of the lending process from origination to servicing with
+                    AI-powered
+                    solutions configured for your organization.
+                </p>
+                <p class="hero__para">Let's work together to achieve your goals - and fit your budget.</p>
+            </div>
+            <div class="hero__right">
+                <form action="" class="hero__form form">
+                    <h3 class="h2 form__heading">Get a Free Software Test-Drive</h3>
+                    <label class="form__label" for="first_name">
+                        <span class="text">First name <span class="red">*</span>
+                        </span>
+                        <input class="input form__input" type="text" name="first_name">
+                    </label>
+                    <label class="form__label" for="last_name">
+                        <span class="text">Last name <span class="red">*</span>
+                        </span>
+                        <input class="input form__input" type="text" name="last_name">
+                    </label>
+                    <label class="form__label" for="business_email">
+                        <span class="text">Business Email <span class="red">*</span>
+                        </span>
+                        <input class="input form__input" type="text" name="business_email">
+                    </label>
+                    <label class="form__label" for="phone_number">
+                        <span class="text">Phone number <span class="red">*</span>
+                        </span>
+                        <input class="input form__input" type="text" name="phone_number">
+                    </label>
+                    <label class="form__label" for="company_name">
+                        <span class="text">Company name <span class="red">*</span>
+                        </span>
+                        <input class="input form__input" type="text" name="company_name">
+                    </label>
+                    <button class="button button--red form__button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHOWCASE SECTION -->
+    <div class="showcase__wrapper section-gray container">
+        <div class="showcase">
+            <h2 class="h2 showcase__heading">TurnKey Lender makes the difference <br>
+                to the core of lending business</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="info">
+                        <span class="number">0.5</span>
+                        <span class="ext">/min</span>
+                    </div>
+                    <h3 class="h3 card__heading">Close loans faster</h3>
+                    <p class="para card__para">Avg loan approval time with TurnKey Lender is only 0.5 min</p>
                 </div>
-                <div class="hero__right">
-                    <form action="" class="hero__form form">
-                        <h3 class="form__heading">Get a Free Software Test-Drive</h3>
+                <div class="card">
+                    <div class="info">
+                        <span class="number">49</span>
+                        <span class="ext">%</span>
+                    </div>
+                    <h3 class="h3 card__heading">Reduce operational cost</h3>
+                    <p class="para card__para">Our customers report their portfolio profitability grows 49% on avg
+                        after
+                        implementing TurnKey Lender</p>
+                </div>
+                <div class="card">
+                    <div class="info">
+                        <span class="number">67</span>
+                        <span class="ext">%</span>
+                    </div>
+                    <h3 class="h3 card__heading">Grow Client LTV</h3>
+                    <p class="para card__para">Automate upsells and cross sell new products to increase client
+                        lifetime
+                        value by 67%
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOLUTIONS SECTION -->
+    <div class="solutions__wrapper container">
+        <div class="solutions">
+            <h2 class="h2 solutions__heading">Lending automation tailored for your business</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card__top">
+                        <img src="./images/bank.jpg" alt="Bank" class="card__img" />
+                        <div class="card__caption">Banks & Enterprises</div>
+                    </div>
+                    <div class="card__bottom">
+                        <ul class="card__list">
+                            <li class="card__item">Functional modules addressing each department’s needs;</li>
+                            <li class="card__item">Adjustable AI-powered scorecard;</li>
+                            <li class="card__item">Unmatched scalability of the platform.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__top">
+                        <img src="./images/people.jpg" alt="People" class="card__img" />
+                        <div class="card__caption">Non-Bank Lenders</div>
+                    </div>
+                    <div class="card__bottom">
+                        <ul class="card__list">
+                            <li class="card__item">Highly customizable end-to-end solution;</li>
+                            <li class="card__item">Credit decisioning powered by machine learning;</li>
+                            <li class="card__item">Alternative and traditional scoring factors combined.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__top">
+                        <img src="./images/docs.jpg" alt="Docs" class="card__img" />
+                        <div class="card__caption">In-house Financing</div>
+                    </div>
+                    <div class="card__bottom">
+                        <ul class="card__list">
+                            <li class="card__item">Bank-grade software that deploys within a day;</li>
+                            <li class="card__item">A quick and safe loan approval process;</li>
+                            <li class="card__item">Additional revenue stream on autopilot.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INDUSTRIES WRAPPER -->
+    <div class="industries__wrapper container">
+        <div class="industries">
+            <h2 class="h2 industries__heading">
+                TurnKey Lender Loan Automation Solutions are used <span class="red">across 27 countries</span> by
+                businesses of any industry, size and org structure
+            </h2>
+            <div class="industries__info">
+                <div class="industries__left">
+                    <ul class="industries__list list">
+                        <li data-item-number="01" class="list__item">Online Lending</li>
+                        <li data-item-number="02" class="list__item">Payday Loans</li>
+                        <li data-item-number="03" class="list__item">Microfinance</li>
+                        <li data-item-number="04" class="list__item">Lease Finance</li>
+                    </ul>
+                </div>
+                <div class="industries__center">
+                    <img src="./images/map.svg" alt="Industries map" class="map">
+                </div>
+                <div class="industries__right">
+                    <ul class="industries__list list">
+                        <li data-item-number="05" class="list__item">Medical and Dental</li>
+                        <li data-item-number="06" class="list__item">Retail business</li>
+                        <li data-item-number="07" class="list__item">Peer-to-peer lending</li>
+                        <li data-item-number="08" class="list__item">Telecom</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TESTIS WRAPPER -->
+    <div class="testis__wrapper section-gray container">
+        <div class="testis">
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card__top">
+                        <figure class="figure">
+                            <img src="./images/eny@2x.png" alt="" class="company-logo">
+                            <caption class="caption">USA</caption>
+                        </figure>
+                    </div>
+                    <p class="para card__content">The product has the vast majority of the functionality right out
+                        of
+                        the box, was
+                        easily integrated with a credit agency to pull FICO scores and the support team did an
+                        outstanding job making
+                        our requested customizations.</p>
+                    <div class="card__bottom">
+                        <p class="card__author">Christopher Reed, Principal</p>
+                        <p class="card__workplace">Shepard Capital Partners</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__top">
+                        <figure class="figure">
+                            <img src="./images/eny@2x.png" alt="" class="company-logo">
+                            <caption class="caption">USA</caption>
+                        </figure>
+                    </div>
+                    <p class="para card__content">The product has the vast majority of the functionality right out
+                        of
+                        the box, was
+                        easily integrated with a credit agency to pull FICO scores and the support team did an
+                        outstanding job making
+                        our requested customizations.</p>
+                    <div class="card__bottom">
+                        <p class="card__author">Christopher Reed, Principal</p>
+                        <p class="card__workplace">Shepard Capital Partners</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__top">
+                        <figure class="figure">
+                            <img src="./images/eny@2x.png" alt="" class="company-logo">
+                            <caption class="caption">USA</caption>
+                        </figure>
+                    </div>
+                    <p class="para card__content">The product has the vast majority of the functionality right out
+                        of
+                        the box, was
+                        easily integrated with a credit agency to pull FICO scores and the support team did an
+                        outstanding job making
+                        our requested customizations.</p>
+                    <div class="card__bottom">
+                        <p class="card__author">Christopher Reed, Principal</p>
+                        <p class="card__workplace">Shepard Capital Partners</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CLIENTS WRAPPER -->
+    <div class="clients__wrapper container">
+        <div class="clients">
+            <h2 class="h2 clients__heading">Recognized by industry experts and associations</h2>
+            <div class="clients__logos">
+                <img src="./images/lending.png" alt="Landing awards logo" class="logo">
+                <img src="./images/SITF.png" alt="SITF Logo" class="logo">
+                <img src="./images/AI.png" alt="Business awards logo" class="logo">
+                <img src="./images/hottest.png" alt="Hottest awards logo" class="logo">
+                <img src="./images/awards.png" alt="Awards logo" class="logo">
+                <img src="./images/CEE.png" alt="CEE logo" class="logo">
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT-US WRAPPER -->
+    <div class="contact-us__wrapper container">
+        <div class="contact-us">
+            <div class="contact-us__left">
+                <h2 class="h2 contact-us__heading">Request Free Access</h2>
+                <p class="para contact-us__para">Try TurnKey Lender for free, with no obligation.</p>
+                <p class="para contact-us__para">
+                    Submit the form and we will help you set your free trial to evaluate the power of AI-based
+                    technology.</p>
+                <div class="contacts">
+                    <div class="address">
+                        <img src="./images/pointer.svg" alt="Pointer icon" class="icon">
+                        1717 Harrison St, San Francisco,
+                        CA 94103, USA
+                    </div>
+                    <div class="telephone">
+                        <img src="./images/tel.svg" alt="Tel icon" class="icon">
+                        <a href="tel:+1231231234">123 - 123 - 1234</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-us__right">
+                <form action="" class="contact-us__form form">
+                    <div class="form__row">
                         <label class="form__label" for="first_name">
                             <span class="text">First name <span class="red">*</span>
                             </span>
@@ -52,6 +339,8 @@
                             </span>
                             <input class="input form__input" type="text" name="last_name">
                         </label>
+                    </div>
+                    <div class="form__row">
                         <label class="form__label" for="business_email">
                             <span class="text">Business Email <span class="red">*</span>
                             </span>
@@ -62,287 +351,29 @@
                             </span>
                             <input class="input form__input" type="text" name="phone_number">
                         </label>
+                    </div>
+                    <div class="form__row">
                         <label class="form__label" for="company_name">
                             <span class="text">Company name <span class="red">*</span>
                             </span>
                             <input class="input form__input" type="text" name="company_name">
                         </label>
-                        <button class="button button--red">Submit</button>
-                    </form>
-                </div>
+                    </div>
+                    <div class="form__row">
+                        <button class="button button--red form__button">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
-
-        <!-- SHOWCASE SECTION -->
-        <div class="showcase__wrapper section-gray">
-            <div class="showcase">
-                <h2 class="h2 showcase__heading">TurnKey Lender makes the difference
-                    to the core of lending business</h2>
-                <div class="cards">
-                    <div class="card">
-                        <div class="info">
-                            <span class="number">0.5</span>
-                            <span class="ext">/min</span>
-                        </div>
-                        <h3 class="h3 card__heading">Close loans faster</h3>
-                        <p class="para card__para">Avg loan approval time with TurnKey Lender is only 0.5 min</p>
-                    </div>
-                    <div class="card">
-                        <div class="info">
-                            <span class="number">49</span>
-                            <span class="ext">%</span>
-                        </div>
-                        <h3 class="h3 card__heading">Reduce operational cost</h3>
-                        <p class="para card__para">Our customers report their portfolio profitability grows 49% on avg
-                            after
-                            implementing TurnKey Lender</p>
-                    </div>
-                    <div class="card">
-                        <div class="info">
-                            <span class="number">67</span>
-                            <span class="ext">%</span>
-                        </div>
-                        <h3 class="h3 card__heading">Grow Client LTV</h3>
-                        <p class="para card__para">Automate upsells and cross sell new products to increase client
-                            lifetime
-                            value by 67%
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SOLUTIONS SECTION -->
-        <div class="solutions__wrapper">
-            <div class="solutions">
-                <h2 class="h2 solutions__heading"></h2>
-                <div class="cards">
-                    <div class="card">
-                        <div class="card__top">
-                            <img src="./images/bank.jpg" alt="Bank" class="card__img" />
-                            <div class="card__caption">Banks & Enterprises</div>
-                        </div>
-                        <div class="card__bottom">
-                            <ul class="card__list">
-                                <li class="card__item">Functional modules addressing each department’s needs;</li>
-                                <li class="card__item">Adjustable AI-powered scorecard;</li>
-                                <li class="card__item">Unmatched scalability of the platform.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__top">
-                            <img src="./images/people.jpg" alt="People" class="card__img" />
-                            <div class="card__caption">Non-Bank Lenders</div>
-                        </div>
-                        <div class="card__bottom">
-                            <ul class="card__list">
-                                <li class="card__item">Highly customizable end-to-end solution;</li>
-                                <li class="card__item">Credit decisioning powered by machine learning;</li>
-                                <li class="card__item">Alternative and traditional scoring factors combined.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__top">
-                            <img src="./images/docs.jpg" alt="Docs" class="card__img" />
-                            <div class="card__caption">In-house Financing</div>
-                        </div>
-                        <div class="card__bottom">
-                            <ul class="card__list">
-                                <li class="card__item">Bank-grade software that deploys within a day;</li>
-                                <li class="card__item">A quick and safe loan approval process;</li>
-                                <li class="card__item">Additional revenue stream on autopilot.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- INDUSTRIES WRAPPER -->
-        <div class="industries__wrapper">
-            <div class="industries">
-                <h2 class="h2 industries__heading">
-                    TurnKey Lender Loan Automation Solutions are used across 27 countries by businesses of any industry,
-                    size and org
-                    structure
-                    <div class="industries__info">
-                        <div class="industries__left">
-                            <ul class="industries__list list">
-                                <li data-item-number="01" class="list__item">Online Lending</li>
-                                <li data-item-number="02" class="list__item">Payday Loans</li>
-                                <li data-item-number="03" class="list__item">Microfinance</li>
-                                <li data-item-number="04" class="list__item">Lease Finance</li>
-                            </ul>
-                        </div>
-                        <div class="industries__center">
-                            <img src="./images/map.svg" alt="Industries map" class="map">
-                        </div>
-                        <div class="industries__right">
-                            <ul class="industries__list list">
-                                <li data-item-number="05" class="list__item">Medical and Dental</li>
-                                <li data-item-number="06" class="list__item">Retail business</li>
-                                <li data-item-number="07" class="list__item">Peer-to-peer lending</li>
-                                <li data-item-number="08" class="list__item">Telecom</li>
-                            </ul>
-                        </div>
-                    </div>
-                </h2>
-            </div>
-        </div>
-
-        <!-- TESTIS WRAPPER -->
-        <div class="testis__wrapper section-gray">
-            <div class="testis">
-                <div class="cards">
-
-                    <div class="card">
-                        <div class="card__top">
-                            <figure class="figure">
-                                <img src="./images/eny@2x.png" alt="" class="company-logo">
-                                <caption class="caption">USA</caption>
-                            </figure>
-                        </div>
-                        <p class="para card__content">The product has the vast majority of the functionality right out
-                            of
-                            the box, was
-                            easily integrated with a credit agency to pull FICO scores and the support team did an
-                            outstanding job making
-                            our requested customizations.</p>
-                        <div class="card__bottom">
-                            <p class="card__author">Christopher Reed, Principal</p>
-                            <p class="card__workplace">Shepard Capital Partners</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card__top">
-                            <figure class="figure">
-                                <img src="./images/eny@2x.png" alt="" class="company-logo">
-                                <caption class="caption">USA</caption>
-                            </figure>
-                        </div>
-                        <p class="para card__content">The product has the vast majority of the functionality right out
-                            of
-                            the box, was
-                            easily integrated with a credit agency to pull FICO scores and the support team did an
-                            outstanding job making
-                            our requested customizations.</p>
-                        <div class="card__bottom">
-                            <p class="card__author">Christopher Reed, Principal</p>
-                            <p class="card__workplace">Shepard Capital Partners</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card__top">
-                            <figure class="figure">
-                                <img src="./images/eny@2x.png" alt="" class="company-logo">
-                                <caption class="caption">USA</caption>
-                            </figure>
-                        </div>
-                        <p class="para card__content">The product has the vast majority of the functionality right out
-                            of
-                            the box, was
-                            easily integrated with a credit agency to pull FICO scores and the support team did an
-                            outstanding job making
-                            our requested customizations.</p>
-                        <div class="card__bottom">
-                            <p class="card__author">Christopher Reed, Principal</p>
-                            <p class="card__workplace">Shepard Capital Partners</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- CLIENTS WRAPPER -->
-        <div class="clients__wrapper">
-            <div class="clients">
-                <h2 class="h2 clients__heading">Recognized by industry experts and associations</h2>
-                <div class="clients__logos">
-                    <img src="./images/lending.png" alt="Landing awards logo" class="client__logo">
-                    <img src="./images/SITF.png" alt="SITF Logo" class="client__logo">
-                    <img src="./images/AI.png" alt="Business awards logo" class="client__logo">
-                    <img src="./images/hottest.png" alt="Hottest awards logo" class="client__logo">
-                    <img src="./images/awards.png" alt="Awards logo" class="client__logo">
-                    <img src="./images/CEE.png" alt="CEE logo" class="client__logo">
-                </div>
-            </div>
-        </div>
-
-        <!-- CONTACT-US WRAPPER -->
-        <div class="contact-us__wrapper">
-            <div class="contact-us">
-                <div class="contact-us__left">
-                    <h2 class="h2 contact-us__heading">Request Free Access</h2>
-                    <p class="para contact-us__para">Try TurnKey Lender for free, with no obligation.</p>
-                    <p class="para contact-us__para">
-                        Submit the form and we will help you set your free trial to evaluate the power of AI-based
-                        technology.</p>
-                    <div class="contacts">
-                        <div class="address">
-                            <img src="./images/pointer.svg" alt="Pointer icon" class="icon">
-                            1717 Harrison St, San Francisco,
-                            CA 94103, USA
-                        </div>
-                        <div class="telephone">
-                            <img src="./images/tel.svg" alt="Tel icon" class="icon">
-                            <a href="tel:+1231231234">123 - 123 - 1234</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-us__right">
-                    <form action="" class="contact-us__form form">
-                        <div class="form__row">
-                            <label class="form__label" for="first_name">
-                                <span class="text">First name <span class="red">*</span>
-                                </span>
-                                <input class="input form__input" type="text" name="first_name">
-                            </label>
-                            <label class="form__label" for="last_name">
-                                <span class="text">Last name <span class="red">*</span>
-                                </span>
-                                <input class="input form__input" type="text" name="last_name">
-                            </label>
-                        </div>
-                        <div class="form__row">
-                            <label class="form__label" for="business_email">
-                                <span class="text">Business Email <span class="red">*</span>
-                                </span>
-                                <input class="input form__input" type="text" name="business_email">
-                            </label>
-                            <label class="form__label" for="phone_number">
-                                <span class="text">Phone number <span class="red">*</span>
-                                </span>
-                                <input class="input form__input" type="text" name="phone_number">
-                            </label>
-                        </div>
-                        <div class="form__row">
-                            <label class="form__label" for="company_name">
-                                <span class="text">Company name <span class="red">*</span>
-                                </span>
-                                <input class="input form__input" type="text" name="company_name">
-                            </label>
-                        </div>
-                        <div class="form__row">
-                            button.button.button--red.form__button
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!-- FOOTER WRAPPER -->
-        <footer class="footer">
-            <img src="./images/logo-footer.svg" alt="" class="footer__logo">
-            <p class="footer__descr">TurnKey Lender is a cloud-based Lending Software for evaluating borrowers,
-                decision-making
-                support, and online-lending process automation. </p>
-        </footer>
     </div>
+
+    <!-- FOOTER WRAPPER -->
+    <footer class="footer">
+        <img src="./images/logo-footer.svg" alt="" class="footer__logo">
+        <p class="footer__descr">TurnKey Lender is a cloud-based Lending Software for evaluating borrowers,
+            decision-making
+            support, and online-lending process automation. </p>
+    </footer>
 
 
     <script src="/src/index.js"></script>

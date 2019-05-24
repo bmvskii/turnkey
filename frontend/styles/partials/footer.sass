@@ -3,12 +3,13 @@
   justify-content: center
   align-items: center
 
-  position: relative
+  
+  @include top-layer
 
   padding: 55px 0
 
-  border-top: 1px solid $l-gray
-
+  border-top: 1px solid rgba($color: $blue, $alpha: .1s)
+  background-color: $white
 
   &::before,
   &::after
@@ -16,12 +17,12 @@
     content: ""
 
     position: absolute
-    top: 0
+    top: -1px
 
     height: 1px
     width: 100%
 
-    background: $l-gray
+    background: rgba($color: $blue, $alpha: .1s)
   
   &::before
     left: -100%
@@ -31,6 +32,10 @@
 
   &__descr
     width: 50%
+    font-size: $fs14
+    color: $blue
+    font-weight: 500
+    line-height: 1.5
 
   &__logo
     margin-right: 40px

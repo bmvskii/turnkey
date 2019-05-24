@@ -3,7 +3,7 @@ button
   
   background: none
 
-  font-family: $roboto
+  font-family: $avenir
   font-size: $fs14
   font-weight: 900
   cursor: pointer
@@ -26,16 +26,21 @@ button
 
   position: relative
   z-index: 10
-
-  &:hover,
-    box-shadow: 0 0 20px 1px rgba(255,255,255 , .3)
   
   @media (max-width: $mobile)
     width: 100%
     
   &--white
+    color: $white
     border-radius: 2px
     border: 1px solid $white
 
+    &:hover
+      border-color: $red
+      background: $red
+
   &--red
     background: $red
+
+    &:hover
+      box-shadow: none
