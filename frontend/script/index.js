@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollTimeInMs = 800;
 
   window.onresize = () => {
-    if (window.innerWidth > 1024) {
+    if (window.innerWidth > 1024 || window.innerWidth <= 650) {
       $('.solutions .owl-carousel').trigger('destroy.owl.carousel');
       $('.showcase .owl-carousel').trigger('destroy.owl.carousel');
     } else {
@@ -18,34 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
           dots: true,
           items: 2,
           margin: 20,
-          animateIn: 'slideInLeft',
-          responsive: {
-            0: {
-              margin: 0,
-              items: 1,
-            },
-            651: {
-              items: 2,
-              margin: 20,
-            },
-          },
         });
 
         showcaseCards.owlCarousel({
           dots: true,
           items: 2,
           margin: 20,
-          animateIn: 'slideInLeft',
-          responsive: {
-            0: {
-              margin: 0,
-              items: 1,
-            },
-            651: {
-              items: 2,
-              margin: 20,
-            },
-          },
         });
       }
     }
@@ -91,4 +69,21 @@ document.addEventListener('DOMContentLoaded', () => {
       header.classList.remove('scrolled');
     }
   });
+
+  const initAccordeons = () => {
+    const cards = document.querySelectorAll('.solutions .card');
+
+    cards.forEach(card => card.addEventListener('click', (e) => {
+      const { target, currentTarget } = e;
+
+      if (target.classList.contains('card__button--toggle')) {
+        currentTarget.classList.toggle('hidden');
+        target.innerHTML === 'Learn more'
+          ? target.innerHTML = 'Hide'
+          : target.innerHTML = 'Learn more';
+      }
+    }));
+  };
+
+  initAccordeons();
 });

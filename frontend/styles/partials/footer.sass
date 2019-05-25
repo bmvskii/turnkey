@@ -3,13 +3,17 @@
   justify-content: center
   align-items: center
 
-  
   @include top-layer
 
-  padding: 55px 0
+  padding: 55px 15px
 
   border-top: 1px solid rgba($color: $blue, $alpha: .1s)
   background-color: $white
+
+  @media screen and (max-width: $mobile)
+    flex-direction: column
+
+    padding: 30px 15px 20px
 
   &::before,
   &::after
@@ -36,6 +40,12 @@
     color: $blue
     font-weight: 500
     line-height: 1.5
+    
+    @media screen and (max-width: $mobile)
+      text-align: center
+      width: 100%
+
+      margin-top: 25px
 
   &__logo
     margin-right: 40px

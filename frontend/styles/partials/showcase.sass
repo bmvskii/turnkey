@@ -23,6 +23,10 @@
 
       .owl-stage
         margin-bottom: 35px
+    
+    @media screen and (max-width: $mobile)
+      display: flex
+      flex-direction: column
 
     .card
       height: 260px
@@ -40,6 +44,10 @@
 
       @media screen and (max-width: $md-screens) 
         width: 100%
+      
+      @media screen and (max-width: $mobile)
+        &:not(:first-child)
+          margin-top: 30px 
 
       &__heading
         margin-bottom: 10px

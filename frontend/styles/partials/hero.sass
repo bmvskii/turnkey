@@ -32,6 +32,9 @@
     @media screen and (max-width: $md-screens)
       width: 50%
 
+    @media screen and (max-width: $mobile)
+      width: 100%
+
     .form
       display: flex
       flex-direction: column
@@ -66,6 +69,9 @@
 
         @media screen and (max-width: $md-screens)
           font-size: $fs20
+
+        @media screen and (max-width: $mobile)
+          font-size: $fs18
 
       &__button
         margin-top: 25px
@@ -107,6 +113,20 @@
 
       background: $gray url('../images/bg.png') no-repeat center center
       background-size: contain
+
+      @media screen and (max-width: $mobile)
+        background-size: cover
+        background-position: -10%
+      
+      @media screen and (min-width: $lg-screens)
+        background-size: 35%
+        background-position: 49% 35%
+      
+      @media screen and (min-width: $extra-lg-screens)
+        background-size: 35%
+        background-position: 49% 35%
+
+
 
     &::before
       display: block

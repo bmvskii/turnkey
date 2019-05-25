@@ -5,12 +5,9 @@
   
   width: 100%
 
-  padding: 25px 0
+  padding: 25px 15px
   transition: $transition
 
-  @media screen and (max-width: $md-screens)
-    padding: 25px 15px
-    max-width: unset
 
   &__wrapper
     height: 100px
@@ -26,10 +23,8 @@
       fill: $white
     
   .nav
-    transition: $transition
-
     @media screen and (max-width: $md-screens)
-      visibility: hidden
+      display: none
 
     &__list
       display: flex
@@ -41,9 +36,10 @@
       margin-right: 29px
 
   .button
-    
     @media screen and (max-width: $mobile)
-      text-transform: normal
+      text-transform: none
+      width: 140px
+
 
   &__wrapper.scrolled
     background-color: $white
@@ -52,7 +48,7 @@
     @include box-shadow
 
     .header
-      padding: 15px 0
+      padding: 15px
 
       .logo
         .change

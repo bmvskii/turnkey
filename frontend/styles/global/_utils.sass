@@ -22,6 +22,7 @@
   // Small devices (landscape phones, 576px and up)
   @media (max-width: 650px)
     max-width: 100%
+    padding: 0 15px
 
 .line
   position: absolute
@@ -66,8 +67,12 @@
 
 .h2
   display: inline-flex
+  justify-content: center
+  line-height: 1.33
   position: relative
 
+  text-align: center
+  
   color: $gray
   font-size: $fs24
   padding-bottom: 24px
@@ -101,24 +106,24 @@
   font-weight: 900
 
 .section-gray
-  position: relative
+  // position: relative
   background: $bg-gray
   
-  &::before,
-  &::after
-    display: block
-    content: ""
+  // &::before,
+  // &::after
+  //   display: block
+  //   content: ""
 
-    position: absolute
-    top: 0
-    bottom: 0
+  //   position: absolute
+  //   top: 0
+  //   bottom: 0
 
-    width: 100%
+  //   width: 100%
 
-    background: $bg-gray
+  //   background: $bg-gray
 
-  &::before
-    left: -100%
+  // &::before
+  //   left: -100%
     
-  &::after
-    right: -100%
+  // &::after
+  //   right: -100%
