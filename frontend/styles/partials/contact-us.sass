@@ -40,6 +40,12 @@
         flex-direction: column
 
         width: calc(50% - 10px)
+        
+        @media screen and (max-width: $md-screens)
+          width: 100%
+
+          &:last-child
+            margin-top: 15px
 
         .text
           color: $blue
@@ -57,6 +63,9 @@
           .form
             &__label
               width: 100%
+
+        @media screen and (max-width: $md-screens)
+          flex-direction: column
 
       &__input
         height: 48px

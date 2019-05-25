@@ -5,6 +5,9 @@
 
   &__wrapper
     padding: 85px 0
+
+    @media screen and (max-width: $md-screens) 
+      padding-top: 370px
   
   &__heading
     margin-bottom: 48px
@@ -14,6 +17,12 @@
   .cards
     display: flex
     @include middle-layer
+
+    @media screen and (max-width: $md-screens) 
+      display: block
+
+      .owl-stage
+        margin-bottom: 35px
 
     .card
       height: 260px
@@ -28,6 +37,9 @@
 
       &:not(:last-child)
         margin-right: 30px
+
+      @media screen and (max-width: $md-screens) 
+        width: 100%
 
       &__heading
         margin-bottom: 10px

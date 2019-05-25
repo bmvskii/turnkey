@@ -7,6 +7,13 @@
 
   padding-top: 100px
 
+  @media screen and (max-width: $md-screens)
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    padding-top: 440px
+
   &__left
     display: flex
     flex-direction: column
@@ -14,10 +21,16 @@
 
     width: 60%
 
+    @media screen and (max-width: $md-screens)
+      width: 75%
+
   &__right
     width: 35%
     padding-top: 45px
     bottom: -30px
+
+    @media screen and (max-width: $md-screens)
+      width: 50%
 
     .form
       display: flex
@@ -47,8 +60,12 @@
 
       &__heading
         display: inline-flex
+        justify-content: center
         margin-bottom: 20px
         white-space: nowrap
+
+        @media screen and (max-width: $md-screens)
+          font-size: $fs20
 
       &__button
         margin-top: 25px
@@ -58,10 +75,16 @@
   &__heading
     margin-bottom: 20px
   
+    @media screen and (max-width: $md-screens)
+      text-align: center
+
   &__para
     color: $white
     opacity: .8
     
+    @media screen and (max-width: $md-screens)
+      text-align: center
+
     &:not(:last-child)
       margin-bottom: 25px
 
@@ -83,7 +106,7 @@
       z-index: -2
 
       background: $gray url('../images/bg.png') no-repeat center center
-      background-size: 80%
+      background-size: contain
 
     &::before
       display: block

@@ -15,9 +15,8 @@
 
     width: 50%
 
-  &__left,
-  &__right
-    width: 25%
+    @media screen and (max-width: $md-screens)
+      display: none
 
   &__right
     .list
@@ -26,12 +25,20 @@
 
   &__info
     display: flex
+    
+    @media screen and (max-width: $md-screens)
+      justify-content: space-between
 
   &__heading
     display: inline-block
     margin-bottom: 100px
     line-height: 1.33
     text-align: center
+
+    width: 80%
+
+    @media screen and (max-width: $mobile)
+      width: 100% 
 
   &__list
   
@@ -65,3 +72,18 @@
         font-weight: bold
 
         margin-right: 20px
+
+      @media screen and (max-width: $md-screens)
+        font-size: $fs16
+
+  &__left,
+  &__right
+    width: 25%
+
+    @media screen and (max-width: $md-screens)
+      width: 45%
+
+      .list
+        &__item
+          margin: 0
+          width: 100%

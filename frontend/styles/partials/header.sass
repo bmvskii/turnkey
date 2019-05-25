@@ -8,6 +8,10 @@
   padding: 25px 0
   transition: $transition
 
+  @media screen and (max-width: $md-screens)
+    padding: 25px 15px
+    max-width: unset
+
   &__wrapper
     height: 100px
     width: 100%
@@ -22,6 +26,11 @@
       fill: $white
     
   .nav
+    transition: $transition
+
+    @media screen and (max-width: $md-screens)
+      visibility: hidden
+
     &__list
       display: flex
 
@@ -30,6 +39,11 @@
       font-weight: bold
       font-size: $fs14
       margin-right: 29px
+
+  .button
+    
+    @media screen and (max-width: $mobile)
+      text-transform: normal
 
   &__wrapper.scrolled
     background-color: $white

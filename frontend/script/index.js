@@ -5,55 +5,77 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollDownTrigger = $('.nav a');
   const scrollTimeInMs = 800;
 
-  //swap logo depends on device
-  // if (window.innerWidth <= 650) {
-  //   mobileLogo.style.display = "block";
+  window.onresize = () => {
+    if (window.innerWidth > 1024) {
+      $('.solutions .owl-carousel').trigger('destroy.owl.carousel');
+      $('.showcase .owl-carousel').trigger('destroy.owl.carousel');
+    } else {
+      if (window.innerWidth <= 1024) {
+        const solutionsCards = $('.solutions .owl-carousel');
+        const showcaseCards = $('.showcase .owl-carousel');
 
-  //   $('.tools .owl-carousel').owlCarousel({
-  //     dots: true,
-  //     dotsEach: true,
-  //     items: 1,
-  //     center: true,
-  //     margin: 20
-  //   });
-  // } else {
-  //   logo.style.display = "block";
-  // }
+        solutionsCards.owlCarousel({
+          dots: true,
+          items: 2,
+          margin: 20,
+          animateIn: 'slideInLeft',
+          responsive: {
+            0: {
+              margin: 0,
+              items: 1,
+            },
+            651: {
+              items: 2,
+              margin: 20,
+            },
+          },
+        });
 
+        showcaseCards.owlCarousel({
+          dots: true,
+          items: 2,
+          margin: 20,
+          animateIn: 'slideInLeft',
+          responsive: {
+            0: {
+              margin: 0,
+              items: 1,
+            },
+            651: {
+              items: 2,
+              margin: 20,
+            },
+          },
+        });
+      }
+    }
+  }
+
+  window.dispatchEvent(new Event('resize'));
 
   //init of a third party libraries
-  // $('.hero .owl-carousel').owlCarousel({
-  //   dots: true,
-  //   items: 1,
-  //   dotsEach: true,
-  //   autoplay: true,
-  //   rewind: true,
-  //   animateIn: 'slideInLeft',
-  //   center: true
-  // });
-
-  // $('.proposals .owl-carousel').owlCarousel({
-  //   dots: true,
-  //   responsiveClass: true,
-  //   responsive: {
-  //     0: {
-  //       margin: 15,
-  //       items: 1,
-  //     },
-  //     768: {
-  //       margin: 28,
-  //       items: 2,
-  //     },
-  //     1024: {
-  //       items: 3,
-  //       margin: 28,
-  //     },
-  //     1440: {
-  //       items: 3,
-  //       margin: 28
-  //     },
-  //   },
-  // });
+  $('.testis .owl-carousel').owlCarousel({
+    dots: true,
+    items: 3,
+    margin: 20,
+    autoplay: true,
+    rewind: true,
+    animateIn: 'slideInLeft',
+    responsive: {
+      0: {
+        margin: 0,
+        items: 1,
+      },
+      768: {
+        items: 2,
+        margin: 20,
+      },
+      1200: {
+        items: 3,
+        margin: 20
+      },
+    },
+  });
 
   $('.nav a, .header .button').click(function () {
     page.animate({

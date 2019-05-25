@@ -1,27 +1,56 @@
 .owl-theme 
   .owl-nav.disabled + .owl-dots
     display: flex
+    justify-content: center
     align-items: center
+    margin-top: 0
 
     .owl-dot
+      display: flex
+      justify-content: center
+      align-items: center
+
       width: 20px
       height: 20px
-      text-align: center
-      line-height: 20px
-
-      opacity: .8
       
-      &:not(&:first-child)
+      &:not(:first-child)
         margin-left: 10px
 
       span
-        margin: 0
-        width: 15px
-        height: 15px
+        display: inline-block
+        width: 16px
+        height: 16px
         transition: $transition
+
+        border-radius: 50%
+
+        margin: 0
 
       &.active
         opacity: 1
+        position: relative
+
         span
-          background: $purple-gradient
-          transform: scale(1.4)
+          display: inline-block
+          justify-content: center
+          align-items: center
+
+          background: $blue
+          border: 1px solid $l-gray
+
+        &::before
+            display: block
+            content: ""
+
+            position: absolute
+            left: calc(50% - 10px)
+            top: calc(50% - 10px)
+
+            z-index: -1
+
+            width: 20px
+            height: 20px
+
+            border-radius: 50%
+            background: $blue
+            

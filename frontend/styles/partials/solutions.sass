@@ -13,6 +13,13 @@
     display: flex
     @include middle-layer
 
+    @media screen and (max-width: $md-screens)
+      display: block
+
+      .owl-stage
+        display: flex
+        margin-bottom: 35px
+
     .card
       display: flex
       flex-direction: column
@@ -23,6 +30,10 @@
       border-radius: $card-border-radius
 
       @include box-shadow
+      
+      @media screen and (max-width: $md-screens) 
+        width: 100%
+        height: 100%
 
       &__top
         position: relative
@@ -48,7 +59,7 @@
           content: ""
 
           position: relative
-          top: 8px
+          top: 12px
           left: -12px
 
           background: $red
