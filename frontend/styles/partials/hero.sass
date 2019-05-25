@@ -76,7 +76,6 @@
       &__button
         margin-top: 25px
         
-        @include box-shadow
 
   &__heading
     margin-bottom: 20px
@@ -112,21 +111,20 @@
       z-index: -2
 
       background: $gray url('../images/bg.png') no-repeat center center
-      background-size: contain
+      
+      @media screen and (max-width: $extra-lg-screens)
+        background-size: 35%
+        background-position: 49% 35%
+      
+      @media screen and (max-width: $md-screens)
+        background-size: 40%
+
+      @media screen and (max-width: $tablets)
+        background-size: 60%
 
       @media screen and (max-width: $mobile)
         background-size: cover
         background-position: -10%
-      
-      @media screen and (min-width: $lg-screens)
-        background-size: 35%
-        background-position: 49% 35%
-      
-      @media screen and (min-width: $extra-lg-screens)
-        background-size: 35%
-        background-position: 49% 35%
-
-
 
     &::before
       display: block
@@ -141,3 +139,7 @@
       
       background-color: #0b0a1a
       opacity: .75
+    
+  .line
+    background-color: $white
+    opacity: .2

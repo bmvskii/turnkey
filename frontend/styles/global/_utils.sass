@@ -3,7 +3,7 @@
   max-width: 1200px
   width: 100%
 
-  padding: 0
+  padding: 0 15px
   position: relative
 
   // Extra large devices (large desktops, 1200px and up)
@@ -30,21 +30,23 @@
   top: 0
   z-index: 2
 
-  width: 2px
+  width: 1px
   background: $blue
 
   opacity: .1
   
   &:nth-child(1)
-    left: 0
+    left: 15px
   &:nth-child(2)
     left: 25%
   &:nth-child(3)
     left: 50%
   &:nth-child(4)
     left: 75%
+
+  //  1px line width + 15px gutter
   &:nth-child(5)
-    left: calc(100% - 2px)
+    left: calc(100% - 16px)
 
 .para
   font-weight: 500
@@ -94,13 +96,35 @@
 
 .link
   font-size: $fs14
-  transition: $transition
-  font-weight: 500
   text-decoration: none
   opacity: 1
 
+  position: relative
+
+  &::before
+    display: block
+    content: ""
+
+    height: 4px
+    width: 0
+
+    position: absolute
+    bottom: 2px
+    left: -10%
+
+    z-index: -1
+
+    background: $red
+    transition: $transition
+
   &:hover
-    opacity: .8
+    &::before
+      width: 120%
+
+  @media screen and (max-width: $mobile)
+    &:focus
+      &::before
+        width: 120%
 
 .marked
   font-weight: 900

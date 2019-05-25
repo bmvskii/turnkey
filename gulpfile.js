@@ -21,10 +21,10 @@ const webpack = require('webpack');
 const notifier = require('node-notifier');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
-
 const fileinclude = require('gulp-file-include');
 
-const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
+// const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
+const isDevelopment = false;
 
 gulp.task('styles-sass', () => {
   return gulp.src('frontend/styles/index.sass')
@@ -41,15 +41,18 @@ gulp.task('styles-sass', () => {
       cascade: false
     }))
     .pipe(gulpIf(isDevelopment, sourcemaps.write()))
-    .pipe(gulpIf(!isDevelopment, combine(cssnano(), rev())))
+    .pipe(combine(cssnano()))
     .pipe(gulp.dest('public/styles/'))
-    .pipe(gulpIf(!isDevelopment, combine(rev.manifest('css.json'), gulp.dest('manifest'))));
+    // .pipe(
+    //   combine(rev.manifest('css.json'), gulp.dest('manifest'))
+    // );
+
 })
 
 gulp.task('assets', function () {
   return gulp.src('frontend/assets/**/*.*', {
-      since: gulp.lastRun('assets')
-    })
+    since: gulp.lastRun('assets')
+  })
     .pipe(gulpIf(!isDevelopment, revReplace({
       manifest: gulp.src('manifest/css.json', {
         allowEmpty: true
@@ -65,8 +68,8 @@ gulp.task('assets', function () {
 
 gulp.task('images', function () {
   return gulp.src('frontend/assets/images/**/*.{svg,png,jpg}', {
-      since: gulp.lastRun('images')
-    })
+    since: gulp.lastRun('images')
+  })
     .pipe(gulp.dest('public/images'));
 });
 
@@ -75,12 +78,11 @@ gulp.task('webpack', function (callback) {
   let options = {
     entry: {
       script: './frontend/script/index.js',
-      // pageIndex: './frontend/js/page-index'
     },
     output: {
       path: __dirname + '/public/js',
       publicPath: '/js/',
-      filename: isDevelopment ? '[name].js' : '[name]-[chunkhash:10].js'
+      filename: '[name].js'
     },
     watch: isDevelopment,
     devtool: isDevelopment ? 'cheap-module-inline-source-map' : null,
@@ -165,7 +167,7 @@ gulp.task('fileinclude', function () {
     .pipe(gulp.dest('./public/'));
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel('images', 'styles-sass', 'webpack', ), 'assets', 'fileinclude', ));
+gulp.task('build', gulp.series('clean', gulp.parallel('images', 'styles-sass', 'webpack'), 'assets', 'fileinclude'));
 
 gulp.task('serve', function () {
   browserSync.init({

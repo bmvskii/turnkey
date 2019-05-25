@@ -2,6 +2,9 @@
   padding-top: 90px
   padding-bottom: 73px
 
+  .owl-carousel
+    @include middle-layer
+
   .card
     display: flex
     flex-direction: column
@@ -11,7 +14,6 @@
     &:not(:last-child)
       margin-right: 30px
 
-    @include middle-layer
     @include box-shadow
     
     border-radius: 2px

@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const page = $('html, body');
   const header = document.querySelector('.header__wrapper');
-
-  const scrollDownTrigger = $('.nav a');
   const scrollTimeInMs = 800;
 
   window.onresize = () => {
@@ -27,11 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     }
+
   }
 
-  window.dispatchEvent(new Event('resize'));
+  const scrollToAnchor = function () {
+    page.animate({
+      scrollTop: $($.attr(this, 'href')).offset().top,
+    }, scrollTimeInMs);
+    return false;
+  };
 
-  //init of a third party libraries
   $('.testis .owl-carousel').owlCarousel({
     dots: true,
     items: 3,
@@ -55,12 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  $('.nav a, .header .button').click(function () {
-    page.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top,
-    }, scrollTimeInMs);
-    return false;
-  });
+  $('.nav a').click(scrollToAnchor);
+  $('.header .button a').click(scrollToAnchor);
+  $('.header .logo, .header .mobile-logo').click(scrollToAnchor);
 
   window.addEventListener('scroll', () => {
     if (window.pageYOffset >= header.offsetHeight) {
@@ -86,4 +86,5 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   initAccordeons();
+  window.dispatchEvent(new Event('resize'));
 });

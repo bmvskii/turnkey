@@ -8,7 +8,6 @@
   padding: 25px 15px
   transition: $transition
 
-
   &__wrapper
     height: 100px
     width: 100%
@@ -19,9 +18,22 @@
     right: 0
 
   .logo
+    @media screen and (max-width: $mobile)
+      display: none
+
     .change
       fill: $white
+  
+  .mobile-logo
+    display: none
+
+    .change
+        fill: $white
     
+    @media screen and (max-width: $mobile)
+      display: block
+
+
   .nav
     @media screen and (max-width: $md-screens)
       display: none
@@ -32,14 +44,13 @@
     &__item
       color: $white
       font-weight: bold
-      font-size: $fs14
       margin-right: 29px
 
   .button
     @media screen and (max-width: $mobile)
       text-transform: none
       width: 140px
-
+      min-width: unset
 
   &__wrapper.scrolled
     background-color: $white
@@ -49,10 +60,15 @@
 
     .header
       padding: 15px
-
+      
       .logo
         .change
-          fill: #000
+          fill: $blue
+
+      @media screen and (max-width: $mobile)
+        .mobile-logo
+          .change
+            fill: $blue
 
       .button
         color: $red
