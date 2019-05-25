@@ -43,9 +43,10 @@ gulp.task('styles-sass', () => {
     .pipe(gulpIf(isDevelopment, sourcemaps.write()))
     .pipe(combine(cssnano()))
     .pipe(gulp.dest('public/styles/'))
-    // .pipe(
-    //   combine(rev.manifest('css.json'), gulp.dest('manifest'))
-    // );
+    .pipe(gulp.dest('docs/styles/'))
+  // .pipe(
+  //   combine(rev.manifest('css.json'), gulp.dest('manifest'))
+  // );
 
 })
 
@@ -63,14 +64,16 @@ gulp.task('assets', function () {
         allowEmpty: true
       })
     })))
-    .pipe(gulp.dest('public'));
+    .pipe(gulp.dest('public'))
+    .pipe(gulp.dest('docs'));
 });
 
 gulp.task('images', function () {
   return gulp.src('frontend/assets/images/**/*.{svg,png,jpg}', {
     since: gulp.lastRun('images')
   })
-    .pipe(gulp.dest('public/images'));
+    .pipe(gulp.dest('public/images'))
+    .pipe(gulp.dest('docs/images'));
 });
 
 gulp.task('webpack', function (callback) {
@@ -155,7 +158,7 @@ gulp.task('webpack', function (callback) {
 });
 
 gulp.task('clean', function () {
-  return del(['public', 'manifest']);
+  return del(['public', 'manifest', 'docs']);
 });
 
 gulp.task('fileinclude', function () {
@@ -164,7 +167,8 @@ gulp.task('fileinclude', function () {
       prefix: '@@',
       basepath: '@file',
     }))
-    .pipe(gulp.dest('./public/'));
+    .pipe(gulp.dest('./public/'))
+    .pipe(gulp.dest('./docs/'));
 });
 
 gulp.task('build', gulp.series('clean', gulp.parallel('images', 'styles-sass', 'webpack'), 'assets', 'fileinclude'));

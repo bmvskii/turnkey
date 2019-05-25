@@ -87,4 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initAccordeons();
   window.dispatchEvent(new Event('resize'));
+
+  const validateForm = (e) => {
+    e.preventDefault();
+    const { currentTarget: form } = e;
+  };
+
+  document.querySelector('#form').addEventListener('submit', (e) => {
+
+  });
 });

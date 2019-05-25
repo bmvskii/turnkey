@@ -10,9 +10,13 @@
   @media screen and (max-width: $md-screens)
     flex-direction: column
     align-items: center
-    justify-content: center
 
-    padding-top: 440px
+    padding-top: 200px
+    justify-content: unset
+
+  // @media screen and (width: 1024px) and (height: 1366px)
+  //   padding-top: 200px
+  //   justify-content: unset
 
   &__left
     display: flex
@@ -23,10 +27,19 @@
 
     @media screen and (max-width: $md-screens)
       width: 75%
+    
+    // @media screen and (width: 1024px) and (height: 1366px)
+    //   margin-bottom: 50px
+    //   width: 60%
 
   &__right
+    // display: flex
+    // align-items: center
+    
     width: 35%
     padding-top: 45px
+    
+    position: relative
     bottom: -30px
 
     @media screen and (max-width: $md-screens)
@@ -76,7 +89,6 @@
       &__button
         margin-top: 25px
         
-
   &__heading
     margin-bottom: 20px
   
@@ -112,19 +124,22 @@
 
       background: $gray url('../images/bg.png') no-repeat center center
       
+      //  Sizes and positions for devices from large screens, ipad pro,
+      //  mobile, e.t.c.
+
       @media screen and (max-width: $extra-lg-screens)
-        background-size: 35%
+        background-size: 40%
         background-position: 49% 35%
       
-      @media screen and (max-width: $md-screens)
-        background-size: 40%
+      // @media screen and (width: 1024px) and (height: 1366px)
+      //     background-size: 67%
 
       @media screen and (max-width: $tablets)
         background-size: 60%
 
       @media screen and (max-width: $mobile)
         background-size: cover
-        background-position: -10%
+        background-position: -10%   
 
     &::before
       display: block

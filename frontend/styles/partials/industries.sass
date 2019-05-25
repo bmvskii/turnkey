@@ -6,6 +6,10 @@
   margin-top: 30px
   margin-bottom: 120px
 
+  position: relative
+  
+  @include middle-layer
+
   &__wrapper
     @media screen and (max-width: $mobile)
       display: none
@@ -60,6 +64,8 @@
       border-radius: 2px
       padding: 25px 90px 25px 20px
       font-size: $fs20
+
+      background-color: $white
 
       white-space: nowrap
 
