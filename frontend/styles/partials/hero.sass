@@ -14,9 +14,8 @@
     padding-top: 200px
     justify-content: unset
 
-  // @media screen and (width: 1024px) and (height: 1366px)
-  //   padding-top: 200px
-  //   justify-content: unset
+  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) 
+    padding-top: 200px
 
   &__left
     display: flex
@@ -28,13 +27,22 @@
     @media screen and (max-width: $md-screens)
       width: 75%
     
-    // @media screen and (width: 1024px) and (height: 1366px)
-    //   margin-bottom: 50px
-    //   width: 60%
+    // Ipad 
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
+      width: 70%
+
+    //Ipad Pro
+    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) 
+      margin-bottom: 50px
+      width: 60%
+
+    @media screen and (max-width: $mobile)
+      margin-bottom: 0
+      width: 100% 
 
   &__right
-    // display: flex
-    // align-items: center
+    display: flex
+    align-items: center
     
     width: 35%
     padding-top: 45px
@@ -47,10 +55,13 @@
 
     @media screen and (max-width: $mobile)
       width: 100%
+      padding-top: 10px
 
     .form
       display: flex
       flex-direction: column
+
+      width: 100%
 
       border-radius: $border-radius
       background-color: $white
@@ -71,6 +82,10 @@
         &:not(:last-child)
           margin-bottom: 15px
 
+        @media screen and (max-width: $mobile)   
+          &:not(:last-child)
+            margin-bottom: 10px
+            
       &__input
         margin-top: 5px
 
@@ -130,12 +145,12 @@
       @media screen and (max-width: $extra-lg-screens)
         background-size: 40%
         background-position: 49% 35%
-      
-      // @media screen and (width: 1024px) and (height: 1366px)
-      //     background-size: 67%
+
+      @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) 
+        background-size: 67%
 
       @media screen and (max-width: $tablets)
-        background-size: 60%
+        background-size: 67%
 
       @media screen and (max-width: $mobile)
         background-size: cover

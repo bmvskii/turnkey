@@ -31,9 +31,14 @@
   &::placeholder
     color: $white
 
-  &--hasError
+  &.error
     border-color: $red
+    color: $red
   
+  & + .error
+    margin-top: 7px
+    color: $red
+
   &__wrapper
     margin-top: 13px
     width: 100%

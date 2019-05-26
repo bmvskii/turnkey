@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Turn Key Lender</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
@@ -128,29 +127,29 @@
                     <label class="form__label" for="first_name">
                         <span class="text">First name <span class="red">*</span>
                         </span>
-                        <input class="input form__input" type="text" name="first_name">
+                        <input class="input form__input" type="text" name="first_name" id="first_name">
                     </label>
                     <label class="form__label" for="last_name">
                         <span class="text">Last name <span class="red">*</span>
                         </span>
-                        <input class="input form__input" type="text" name="last_name">
+                        <input class="input form__input" type="text" name="last_name" id="last_name">
                     </label>
                     <label class="form__label" for="business_email">
                         <span class="text">Business Email <span class="red">*</span>
                         </span>
-                        <input class="input form__input" type="text" name="business_email">
+                        <input class="input form__input" type="text" name="business_email" id="business_email">
                     </label>
                     <label class="form__label" for="phone_number">
                         <span class="text">Phone number <span class="red">*</span>
                         </span>
-                        <input class="input form__input" type="text" name="phone_number">
+                        <input class="input form__input" type="text" name="phone_number" id="phone_number">
                     </label>
                     <label class="form__label" for="company_name">
                         <span class="text">Company name <span class="red">*</span>
                         </span>
-                        <input class="input form__input" type="text" name="company_name">
+                        <input class="input form__input" type="text" name="company_name" id="company_name">
                     </label>
-                    <button class="button button--red form__button" data-hover="Submit">
+                    <button class="button button--red form__button" type="submit" data-hover="Submit">
                         Submit
                     </button>
                 </form>
@@ -553,34 +552,34 @@
             <div class="contact-us__right">
                 <form method="POST" class="contact-us__form form">
                     <div class="form__row">
-                        <label class="form__label" for="first_name">
+                        <label class="form__label" for="us__first_name">
                             <span class="text">First name <span class="red">*</span>
                             </span>
-                            <input class="input form__input" type="text" name="first_name">
+                            <input class="input form__input" type="text" name="first_name" id="contact-us__first_name">
                         </label>
-                        <label class="form__label" for="last_name">
+                        <label class="form__label" for="contact-us__last_name">
                             <span class="text">Last name <span class="red">*</span>
                             </span>
-                            <input class="input form__input" type="text" name="last_name">
+                            <input class="input form__input" type="text" name="last_name" id="contact-us__last_name">
                         </label>
                     </div>
                     <div class="form__row">
-                        <label class="form__label" for="business_email">
+                        <label class="form__label" for="contact-us__business_email">
                             <span class="text">Business Email <span class="red">*</span>
                             </span>
-                            <input class="input form__input" type="text" name="business_email">
+                            <input class="input form__input" type="text" name="business_email" id="contact-us__business_email">
                         </label>
-                        <label class="form__label" for="phone_number">
+                        <label class="form__label" for="contact-us__phone_number">
                             <span class="text">Phone number <span class="red">*</span>
                             </span>
-                            <input class="input form__input" type="text" name="phone_number">
+                            <input class="input form__input" type="text" name="phone_number" id="contact-us__phone_number">
                         </label>
                     </div>
                     <div class="form__row">
-                        <label class="form__label" for="company_name">
+                        <label class="form__label" for="contact-us__company_name">
                             <span class="text">Company name <span class="red">*</span>
                             </span>
-                            <input class="input form__input" type="text" name="company_name">
+                            <input class="input form__input" type="text" name="company_name" id="contact-us__company_name">
                         </label>
                     </div>
                     <div class="form__row">
@@ -628,6 +627,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
 
     <script src="./js/script.js"></script>
 </body>
