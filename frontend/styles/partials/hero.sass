@@ -11,10 +11,10 @@
     flex-direction: column
     align-items: center
 
-    padding-top: 200px
+    padding-top: 160px
     justify-content: unset
 
-  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) 
+  @media only screen and (width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) 
     padding-top: 200px
 
   &__left
@@ -32,12 +32,12 @@
       width: 70%
 
     //Ipad Pro
-    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) 
+    @media only screen and (width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) 
       margin-bottom: 50px
       width: 60%
 
     @media screen and (max-width: $mobile)
-      margin-bottom: 0
+      margin-bottom: 20px
       width: 100% 
 
   &__right
@@ -52,6 +52,7 @@
 
     @media screen and (max-width: $md-screens)
       width: 50%
+      bottom: 0
 
     @media screen and (max-width: $mobile)
       width: 100%
@@ -146,7 +147,7 @@
         background-size: 40%
         background-position: 49% 35%
 
-      @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) 
+      @media only screen and (width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) 
         background-size: 67%
 
       @media screen and (max-width: $tablets)
@@ -172,4 +173,4 @@
     
   .line
     background-color: $white
-    opacity: .2
+    opacity: .1
