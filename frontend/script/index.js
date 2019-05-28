@@ -63,6 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
         margin: 20,
       });
 
+    }
+
+    if (window.innerWidth > 1024) {
+      testimonialsCards.trigger('destroy.owl.carousel');
+    } else {
       testimonialsCards.owlCarousel({
         dots: true,
         items: 3,
@@ -80,12 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    if (window.innerWidth > 1024) {
-      testimonialsCards.trigger('destroy.owl.carousel');
-    }
-
     if (window.innerWidth <= 650 ||
-       (window.innerWidth <= 768 && window.innerHeight < 1024)) {
+      (window.innerWidth <= 768 && window.innerHeight < 1024)) {
       setPaddingOnShowcaseSection();
     }
   }
@@ -129,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroSectionHeight = document.querySelector('.hero').offsetHeight;
     const showcaseSection = document.querySelector('.showcase');
 
-    const paddingTopValue = 100;
+    const paddingTopValue = 30;
     const showcasePadding = heroFormHeight - (heroSectionHeight - heroRightSectionOffset) + paddingTopValue;
 
     showcaseSection.style.paddingTop = `${showcasePadding}px`;
