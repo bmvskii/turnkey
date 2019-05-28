@@ -37,7 +37,7 @@
       width: 60%
 
     @media screen and (max-width: $mobile)
-      margin-bottom: 20px
+      margin-bottom: 30px
       width: 100% 
 
   &__right
@@ -52,7 +52,7 @@
 
     @media screen and (max-width: $md-screens)
       width: 50%
-      bottom: 0
+      bottom: 20px
 
     @media screen and (max-width: $mobile)
       width: 100%
@@ -125,8 +125,9 @@
     position: relative
 
     width: 100%
-    height: 100vh
-
+    background: $l-gray
+    z-index: -3
+  
     &::after
       display: block
       content: ""
@@ -138,7 +139,7 @@
       bottom: 0
       z-index: -2
 
-      background: $gray url('../images/bg.png') no-repeat center center
+      background: $l-gray url('../images/bg.png') no-repeat center center
       
       //  Sizes and positions for devices from large screens, ipad pro,
       //  mobile, e.t.c.
@@ -147,15 +148,13 @@
         background-size: 40%
         background-position: 49% 35%
 
-      @media only screen and (width: 1024px) and (height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) 
+      @media screen and (max-width: $md-screens)
         background-size: 67%
-
-      @media screen and (max-width: $tablets)
-        background-size: 67%
+        bottom: 25%
 
       @media screen and (max-width: $mobile)
         background-size: cover
-        background-position: -10%   
+        background-position: 20%   
 
     &::before
       display: block
@@ -170,6 +169,9 @@
       
       background-color: #0b0a1a
       opacity: .75
+
+      @media screen and (max-width: $md-screens)
+        bottom: 25%
     
   .line
     background-color: $white

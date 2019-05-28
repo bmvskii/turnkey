@@ -85,10 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    if (window.innerWidth <= 650 ||
-      (window.innerWidth <= 768 && window.innerHeight < 1024)) {
-      setPaddingOnShowcaseSection();
-    }
+    // if (window.innerWidth <= 650 ||
+    //   (window.innerWidth <= 768 && window.innerHeight < 1024)) {
+    //   setPaddingOnShowcaseSection();
+    // }
   }
 
   window.addEventListener('scroll', () => {
@@ -123,17 +123,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
   };
 
-  const setPaddingOnShowcaseSection = () => {
-    const heroRightSectionOffset = document.querySelector('.hero__right').offsetTop;
-    const heroFormHeight = document.querySelector('.hero .form').offsetHeight;
-    const heroSectionHeight = document.querySelector('.hero').offsetHeight;
-    const showcaseSection = document.querySelector('.showcase');
+  // const setPaddingOnShowcaseSection = () => {
+  //   const heroRightSectionOffset = document.querySelector('.hero__right').offsetTop;
+  //   const heroFormHeight = document.querySelector('.hero .form').offsetHeight;
+  //   const heroSectionHeight = document.querySelector('.hero').offsetHeight;
+  //   const showcaseSection = document.querySelector('.showcase');
 
-    const paddingTopValue = 30;
-    const showcasePadding = heroFormHeight - (heroSectionHeight - heroRightSectionOffset) + paddingTopValue;
+  //   const paddingTopValue = 30;
+  //   const showcasePadding = heroFormHeight - (heroSectionHeight - heroRightSectionOffset) + paddingTopValue;
 
-    showcaseSection.style.paddingTop = `${showcasePadding}px`;
-  };
+  //   showcaseSection.style.paddingTop = `${showcasePadding}px`;
+  // };
 
   $("#form").validate(options);
   $(".contact-us__form").validate(options);
