@@ -100,11 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const scrollToAnchor = function () {
-    const isButton = $(this).hasClass('button');
-    const additionalOffset = isButton ? document.querySelector('.header').offsetHeight : 0;
+    const additionalOffset = document.querySelector('.header').offsetHeight;
 
     page.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top + additionalOffset,
+      scrollTop: $($.attr(this, 'href')).offset().top - additionalOffset,
     }, scrollTimeInMs);
     return false;
   };
